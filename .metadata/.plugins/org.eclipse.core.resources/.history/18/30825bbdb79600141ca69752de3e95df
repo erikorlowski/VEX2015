@@ -279,126 +279,135 @@ void moveStraightForIME(drive myDrive, straightDrive values)
 	}
 }
 
-void turnForIME(drive myDrive, turnDrive values)
+void turnForIME(int leftMotor, int rightMotor, int leftIME, int rightIME, float leftDistance, float rightDistance, int maxPower)
 {
 	//Defines variables for the function
 	int finished = 0;
-	float leftToMove = values.leftDistance, rightToMove = values.rightDistance;
+	float leftToMove = leftDistance, rightToMove = rightDistance;
 	float timeDif;
 	int leftSpeed;
 	int rightSpeed;
 	int leftMoved, rightMoved;
 
+	//What encoder value will the wheels start braking at?
+	float brakingDistance = 200;
+
+	//What is the deadband for both wheels?
+	float deadband = 25.0;
+
+	//How long should it take for the wheels to accelerate?
+	int rampTime = 500;
+
 	//Defines the start time for the function
 	long int startTime = millis();
 
 	//Resets IMEs and motors
-	imeReset(myDrive.leftIME);
-	imeReset(myDrive.rightIME);
-	motorSet(myDrive.leftMotor, 0);
-	motorSet(myDrive.rightMotor, 0);
+	imeReset(leftIME);
+	imeReset(rightIME);
+	motorSet(leftMotor, 0);
+	motorSet(rightMotor, 0);
 
 	while(!finished)
 	{
 		//Gets the elapsed time and IME values
 		timeDif = millis() - startTime;
-		imeGet(myDrive.leftIME, &leftMoved);
-		imeGet(myDrive.rightIME, &rightMoved);
+		imeGet(leftIME, &leftMoved);
+		imeGet(rightIME, &rightMoved);
 
 		//If the IMEs are inverted, invert their moved variables
 		leftMoved = (LEFT_IME_INVERTED) ? leftMoved * -1 : leftMoved;
 		rightMoved = (RIGHT_IME_INVERTED) ? rightMoved * -1 : rightMoved;
 
 		//If a wheel is moving backwards, invert its moved variable
-		if(values.leftDistance < 0)
+		if(leftDistance < 0)
 		{
 			leftMoved *= -1;
 		}
 
-		if(values.rightDistance < 0)
+		if(rightDistance < 0)
 		{
 			rightMoved *= -1;
 		}
 
 		//CASE 1
 		//If the left motor is accelerating and is not within the braking distance:
-		if(timeDif < values.rampTime && leftMoved < values.leftDistance - values.brakingDistance)
+		if(timeDif < rampTime && leftMoved < leftDistance - brakingDistance)
 		{
 			puts("1\n");
-			leftSpeed = (int) (((float) (timeDif) / (float) (values.rampTime)) * values.maxPower);
+			leftSpeed = (int) (((float) (timeDif) / (float) (rampTime)) * maxPower);
 		}
 		//CASE 2
 		//If the left motor is within the braking distance, slow it down
-		else if(leftMoved > values.leftDistance - values.brakingDistance)
+		else if(leftMoved > leftDistance - brakingDistance)
 		{
 			puts("2\n");
-			leftSpeed = (int) (((values.leftDistance - leftMoved) / values.brakingDistance) * values.maxPower);
+			leftSpeed = (int) (((leftDistance - leftMoved) / brakingDistance) * maxPower);
 		}
 		//CASE 3
 		//If the left motor is not slowing down or speeding up, run it at max power
 		else
 		{
 			puts("3\n");
-			leftSpeed = values.maxPower;
+			leftSpeed = maxPower;
 		}
 		//END OF LEFT
 
 		//CASE 1
 		//If the right motor is accelerating and is not within the braking distance:
-		if(rightMoved < values.rightDistance - values.brakingDistance)
+		if(rightMoved < rightDistance - brakingDistance)
 		{
 			puts("1\n");
-			rightSpeed = (int) (((float) (timeDif) / (float) (values.rampTime)) * values.maxPower);
+			rightSpeed = (int) (((float) (timeDif) / (float) (rampTime)) * maxPower);
 		}
 		//CASE 2
 		//If the right motor is within the braking distance, slow it down
-		else if(rightMoved > values.rightDistance - values.brakingDistance)
+		else if(rightMoved > rightDistance - brakingDistance)
 		{
 			puts("2\n");
-			rightSpeed = (int) (((values.rightDistance - rightMoved) / values.brakingDistance) * values.maxPower);
+			rightSpeed = (int) (((rightDistance - rightMoved) / brakingDistance) * maxPower);
 		}
 		//CASE 3
 		//If the right motor is not slowing down or speeding up, run it at max power
 		else
 		{
 			puts("3\n");
-			rightSpeed = values.maxPower;
+			rightSpeed = maxPower;
 		}
 		//END OF RIGHT
 
 		//CASE 4
 		//Limits the left speed in the positive direction
-		if(leftSpeed > values.maxPower)
+		if(leftSpeed > maxPower)
 		{
 			puts("4\n");
-			leftSpeed = values.maxPower;
+			leftSpeed = maxPower;
 		}
 		//CASE 4A
 		//Limits the left speed in the negative direction
-		else if(leftSpeed * -1 > values.maxPower)
+		else if(leftSpeed * -1 > maxPower)
 		{
 			puts("4A\n");
-			leftSpeed = values.maxPower * -1;
+			leftSpeed = maxPower * -1;
 		}
 
 		//CASE 5
 		//Limits the right speed in the positive direction
-		if(rightSpeed > values.maxPower)
+		if(rightSpeed > maxPower)
 		{
 			puts("5\n");
-			rightSpeed = values.maxPower;
+			rightSpeed = maxPower;
 		}
 		//CASE 5A
 		//Limits the right speed in the negative direction
-		else if(rightSpeed * -1 > values.maxPower)
+		else if(rightSpeed * -1 > maxPower)
 		{
 			puts("5A\n");
-			rightSpeed = values.maxPower * -1;
+			rightSpeed = maxPower * -1;
 		}
 
 		//CASE 7
 		//If both motors are within the deadband, stop the function
-		if(values.leftDistance - leftMoved < values.deadband && values.rightDistance - rightMoved < values.deadband)
+		if(leftDistance - leftMoved < deadband && rightDistance - rightMoved < deadband)
 		{
 			puts("7\n");
 			finished = 1;
@@ -422,8 +431,8 @@ void turnForIME(drive myDrive, turnDrive values)
 		rightSpeed = (RIGHT_MOTOR_INVERTED) ? rightSpeed * -1 : rightSpeed;
 
 		//Set the motors
-		motorSet(myDrive.leftMotor, leftSpeed);
-		motorSet(myDrive.rightMotor, rightSpeed);
+		motorSet(leftMotor, leftSpeed);
+		motorSet(rightMotor, rightSpeed);
 
 		//Avoid hogging the CPU
 		delay(20);
@@ -437,7 +446,7 @@ void operatorControl()
 	turnDrive step2 = {1000, -1000, 127, 200, 25, 500};
 	pidValues liftPid = {1, 0.000, 0.0, 0, 0, millis(), 127, -127};
 
-	moveStraightForIME(myDrive, step1);
+	moveStraightForIME(LEFT_MOTOR, RIGHT_MOTOR, LEFT_IME, RIGHT_IME, -2000, 100);
 
 	encoderReset(liftEnc);
 
@@ -450,7 +459,7 @@ void operatorControl()
 
 	motorSet(LEFT_MOTOR, 0);
 
-	turnForIME(myDrive, step2);
+	turnForIME(LEFT_MOTOR, RIGHT_MOTOR, LEFT_IME, RIGHT_IME, 1000, -1000, 127);
 
 	puts("Done");
 

@@ -437,7 +437,7 @@ void operatorControl()
 	turnDrive step2 = {1000, -1000, 127, 200, 25, 500};
 	pidValues liftPid = {1, 0.000, 0.0, 0, 0, millis(), 127, -127};
 
-	moveStraightForIME(myDrive, step1);
+	moveStraightForIME(LEFT_MOTOR, RIGHT_MOTOR, LEFT_IME, RIGHT_IME, -2000, 100);
 
 	encoderReset(liftEnc);
 
@@ -450,7 +450,7 @@ void operatorControl()
 
 	motorSet(LEFT_MOTOR, 0);
 
-	turnForIME(myDrive, step2);
+	turnForIME(LEFT_MOTOR, RIGHT_MOTOR, LEFT_IME, RIGHT_IME, 1000, -1000, 127);
 
 	puts("Done");
 
