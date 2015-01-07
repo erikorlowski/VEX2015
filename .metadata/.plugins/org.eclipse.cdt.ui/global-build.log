@@ -1,0 +1,354 @@
+19:19:07 **** Build of configuration Default for project Proto_Autonomous ****
+make all 
+CC -I../include -I../src auto.c
+In file included from auto.c:35:0:
+../include/main.h:60:1: error: unknown type name 'Encoder'
+make[1]: *** [../bin/auto.o] Error 1
+make: *** [src] Error 2
+19:21:12 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+CC -I../include -I../src auto.c
+In file included from auto.c:35:0:
+../include/main.h:60:1: error: unknown type name 'Encoder'
+make[1]: *** [../bin/auto.o] Error 1
+make: *** [src] Error 2
+19:22:48 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+CC -I../include -I../src auto.c
+CC -I../include -I../src init.c
+CC -I../include -I../src opcontrol.c
+opcontrol.c: In function 'moveStraightForIME':
+opcontrol.c:109:31: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:109:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  20600	      0	   4224	  24824	   60f8	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:23:38 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+CC -I../include -I../src opcontrol.c
+opcontrol.c: In function 'moveStraightForIME':
+opcontrol.c:109:31: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:109:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  20600	      0	   4224	  24824	   60f8	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:24:06 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:25:43 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+CC -I../include -I../src opcontrol.c
+opcontrol.c: In function 'moveStraightForIME':
+opcontrol.c:109:31: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:109:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  20608	      0	   4224	  24832	   6100	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:26:23 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:36:25 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+CC -I../include -I../src opcontrol.c
+opcontrol.c: In function 'moveStraightForIME':
+opcontrol.c:109:31: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:109:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+opcontrol.c: In function 'turnForIME':
+opcontrol.c:216:35: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:216:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  21436	      0	   4224	  25660	   643c	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:36:46 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:37:43 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:38:05 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:39:06 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+CC -I../include -I../src opcontrol.c
+opcontrol.c: In function 'moveStraightForIME':
+opcontrol.c:109:31: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:109:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+opcontrol.c: In function 'turnForIME':
+opcontrol.c:216:35: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:216:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  21436	      0	   4224	  25660	   643c	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:39:33 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:04:34 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+CC -I../include -I../src opcontrol.c
+opcontrol.c: In function 'moveStraightForIME':
+opcontrol.c:109:31: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:109:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+opcontrol.c: In function 'turnForIME':
+opcontrol.c:216:35: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:216:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  21436	      0	   4224	  25660	   643c	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:05:31 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:06:47 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:07:40 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+CC -I../include -I../src opcontrol.c
+opcontrol.c: In function 'moveStraightForIME':
+opcontrol.c:109:31: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:109:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+opcontrol.c: In function 'turnForIME':
+opcontrol.c:216:35: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:216:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  21452	      0	   4224	  25676	   644c	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:08:32 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:09:12 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+CC -I../include -I../src opcontrol.c
+opcontrol.c: In function 'moveStraightForIME':
+opcontrol.c:109:31: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:109:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+opcontrol.c: In function 'turnForIME':
+opcontrol.c:216:35: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:216:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  21464	      0	   4224	  25688	   6458	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:10:03 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:22:16 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+CC -I../include -I../src opcontrol.c
+opcontrol.c: In function 'moveStraightForIME':
+opcontrol.c:109:31: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:109:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+opcontrol.c: In function 'turnForIME':
+opcontrol.c:216:35: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:216:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+opcontrol.c:251:18: warning: 'rightMaxPower' may be used uninitialized in this function [-Wmaybe-uninitialized]
+opcontrol.c:336:10: warning: 'rightSpeed' may be used uninitialized in this function [-Wmaybe-uninitialized]
+opcontrol.c:245:17: warning: 'leftMaxPower' may be used uninitialized in this function [-Wmaybe-uninitialized]
+opcontrol.c:335:10: warning: 'leftSpeed' may be used uninitialized in this function [-Wmaybe-uninitialized]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  21332	      0	   4224	  25556	   63d4	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:22:41 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:23:07 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:23:38 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:28:19 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+CC -I../include -I../src auto.c
+CC -I../include -I../src init.c
+CC -I../include -I../src opcontrol.c
+opcontrol.c: In function 'moveStraightForIME':
+opcontrol.c:109:31: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:109:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+opcontrol.c: In function 'turnForIME':
+opcontrol.c:216:35: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:216:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+opcontrol.c:251:18: warning: 'rightMaxPower' may be used uninitialized in this function [-Wmaybe-uninitialized]
+opcontrol.c:336:10: warning: 'rightSpeed' may be used uninitialized in this function [-Wmaybe-uninitialized]
+opcontrol.c:245:17: warning: 'leftMaxPower' may be used uninitialized in this function [-Wmaybe-uninitialized]
+opcontrol.c:335:10: warning: 'leftSpeed' may be used uninitialized in this function [-Wmaybe-uninitialized]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  21332	      0	   4224	  25556	   63d4	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:28:45 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:30:13 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+CC -I../include -I../src auto.c
+CC -I../include -I../src init.c
+CC -I../include -I../src opcontrol.c
+opcontrol.c: In function 'moveStraightForIME':
+opcontrol.c:109:31: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:109:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+opcontrol.c: In function 'turnForIME':
+opcontrol.c:216:35: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:216:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+opcontrol.c:251:18: warning: 'rightMaxPower' may be used uninitialized in this function [-Wmaybe-uninitialized]
+opcontrol.c:336:10: warning: 'rightSpeed' may be used uninitialized in this function [-Wmaybe-uninitialized]
+opcontrol.c:245:17: warning: 'leftMaxPower' may be used uninitialized in this function [-Wmaybe-uninitialized]
+opcontrol.c:335:10: warning: 'leftSpeed' may be used uninitialized in this function [-Wmaybe-uninitialized]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  21332	      0	   4224	  25556	   63d4	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:30:40 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:38:43 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+CC -I../include -I../src opcontrol.c
+opcontrol.c: In function 'moveStraightForIME':
+opcontrol.c:109:31: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:109:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+opcontrol.c: In function 'turnForIME':
+opcontrol.c:216:35: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:216:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  21368	      0	   4224	  25592	   63f8	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:38:51 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:40:59 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+CC -I../include -I../src opcontrol.c
+opcontrol.c: In function 'moveStraightForIME':
+opcontrol.c:109:31: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:109:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+opcontrol.c: In function 'turnForIME':
+opcontrol.c:216:35: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:216:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  21368	      0	   4224	  25592	   63f8	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:41:23 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:42:29 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+CC -I../include -I../src opcontrol.c
+opcontrol.c: In function 'moveStraightForIME':
+opcontrol.c:109:31: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:109:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+opcontrol.c: In function 'turnForIME':
+opcontrol.c:216:35: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:216:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  21400	      0	   4224	  25624	   6418	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:49:16 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:50:00 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:50:24 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:51:17 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+CC -I../include -I../src opcontrol.c
+opcontrol.c: In function 'moveStraightForIME':
+opcontrol.c:109:31: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:109:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+opcontrol.c: In function 'turnForIME':
+opcontrol.c:216:35: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:216:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  21400	      0	   4224	  25624	   6418	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:51:46 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:52:18 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+CC -I../include -I../src opcontrol.c
+opcontrol.c: In function 'moveStraightForIME':
+opcontrol.c:109:31: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:109:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+opcontrol.c: In function 'turnForIME':
+opcontrol.c:216:35: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:216:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  21400	      0	   4224	  25624	   6418	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:52:38 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:58:54 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+CC -I../include -I../src opcontrol.c
+opcontrol.c: In function 'moveStraightForIME':
+opcontrol.c:109:31: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:109:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+opcontrol.c: In function 'turnForIME':
+opcontrol.c:216:35: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:216:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  21392	      0	   4224	  25616	   6410	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:59:11 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:01:41 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+CC -I../include -I../src opcontrol.c
+opcontrol.c: In function 'moveStraightForIME':
+opcontrol.c:109:31: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:109:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+opcontrol.c: In function 'turnForIME':
+opcontrol.c:216:35: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:216:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  21368	      0	   4224	  25592	   63f8	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:01:55 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:02:18 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:03:17 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:03:37 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:04:23 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+CC -I../include -I../src opcontrol.c
+opcontrol.c: In function 'moveStraightForIME':
+opcontrol.c:109:31: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:109:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+opcontrol.c: In function 'turnForIME':
+opcontrol.c:209:35: warning: unused variable 'rightToMove' [-Wunused-variable]
+opcontrol.c:209:8: warning: unused variable 'leftToMove' [-Wunused-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  21312	      0	   4224	  25536	   63c0	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:04:40 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+make[1]: Nothing to be done for `all'.

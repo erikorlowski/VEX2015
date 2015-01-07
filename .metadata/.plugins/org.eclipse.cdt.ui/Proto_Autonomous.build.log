@@ -1,0 +1,6 @@
+20:04:40 **** Incremental Build of configuration Default for project Proto_Autonomous ****
+make all 
+make[1]: Nothing to be done for `all'.
+
+20:04:41 Build Finished (took 797ms)
+
