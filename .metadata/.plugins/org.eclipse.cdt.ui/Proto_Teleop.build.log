@@ -1,0 +1,6 @@
+20:22:08 **** Incremental Build of configuration Default for project Proto_Teleop ****
+make all 
+make[1]: Nothing to be done for `all'.
+
+20:22:09 Build Finished (took 969ms)
+
