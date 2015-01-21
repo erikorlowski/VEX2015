@@ -69,9 +69,6 @@ int limitNum(int num, int max, int min)
 }
 
 void operatorControl() {
-
-	while (1)
-	{
 		//DRIVE
 		puts("Operator Control");
 			int driveX;
@@ -83,6 +80,8 @@ void operatorControl() {
 
 			while (1)
 			{
+				puts("Loop");
+
 				//DRIVE
 				driveX = joystickGetAnalog(1, 1);
 				driveY = joystickGetAnalog(1, 2);
@@ -101,7 +100,4 @@ void operatorControl() {
 
 				delay(20);
 			}
-
-		delay(20);
-	}
 }
