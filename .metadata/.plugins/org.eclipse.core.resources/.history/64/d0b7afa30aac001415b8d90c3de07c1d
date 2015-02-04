@@ -173,15 +173,15 @@ int liftSafety(int desiredSpeed, double encValue)
 	{
 		return limit(desiredSpeed, 127, 0);
 	}
-	else if(encValue < SLOW_HEIGHT)
+	else if(encoderGet(liftEnc) < SLOW_HEIGHT)
 	{
 		return limit(desiredSpeed, 127, -40);
 	}
-	else if(encValue > MAX_HEIGHT)
+	else if(encoderGet(liftEnc) > MAX_HEIGHT)
 	{
 		return limit(desiredSpeed, 0, -127);
 	}
-	else if(encValue < 0)
+	else if(encoderGet(liftEnc) < 0)
 	{
 		return limit(desiredSpeed, 127, 0);
 	}

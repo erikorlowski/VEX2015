@@ -51,13 +51,7 @@
  *
  * This task should never exit; it should end with some kind of infinite loop, even if empty.
  */
-
-
-//Autonomous global variables go here
-int alliance = RED_ALLIANCE;
-
 //STRUCTS
-
 typedef struct pidValues
 {
 	//Defines the variables associated with a simple PID controller
@@ -173,15 +167,15 @@ int liftSafety(int desiredSpeed, double encValue)
 	{
 		return limit(desiredSpeed, 127, 0);
 	}
-	else if(encValue < SLOW_HEIGHT)
+	else if(encoderGet(liftEnc) < SLOW_HEIGHT)
 	{
 		return limit(desiredSpeed, 127, -40);
 	}
-	else if(encValue > MAX_HEIGHT)
+	else if(encoderGet(liftEnc) > MAX_HEIGHT)
 	{
 		return limit(desiredSpeed, 0, -127);
 	}
-	else if(encValue < 0)
+	else if(encoderGet(liftEnc) < 0)
 	{
 		return limit(desiredSpeed, 127, 0);
 	}
@@ -515,17 +509,9 @@ void turnForIME(drive myDrive, turnDrive *values)
 	motorSet(myDrive.rightMotor, (*values).rightSpeed);
 }
 
-void getAlliance()
-{
-	//Red alliance is down, blue alliance is up
-	alliance = digitalRead(ALLIANCE_SELECTION_SWITCH) ?
-			RED_ALLIANCE : BLUE_ALLIANCE;
-}
-
 void autonInit()
 {
 	//Auton init code goes here
-	getAlliance();
 }
 
 

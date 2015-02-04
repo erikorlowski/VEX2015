@@ -1,0 +1,18 @@
+Drive:
+	Holonomic Control
+	---
+	
+Lift:
+	Simple Control
+	Master Slave
+	---
+	Height Hold
+	Preset Heights
+	
+Pickup:
+	Simple Control
+	---
+	Pickup Position
+	
+Autonomous:
+	TBD

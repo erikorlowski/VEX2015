@@ -72,10 +72,7 @@
 #define HEIGHT_7 50
 #define SLOW_HEIGHT 2
 #define MAX_HEIGHT 50
-
-#define RED_ALLIANCE 1
-#define BLUE_ALLIANCE 2
-#define ALLIANCE_SELECTION_SWITCH 4
+#define DROP_HEIGHT 3
 
 #include <API.h>
 
