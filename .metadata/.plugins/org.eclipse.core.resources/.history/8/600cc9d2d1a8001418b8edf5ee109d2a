@@ -140,18 +140,6 @@ double limit(double value, double max, double min)
 	}
 }
 
-double abs(double num)
-{
-	if(num < 0)
-	{
-		return -num;
-	}
-	else
-	{
-		return num;
-	}
-}
-
 //TEAM METHODS
 void watchLift()
 {
@@ -514,7 +502,10 @@ void autonInit()
 	//Auton init code goes here
 }
 
-
+void teleopInit()
+{
+	//Teleop init code goes here
+}
 
 void autonomous()
 {
@@ -540,13 +531,6 @@ void autonomous()
 	}
 }
 
-pidValues telopLiftPid = {1, 0.000, 0.0, 0, 0, millis(), 127, -127};
-
-void teleopInit()
-{
-	telopLiftPid.lastTime = millis();
-}
-
 void teleop()
 {
 	int driveX;
@@ -557,21 +541,15 @@ void teleop()
 	const int LIFT_MODE_MANUAL = 0;
 	const int LIFT_MODE_AUTO = 1;
 
-	const int LIFT_STICK = 1;
-
 	int liftMode = LIFT_MODE_MANUAL;
-	int lastLiftMode = LIFT_MODE_MANUAL;
-	int liftSpeed = 0;
-	int liftSP = 0;
-	double liftEncValue = 0;
 
 	teleopInit();
 
 	while(1)
 	{
 		//DRIVE
-		driveX = joystickGetAnalog(1, 4);
-		driveY = joystickGetAnalog(1, 3);
+		driveX = joystickGetAnalog(1, 1);
+		driveY = joystickGetAnalog(1, 2);
 
 		leftSpeed = driveY + driveX;
 		leftSpeed = limit(leftSpeed, 127, -127);
@@ -586,90 +564,7 @@ void teleop()
 		motorSet(RIGHT_MOTOR, rightSpeed);
 
 		//LIFT
-		watchLift();
 
-		liftEncValue = encoderGet(liftEnc);
-
-		if(joystickGetDigital(LIFT_STICK, 5, JOY_UP))
-		{
-			liftMode = LIFT_MODE_AUTO;
-			liftSP = LOAD_HEIGHT;
-		}
-		else if(joystickGetDigital(LIFT_STICK,5, JOY_DOWN))
-		{
-			liftMode = LIFT_MODE_AUTO;
-			liftSP = 0;
-		}
-		else if(joystickGetDigital(LIFT_STICK,7, JOY_DOWN))
-		{
-			liftMode = LIFT_MODE_AUTO;
-			liftSP = HEIGHT_1;
-		}
-		else if(joystickGetDigital(LIFT_STICK,8, JOY_DOWN))
-		{
-			liftMode = LIFT_MODE_AUTO;
-			liftSP = HEIGHT_2;
-		}
-		else if(joystickGetDigital(LIFT_STICK,7, JOY_LEFT))
-		{
-			liftMode = LIFT_MODE_AUTO;
-			liftSP = HEIGHT_3;
-		}
-		else if(joystickGetDigital(LIFT_STICK,7, JOY_RIGHT))
-		{
-			liftMode = LIFT_MODE_AUTO;
-			liftSP = HEIGHT_4;
-		}
-		else if(joystickGetDigital(LIFT_STICK,8, JOY_LEFT))
-		{
-			liftMode = LIFT_MODE_AUTO;
-			liftSP = HEIGHT_5;
-		}
-		else if(joystickGetDigital(LIFT_STICK,8, JOY_RIGHT))
-		{
-			liftMode = LIFT_MODE_AUTO;
-			liftSP = HEIGHT_6;
-		}
-		else if(joystickGetDigital(LIFT_STICK,7, JOY_UP))
-		{
-			liftMode = LIFT_MODE_AUTO;
-			liftSP = HEIGHT_7;
-		}
-
-		if(abs(joystickGetDigial(LIFT_STICK,4) > 5))
-		{
-			liftMode = LIFT_MODE_MANUAL;
-		}
-
-		if(lastLiftMode == LIFT_MODE_MANUAL && liftMode == LIFT_MODE_AUTO)
-		{
-			telopLiftPid.lastError = 0;
-			telopLiftPid.sumOfErrors = 0;
-			telopLiftPid.lastTime = millis();
-		}
-
-		if(liftMode == LIFT_MODE_MANUAL)
-		{
-			liftSpeed = joystickGetAnalog(LIFT_STICK,2);
-		}
-		else if(liftMode == LIFT_MODE_AUTO)
-		{
-			liftSpeed = pidController(telopLiftPid, liftSP, liftEncValue);
-		}
-
-		if(!(joystickGetDigital(LIFT_STICK,6,JOY_UP) && joystickGetDigital(LIFT_STICK,6,JOY_DOWN)))
-		{
-			liftSpeed = liftSafety(liftSpeed, liftEncValue);
-		}
-
-		printf("Encoder: %f", liftEncValue);
-		printf("Limit Switch: %d", digitalRead(LIFT_LIMIT_SWITCH));
-
-		motorSet(LIFT_MOTOR_BOT, LIFT_MOTOR_BOT_INVERTED ? -liftSpeed : liftSpeed);
-		motorSet(LIFT_MOTOR_MID, LIFT_MOTOR_MID_INVERTED ? -liftSpeed : liftSpeed);
-		motorSet(LIFT_MOTOR_TOP, LIFT_MOTOR_TOP_INVERTED ? -liftSpeed : liftSpeed);
-
-		lastLiftMode = liftMode;
 
 		delay(20);
 	}

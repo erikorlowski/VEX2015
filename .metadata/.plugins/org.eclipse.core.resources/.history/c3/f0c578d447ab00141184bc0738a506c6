@@ -570,8 +570,8 @@ void teleop()
 	while(1)
 	{
 		//DRIVE
-		driveX = joystickGetAnalog(1, 4);
-		driveY = joystickGetAnalog(1, 3);
+		driveX = joystickGetAnalog(1, 1);
+		driveY = joystickGetAnalog(1, 2);
 
 		leftSpeed = driveY + driveX;
 		leftSpeed = limit(leftSpeed, 127, -127);
@@ -650,17 +650,14 @@ void teleop()
 
 		if(liftMode == LIFT_MODE_MANUAL)
 		{
-			liftSpeed = joystickGetAnalog(LIFT_STICK,2);
+			liftSpeed = joystickGetAnalog(LIFT_STICK,4);
 		}
 		else if(liftMode == LIFT_MODE_AUTO)
 		{
 			liftSpeed = pidController(telopLiftPid, liftSP, liftEncValue);
 		}
 
-		if(!(joystickGetDigital(LIFT_STICK,6,JOY_UP) && joystickGetDigital(LIFT_STICK,6,JOY_DOWN)))
-		{
-			liftSpeed = liftSafety(liftSpeed, liftEncValue);
-		}
+		liftSpeed = liftSafety(liftSpeed, liftEncValue);
 
 		printf("Encoder: %f", liftEncValue);
 		printf("Limit Switch: %d", digitalRead(LIFT_LIMIT_SWITCH));

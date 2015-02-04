@@ -82,8 +82,8 @@ void operatorControl()
 	while (1)
 	{
 		//DRIVE
-		driveX = joystickGetAnalog(1, 4);
-		driveY = joystickGetAnalog(1, 3);
+		driveX = joystickGetAnalog(1, 1);
+		driveY = joystickGetAnalog(1, 2);
 
 		leftSpeed = driveY + driveX;
 		leftSpeed = limitNum(leftSpeed, 127, -127);
@@ -98,12 +98,12 @@ void operatorControl()
 		motorSet(RIGHT_MOTOR, rightSpeed);
 
 		//LIFT
-		liftSpeed = joystickGetAnalog(1, 2);
+		liftSpeed = joystickGetAnalog(1, 4);
 		liftSpeed = limitNum(liftSpeed, 127, -127);
 
-		motorSet(LIFT_MOTOR_BOT, LIFT_MOTOR_BOT_INVERTED ? -liftSpeed : liftSpeed);
-		motorSet(LIFT_MOTOR_MID, LIFT_MOTOR_MID_INVERTED ? -liftSpeed : liftSpeed);
-		motorSet(LIFT_MOTOR_TOP, LIFT_MOTOR_TOP_INVERTED ? -liftSpeed : liftSpeed);
+		motorSet(LIFT_MOTOR_BOT, liftSpeed);
+		motorSet(LIFT_MOTOR_MID, liftSpeed);
+		motorSet(LIFT_MOTOR_TOP, liftSpeed);
 
 		delay(20);
 	}

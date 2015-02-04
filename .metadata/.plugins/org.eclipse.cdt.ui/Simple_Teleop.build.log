@@ -1,0 +1,14 @@
+19:38:19 **** Incremental Build of configuration Default for project Simple_Teleop ****
+make all 
+CC -I../include -I../src auto.c
+CC -I../include -I../src init.c
+CC -I../include -I../src opcontrol.c
+opcontrol.c: In function 'operatorControl':
+opcontrol.c:79:6: warning: unused variable 'liftMode' [-Wunused-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  12252	      0	   3840	  16092	   3edc	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+
+19:38:22 Build Finished (took 2s.968ms)
+

@@ -657,10 +657,7 @@ void teleop()
 			liftSpeed = pidController(telopLiftPid, liftSP, liftEncValue);
 		}
 
-		if(!(joystickGetDigital(LIFT_STICK,6,JOY_UP) && joystickGetDigital(LIFT_STICK,6,JOY_DOWN)))
-		{
-			liftSpeed = liftSafety(liftSpeed, liftEncValue);
-		}
+		liftSpeed = liftSafety(liftSpeed, liftEncValue);
 
 		printf("Encoder: %f", liftEncValue);
 		printf("Limit Switch: %d", digitalRead(LIFT_LIMIT_SWITCH));

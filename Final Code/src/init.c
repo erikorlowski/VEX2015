@@ -42,7 +42,10 @@
  * states (digitalWrite()) of limit switches, push buttons, and solenoids. It can also safely
  * configure a UART port (usartOpen()) but cannot set up an LCD (lcdInit()).
  */
-void initializeIO() {
+void initializeIO()
+{
+	liftEnc = encoderInit(LIFT_ENCODER_TOP, LIFT_ENCODER_BOTTOM, 0);
+	pinMode(LIFT_LIMIT_SWITCH, INPUT);
 }
 
 /*
@@ -58,5 +61,8 @@ void initializeIO() {
  * will not start. An autonomous mode selection menu like the pre_auton() in other environments
  * can be implemented in this task if desired.
  */
-void initialize() {
+void initialize()
+{
+	int numInitialized = imeInitializeAll();
+	printf("%d IMEs initialized.\n", numInitialized);
 }
