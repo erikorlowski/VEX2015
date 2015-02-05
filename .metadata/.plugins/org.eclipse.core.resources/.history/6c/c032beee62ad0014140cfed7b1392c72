@@ -102,19 +102,19 @@ int liftSafety(int desiredSpeed, double potValue)
 	}
 }
 
-void liftMasterSlave(int desiredSpeed, int *(pLeftSide), int *(pRightSide), double kP, int leftPot, int rightPot)
+void liftMasterSlave(int desiredSpeed, int *(leftSide), int *(rightSide), double kP, int leftPot, int rightPot)
 {
 	int error = rightPot - leftPot;
 
 	if(error > 0)
 	{
-		*(pLeftSide) = desiredSpeed;
-		*(pRightSide) = desiredSpeed - kP * error;
+		*(leftSide) = desiredSpeed;
+		*(rightSide) = desiredSpeed - kP * error;
 	}
 	else
 	{
-		*(pLeftSide) = desiredSpeed - kP * error;
-		*(pRightSide) = desiredSpeed;
+		*(leftSide) = desiredSpeed - kP * error;
+		*(rightSide) = desiredSpeed;
 	}
 }
 
@@ -151,8 +151,7 @@ void liftFirstStage(int speed, int overrideSafeties, double leftPotValue, double
 	int leftSpeed = 0;
 	int rightSpeed = 0;
 
-	/*leftMasterSlave(speed, &leftSpeed, &rightSpeed, .003,
-			leftPotValue, rightPotValue);*/
+	leftMasterSlave(speed, &leftSpeed, &rightSpeed, )
 
 	leftSpeed = limit(leftSpeed, 127, -127);
 	rightSpeed = limit(rightSpeed, 127, -127);

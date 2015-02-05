@@ -151,8 +151,8 @@ void liftFirstStage(int speed, int overrideSafeties, double leftPotValue, double
 	int leftSpeed = 0;
 	int rightSpeed = 0;
 
-	/*leftMasterSlave(speed, &leftSpeed, &rightSpeed, .003,
-			leftPotValue, rightPotValue);*/
+	leftMasterSlave(speed, &leftSpeed, &rightSpeed, .003,
+			leftPotValue, rightPotValue);
 
 	leftSpeed = limit(leftSpeed, 127, -127);
 	rightSpeed = limit(rightSpeed, 127, -127);

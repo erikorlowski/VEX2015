@@ -102,21 +102,10 @@ int liftSafety(int desiredSpeed, double potValue)
 	}
 }
 
-void liftMasterSlave(int desiredSpeed, int *(pLeftSide), int *(pRightSide), double kP, int leftPot, int rightPot)
+/*void liftMasterSlave(*int leftSide, *int rightSide, int kP, double leftPot, double rightPot)
 {
-	int error = rightPot - leftPot;
 
-	if(error > 0)
-	{
-		*(pLeftSide) = desiredSpeed;
-		*(pRightSide) = desiredSpeed - kP * error;
-	}
-	else
-	{
-		*(pLeftSide) = desiredSpeed - kP * error;
-		*(pRightSide) = desiredSpeed;
-	}
-}
+}*/
 
 void holonomicDrive(int x, int y, int rotation)
 {
@@ -148,14 +137,8 @@ void holonomicDrive(int x, int y, int rotation)
 
 void liftFirstStage(int speed, int overrideSafeties, double leftPotValue, double rightPotValue)
 {
-	int leftSpeed = 0;
-	int rightSpeed = 0;
-
-	/*leftMasterSlave(speed, &leftSpeed, &rightSpeed, .003,
-			leftPotValue, rightPotValue);*/
-
-	leftSpeed = limit(leftSpeed, 127, -127);
-	rightSpeed = limit(rightSpeed, 127, -127);
+	int leftSpeed = limit(leftSpeed, 127, -127);
+	int rightSpeed = limit(rightSpeed, 127, -127);
 
 	if(!overrideSafeties)
 	{
@@ -247,9 +230,9 @@ void teleop()
 	const int PICKUP_RUN_SPEED = 127;
 	int overrideFirstStageLiftSafety = 0;
 	const int STRAFE_SPEED = 50;
-	int firstStageLeftPotValue;
-	int firstStageRightPotValue;
-	int secondStagePotValue;
+	double firstStageLeftPotValue;
+	double firstStageRightPotValue;
+	double secondStagePotValue;
 
 	teleopInit();
 
@@ -338,7 +321,7 @@ void teleop()
 
 		motorSet(PICKUP_MOTOR, pickupSpeed);
 
-		printf("1_L: %d\n1_R: %d\n2: %d\n",
+		printf("1_L: %.2f\n1_R: %.2f\n2: %.2f\n",
 				firstStageLeftPotValue, firstStageRightPotValue,
 				secondStagePotValue);
 
