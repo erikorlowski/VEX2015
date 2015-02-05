@@ -46,6 +46,7 @@ void initializeIO()
 {
 	liftEnc = encoderInit(LIFT_ENCODER_TOP, LIFT_ENCODER_BOTTOM, 0);
 	pinMode(LIFT_LIMIT_SWITCH, INPUT);
+	pinMode(ALLIANCE_SELECTION_SWITCH, INPUT);
 }
 
 /*
