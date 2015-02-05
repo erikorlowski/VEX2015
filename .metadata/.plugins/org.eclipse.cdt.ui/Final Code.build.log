@@ -1,0 +1,17 @@
+19:39:00 **** Build of configuration Default for project Final Code ****
+make all 
+CC -I../include -I../src auto.c
+CC -I../include -I../src init.c
+CC -I../include -I../src opcontrol.c
+opcontrol.c:557:1: error: initializer element is not constant
+opcontrol.c:557:1: error: (near initialization for 'telopLiftPid.lastTime')
+opcontrol.c: In function 'teleop':
+opcontrol.c:657:3: error: implicit declaration of function 'joystickGetDigial' [-Werror=implicit-function-declaration]
+opcontrol.c:675:4: error: incompatible type for argument 1 of 'pidController'
+opcontrol.c:194:5: note: expected 'struct pidValues *' but argument is of type 'pidValues'
+cc1.exe: some warnings being treated as errors
+make[1]: *** [../bin/opcontrol.o] Error 1
+make: *** [src] Error 2
+
+19:39:02 Build Finished (took 2s.304ms)
+

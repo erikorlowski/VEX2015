@@ -5,7 +5,7 @@ Drive:
 Lift:
 	Simple Control X
 	---
-	Safeties X (first stage only)
+	Safeties X
 	Master Slave
 	Height Hold
 	Coordinated Movement

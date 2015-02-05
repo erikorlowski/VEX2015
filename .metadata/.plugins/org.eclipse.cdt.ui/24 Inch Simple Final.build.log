@@ -1,0 +1,14 @@
+20:57:01 **** Incremental Build of configuration Default for project 24 Inch Simple Final ****
+make all 
+CC -I../include -I../src opcontrol.c
+opcontrol.c: In function 'teleop':
+opcontrol.c:315:5: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat]
+opcontrol.c:315:5: warning: format '%f' expects argument of type 'double', but argument 3 has type 'int' [-Wformat]
+opcontrol.c:315:5: warning: format '%f' expects argument of type 'double', but argument 4 has type 'int' [-Wformat]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  17112	      0	   3840	  20952	   51d8	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+
+20:57:03 Build Finished (took 2s.810ms)
+

@@ -69,7 +69,7 @@ double limit(double value, double max, double min)
 	}
 }
 
-double abs(double num)
+double absoluteValue(double num)
 {
 	if(num < 0)
 	{
@@ -102,6 +102,11 @@ int liftSafety(int desiredSpeed, double potValue)
 	}
 }
 
+/*void liftMasterSlave(*int leftSide, *int rightSide, int kP, double leftPot, double rightPot)
+{
+
+}*/
+
 void holonomicDrive(int x, int y, int rotation)
 {
 	int frontLeft;
@@ -109,7 +114,7 @@ void holonomicDrive(int x, int y, int rotation)
 	int rearLeft;
 	int rearRight;
 
-	frontLeft = y -x + rotation;
+	frontLeft = y - x + rotation;
 	frontRight = y + x - rotation;
 	rearLeft = y + x + rotation;
 	rearRight = y - x - rotation;
@@ -123,10 +128,17 @@ void holonomicDrive(int x, int y, int rotation)
 	frontRight = limit(frontRight, 127, -127);
 	rearLeft = limit(rearLeft, 127, -127);
 	rearRight = limit(rearRight, 127, -127);
+
+	motorSet(FRONT_LEFT_DRIVE, frontLeft);
+	motorSet(FRONT_RIGHT_DRIVE, frontRight);
+	motorSet(REAR_LEFT_DRIVE, rearLeft);
+	motorSet(REAR_RIGHT_DRIVE, rearRight);
 }
 
 void liftFirstStage(int speed, int overrideSafeties, double leftPotValue, double rightPotValue)
 {
+	rightPotValue -= 4095;
+
 	int leftSpeed = FIRST_STAGE_LIFT_LEFT_INVERTED ? -speed : speed;
 	int rightSpeed = FIRST_STAGE_LIFT_RIGHT_INVERTED ? -speed : speed;
 
@@ -143,13 +155,19 @@ void liftFirstStage(int speed, int overrideSafeties, double leftPotValue, double
 	motorSet(FIRST_STAGE_LIFT_RIGHT, rightSpeed);
 }
 
-void liftSecondStage(int speed)
+void liftSecondStage(int speed, int overrideSafeties, double leftPotValue, double rightPotValue)
 {
 	int leftSpeed = SECOND_STAGE_LIFT_LEFT_INVERTED ? -speed : speed;
 	int rightSpeed = SECOND_STAGE_LIFT_RIGHT_INVERTED ? -speed : speed;
 
 	leftSpeed = limit(leftSpeed, 127, -127);
 	rightSpeed = limit(rightSpeed, 127, -127);
+
+	if(!overrideSafeties)
+	{
+		leftSpeed = liftSafety(leftSpeed, leftPotValue);
+		rightSpeed = liftSafety(rightSpeed, rightPotValue);
+	}
 
 	motorSet(SECOND_STAGE_LIFT_LEFT, leftSpeed);
 	motorSet(SECOND_STAGE_LIFT_RIGHT, rightSpeed);
@@ -171,7 +189,7 @@ void autonInit()
 
 
 
-void autonomous()
+void myAutonomous()
 {
 	int step = 1;
 	int isAuto = 1;
@@ -207,20 +225,30 @@ void teleop()
 	int driveY;
 	int driveRotation;
 	int firstStageLiftSpeed;
-	const int FIRST_STAGE_SPEED = 100;
+	const int FIRST_STAGE_SPEED = 80;
 	int secondStageLiftSpeed;
-	const int SECOND_STAGE_SPEED = 100;
+	const int SECOND_STAGE_SPEED = 80;
 	int pickupSpeed;
 	const int PICKUP_RUN_SPEED = 127;
 	int overrideFirstStageLiftSafety = 0;
+	const int STRAFE_SPEED = 50;
 
 	teleopInit();
 
 	while(1)
 	{
-		driveX = joystickGetAnalog(1, 4);
+		driveX = -joystickGetAnalog(1, 4);
 		driveY = joystickGetAnalog(1, 3);
 		driveRotation = joystickGetAnalog(1, 1);
+
+		if(joystickGetDigital(1,7,JOY_LEFT))
+		{
+			driveX = STRAFE_SPEED;
+		}
+		else if(joystickGetDigital(1,7,JOY_RIGHT))
+		{
+			driveX = -STRAFE_SPEED;
+		}
 
 		holonomicDrive(driveX, driveY, driveRotation);
 
@@ -237,7 +265,7 @@ void teleop()
 			firstStageLiftSpeed = 0;
 		}
 
-		if(!(joystickGetDigital(1,5,JOY_UP) && joystickGetDigital(1,5,JOY_DOWN)))
+		if(joystickGetDigital(1,5,JOY_UP) && joystickGetDigital(1,5,JOY_DOWN))
 		{
 			overrideFirstStageLiftSafety = 1;
 		}
@@ -249,11 +277,11 @@ void teleop()
 		liftFirstStage(firstStageLiftSpeed, overrideFirstStageLiftSafety,
 				analogRead(FIRST_STAGE_POT_LEFT), analogRead(FIRST_STAGE_POT_RIGHT));
 
-		if(joystickGetDigital(1, 7, JOY_UP))
+		if(joystickGetDigital(1, 8, JOY_UP))
 		{
 			secondStageLiftSpeed = SECOND_STAGE_SPEED;
 		}
-		else if(joystickGetDigital(1, 7, JOY_DOWN))
+		else if(joystickGetDigital(1, 8, JOY_DOWN))
 		{
 			secondStageLiftSpeed = -SECOND_STAGE_SPEED;
 		}
@@ -262,13 +290,14 @@ void teleop()
 			secondStageLiftSpeed = 0;
 		}
 
-		liftSecondStage(secondStageLiftSpeed);
+		liftSecondStage(secondStageLiftSpeed, overrideFirstStageLiftSafety,
+				analogRead(SECOND_STAGE_POT), analogRead(SECOND_STAGE_POT));
 
-		if(joystickGetDigital(1, 7, JOY_UP))
+		if(joystickGetDigital(1, 6, JOY_UP))
 		{
 			pickupSpeed = PICKUP_RUN_SPEED;
 		}
-		else if(joystickGetDigital(1, 7, JOY_DOWN))
+		else if(joystickGetDigital(1, 6, JOY_DOWN))
 		{
 			pickupSpeed = -PICKUP_RUN_SPEED;
 		}
@@ -277,12 +306,20 @@ void teleop()
 			pickupSpeed = 0;
 		}
 
+		pickupSpeed = PICKUP_MOTOR_INVERTED ? -pickupSpeed : pickupSpeed;
+
+		motorSet(PICKUP_MOTOR, pickupSpeed);
+
+		printf("1_L: %.2f\n1_R: %.2f\n2: %.2f\n",
+				analogRead(FIRST_STAGE_POT_LEFT), analogRead(FIRST_STAGE_POT_RIGHT),
+				analogRead(SECOND_STAGE_POT));
+
 		delay(20);
 	}
 }
 
 void operatorControl()
 {
-	autonomous();
+	//myAutonomous();
 	teleop();
 }

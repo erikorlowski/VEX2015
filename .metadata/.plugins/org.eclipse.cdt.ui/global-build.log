@@ -1,308 +1,110 @@
-19:30:29 **** Incremental Build of configuration Default for project Proto_Autonomous ****
-make all 
-make[1]: Nothing to be done for `all'.
-19:30:41 **** Incremental Build of configuration Default for project Proto_Autonomous ****
-make all 
-make[1]: Nothing to be done for `all'.
-19:31:36 **** Incremental Build of configuration Default for project Proto_Autonomous ****
-make all 
-make[1]: Nothing to be done for `all'.
-19:38:18 **** Incremental Build of configuration Default for project Proto_Autonomous ****
-make all 
-make[1]: Nothing to be done for `all'.
-19:38:53 **** Incremental Build of configuration Default for project Proto_Autonomous ****
-make all 
-make[1]: Nothing to be done for `all'.
-19:43:43 **** Build of configuration Default for project Proto_Teleop ****
+20:37:57 **** Incremental Build of configuration Default for project 24 Inch Simple Final ****
 make all 
 CC -I../include -I../src auto.c
 CC -I../include -I../src init.c
 CC -I../include -I../src opcontrol.c
-opcontrol.c: In function 'operatorControl':
-opcontrol.c:81:8: warning: unused variable 'liftSpeed' [-Wunused-variable]
+opcontrol.c: In function 'teleop':
+opcontrol.c:294:5: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat]
+opcontrol.c:294:5: warning: format '%f' expects argument of type 'double', but argument 3 has type 'int' [-Wformat]
+opcontrol.c:294:5: warning: format '%f' expects argument of type 'double', but argument 4 has type 'int' [-Wformat]
+opcontrol.c:224:6: warning: variable 'pickupSpeed' set but not used [-Wunused-but-set-variable]
 LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
    text	   data	    bss	    dec	    hex	filename
-  12204	      0	   3840	  16044	   3eac	./bin/output.elf
+  16696	      0	   3840	  20536	   5038	./bin/output.elf
 arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-20:22:08 **** Incremental Build of configuration Default for project Proto_Teleop ****
-make all 
-make[1]: Nothing to be done for `all'.
-20:40:26 **** Incremental Build of configuration Default for project Proto_Teleop ****
-make all 
-make[1]: Nothing to be done for `all'.
-20:43:44 **** Incremental Build of configuration Default for project Proto_Teleop ****
-make all 
-CC -I../include -I../src opcontrol.c
-opcontrol.c: In function 'operatorControl':
-opcontrol.c:78:8: warning: unused variable 'liftSpeed' [-Wunused-variable]
-LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  12216	      0	   3840	  16056	   3eb8	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-20:44:11 **** Incremental Build of configuration Default for project Proto_Teleop ****
-make all 
-make[1]: Nothing to be done for `all'.
-20:44:40 **** Incremental Build of configuration Default for project Proto_Teleop ****
-make all 
-make[1]: Nothing to be done for `all'.
-21:09:39 **** Build of configuration Default for project Iterative_Autonomous ****
-make all 
-CC -I../include -I../src opcontrol.c
-opcontrol.c:104:15: error: expected ':', ',', ';', '}' or '__attribute__' before '=' token
-opcontrol.c: In function 'turnForIME':
-opcontrol.c:302:11: error: 'turnDrive' has no member named 'isFirstTime'
-opcontrol.c:305:9: error: 'turnDrive' has no member named 'leftToMove'
-opcontrol.c:306:9: error: 'turnDrive' has no member named 'rightToMove'
-opcontrol.c:309:9: error: 'turnDrive' has no member named 'startTime'
-opcontrol.c:321:8: error: 'turnDrive' has no member named 'timeDif'
-opcontrol.c:321:36: error: 'turnDrive' has no member named 'startTime'
-opcontrol.c:322:34: error: 'turnDrive' has no member named 'leftMoved'
-opcontrol.c:323:35: error: 'turnDrive' has no member named 'rightMoved'
-opcontrol.c:326:8: error: 'turnDrive' has no member named 'leftMoved'
-opcontrol.c:326:49: error: 'turnDrive' has no member named 'leftMoved'
-opcontrol.c:326:73: error: 'turnDrive' has no member named 'leftMoved'
-opcontrol.c:327:8: error: 'turnDrive' has no member named 'rightMoved'
-opcontrol.c:327:51: error: 'turnDrive' has no member named 'rightMoved'
-opcontrol.c:327:76: error: 'turnDrive' has no member named 'rightMoved'
-opcontrol.c:332:9: error: 'turnDrive' has no member named 'leftMoved'
-opcontrol.c:337:9: error: 'turnDrive' has no member named 'rightMoved'
-opcontrol.c:342:11: error: 'turnDrive' has no member named 'timeDif'
-opcontrol.c:342:47: error: 'turnDrive' has no member named 'leftMoved'
-opcontrol.c:345:9: error: 'turnDrive' has no member named 'leftSpeed'
-opcontrol.c:345:45: error: 'turnDrive' has no member named 'timeDif'
-opcontrol.c:349:16: error: 'turnDrive' has no member named 'leftMoved'
-opcontrol.c:352:9: error: 'turnDrive' has no member named 'leftSpeed'
-opcontrol.c:352:59: error: 'turnDrive' has no member named 'leftMoved'
-opcontrol.c:359:9: error: 'turnDrive' has no member named 'leftSpeed'
-opcontrol.c:365:11: error: 'turnDrive' has no member named 'rightMoved'
-opcontrol.c:368:9: error: 'turnDrive' has no member named 'rightSpeed'
-opcontrol.c:368:46: error: 'turnDrive' has no member named 'timeDif'
-opcontrol.c:372:16: error: 'turnDrive' has no member named 'rightMoved'
-opcontrol.c:375:9: error: 'turnDrive' has no member named 'rightSpeed'
-opcontrol.c:375:61: error: 'turnDrive' has no member named 'rightMoved'
-opcontrol.c:382:9: error: 'turnDrive' has no member named 'rightSpeed'
-opcontrol.c:388:11: error: 'turnDrive' has no member named 'leftSpeed'
-opcontrol.c:391:9: error: 'turnDrive' has no member named 'leftSpeed'
-opcontrol.c:395:16: error: 'turnDrive' has no member named 'leftSpeed'
-opcontrol.c:398:9: error: 'turnDrive' has no member named 'leftSpeed'
-opcontrol.c:403:11: error: 'turnDrive' has no member named 'rightSpeed'
-opcontrol.c:406:9: error: 'turnDrive' has no member named 'rightSpeed'
-opcontrol.c:410:16: error: 'turnDrive' has no member named 'rightSpeed'
-opcontrol.c:413:9: error: 'turnDrive' has no member named 'rightSpeed'
-opcontrol.c:418:33: error: 'turnDrive' has no member named 'leftMoved'
-opcontrol.c:418:94: error: 'turnDrive' has no member named 'rightMoved'
-opcontrol.c:421:9: error: 'turnDrive' has no member named 'finished'
-opcontrol.c:422:9: error: 'turnDrive' has no member named 'leftSpeed'
-opcontrol.c:423:9: error: 'turnDrive' has no member named 'rightSpeed'
-opcontrol.c:431:36: error: 'turnDrive' has no member named 'leftMoved'
-opcontrol.c:432:37: error: 'turnDrive' has no member named 'rightMoved'
-opcontrol.c:433:36: error: 'turnDrive' has no member named 'leftSpeed'
-opcontrol.c:434:39: error: 'turnDrive' has no member named 'rightSpeed'
-opcontrol.c:438:8: error: 'turnDrive' has no member named 'leftSpeed'
-opcontrol.c:438:51: error: 'turnDrive' has no member named 'leftSpeed'
-opcontrol.c:438:75: error: 'turnDrive' has no member named 'leftSpeed'
-opcontrol.c:439:8: error: 'turnDrive' has no member named 'rightSpeed'
-opcontrol.c:439:53: error: 'turnDrive' has no member named 'rightSpeed'
-opcontrol.c:439:78: error: 'turnDrive' has no member named 'rightSpeed'
-opcontrol.c:442:36: error: 'turnDrive' has no member named 'leftSpeed'
-opcontrol.c:443:37: error: 'turnDrive' has no member named 'rightSpeed'
-opcontrol.c: In function 'operatorControl':
-opcontrol.c:450:2: warning: excess elements in struct initializer [enabled by default]
-opcontrol.c:450:2: warning: (near initialization for 'step2') [enabled by default]
-opcontrol.c:450:2: warning: excess elements in struct initializer [enabled by default]
-opcontrol.c:450:2: warning: (near initialization for 'step2') [enabled by default]
-opcontrol.c:450:2: warning: excess elements in struct initializer [enabled by default]
-opcontrol.c:450:2: warning: (near initialization for 'step2') [enabled by default]
-opcontrol.c:450:2: warning: excess elements in struct initializer [enabled by default]
-opcontrol.c:450:2: warning: (near initialization for 'step2') [enabled by default]
-opcontrol.c:450:2: warning: excess elements in struct initializer [enabled by default]
-opcontrol.c:450:2: warning: (near initialization for 'step2') [enabled by default]
-opcontrol.c:450:2: warning: excess elements in struct initializer [enabled by default]
-opcontrol.c:450:2: warning: (near initialization for 'step2') [enabled by default]
-opcontrol.c:450:2: warning: excess elements in struct initializer [enabled by default]
-opcontrol.c:450:2: warning: (near initialization for 'step2') [enabled by default]
-opcontrol.c:450:2: warning: excess elements in struct initializer [enabled by default]
-opcontrol.c:450:2: warning: (near initialization for 'step2') [enabled by default]
-opcontrol.c:450:2: warning: excess elements in struct initializer [enabled by default]
-opcontrol.c:450:2: warning: (near initialization for 'step2') [enabled by default]
-opcontrol.c:450:2: warning: excess elements in struct initializer [enabled by default]
-opcontrol.c:450:2: warning: (near initialization for 'step2') [enabled by default]
-opcontrol.c:451:12: warning: unused variable 'liftPid' [-Wunused-variable]
-opcontrol.c:450:12: warning: unused variable 'step2' [-Wunused-variable]
-make[1]: *** [../bin/opcontrol.o] Error 1
-make: *** [src] Error 2
-21:11:16 **** Incremental Build of configuration Default for project Iterative_Autonomous ****
-make all 
-CC -I../include -I../src opcontrol.c
-opcontrol.c: In function 'operatorControl':
-opcontrol.c:451:12: warning: unused variable 'liftPid' [-Wunused-variable]
-opcontrol.c:450:12: warning: unused variable 'step2' [-Wunused-variable]
-LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  18240	      0	   4224	  22464	   57c0	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-21:17:33 **** Incremental Build of configuration Default for project Iterative_Autonomous ****
-make all 
-CC -I../include -I../src opcontrol.c
-opcontrol.c: In function 'operatorControl':
-opcontrol.c:455:3: error: incompatible type for argument 2 of 'moveStraightForIME'
-opcontrol.c:174:6: note: expected 'struct straightDrive *' but argument is of type 'straightDrive'
-opcontrol.c:451:12: warning: unused variable 'liftPid' [-Wunused-variable]
-opcontrol.c:450:12: warning: unused variable 'step2' [-Wunused-variable]
-make[1]: *** [../bin/opcontrol.o] Error 1
-make: *** [src] Error 2
-21:17:57 **** Incremental Build of configuration Default for project Iterative_Autonomous ****
-make all 
-CC -I../include -I../src opcontrol.c
-opcontrol.c: In function 'operatorControl':
-opcontrol.c:451:12: warning: unused variable 'liftPid' [-Wunused-variable]
-opcontrol.c:450:12: warning: unused variable 'step2' [-Wunused-variable]
-LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  18240	      0	   4224	  22464	   57c0	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-21:18:15 **** Incremental Build of configuration Default for project Iterative_Autonomous ****
-make all 
-make[1]: Nothing to be done for `all'.
-21:23:25 **** Incremental Build of configuration Default for project Iterative_Autonomous ****
-make all 
-CC -I../include -I../src opcontrol.c
-opcontrol.c: In function 'operatorControl':
-opcontrol.c:451:12: warning: unused variable 'liftPid' [-Wunused-variable]
-LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  19024	      0	   4224	  23248	   5ad0	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-21:23:44 **** Incremental Build of configuration Default for project Iterative_Autonomous ****
-make all 
-make[1]: Nothing to be done for `all'.
-21:24:21 **** Incremental Build of configuration Default for project Iterative_Autonomous ****
-make all 
-make[1]: Nothing to be done for `all'.
-21:25:53 **** Incremental Build of configuration Default for project Iterative_Autonomous ****
-make all 
-CC -I../include -I../src opcontrol.c
-opcontrol.c: In function 'operatorControl':
-opcontrol.c:451:12: warning: unused variable 'liftPid' [-Wunused-variable]
-LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  19072	      0	   4224	  23296	   5b00	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-21:26:11 **** Incremental Build of configuration Default for project Iterative_Autonomous ****
-make all 
-make[1]: Nothing to be done for `all'.
-21:27:49 **** Incremental Build of configuration Default for project Iterative_Autonomous ****
-make all 
-CC -I../include -I../src opcontrol.c
-opcontrol.c: In function 'operatorControl':
-opcontrol.c:453:12: warning: unused variable 'liftPid' [-Wunused-variable]
-LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  19108	      0	   4224	  23332	   5b24	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-21:28:06 **** Incremental Build of configuration Default for project Iterative_Autonomous ****
-make all 
-make[1]: Nothing to be done for `all'.
-21:29:08 **** Incremental Build of configuration Default for project Iterative_Autonomous ****
-make all 
-CC -I../include -I../src opcontrol.c
-opcontrol.c: In function 'operatorControl':
-opcontrol.c:455:12: warning: unused variable 'liftPid' [-Wunused-variable]
-LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  19108	      0	   4224	  23332	   5b24	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-21:29:29 **** Incremental Build of configuration Default for project Iterative_Autonomous ****
-make all 
-make[1]: Nothing to be done for `all'.
-21:33:05 **** Incremental Build of configuration Default for project Iterative_Autonomous ****
-make all 
-CC -I../include -I../src opcontrol.c
-LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  21580	      0	   4224	  25804	   64cc	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-21:33:26 **** Incremental Build of configuration Default for project Iterative_Autonomous ****
-make all 
-make[1]: Nothing to be done for `all'.
-21:34:25 **** Incremental Build of configuration Default for project Iterative_Autonomous ****
-make all 
-CC -I../include -I../src opcontrol.c
-LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  21596	      0	   4224	  25820	   64dc	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-21:34:50 **** Incremental Build of configuration Default for project Iterative_Autonomous ****
-make all 
-make[1]: Nothing to be done for `all'.
-21:36:23 **** Incremental Build of configuration Default for project Iterative_Autonomous ****
-make all 
-CC -I../include -I../src opcontrol.c
-LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  21616	      0	   4224	  25840	   64f0	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-21:36:39 **** Incremental Build of configuration Default for project Iterative_Autonomous ****
-make all 
-make[1]: Nothing to be done for `all'.
-21:37:16 **** Incremental Build of configuration Default for project Iterative_Autonomous ****
-make all 
-CC -I../include -I../src opcontrol.c
-LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  21616	      0	   4224	  25840	   64f0	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-21:37:31 **** Incremental Build of configuration Default for project Iterative_Autonomous ****
-make all 
-make[1]: Nothing to be done for `all'.
-21:38:02 **** Incremental Build of configuration Default for project Iterative_Autonomous ****
-make all 
-make[1]: Nothing to be done for `all'.
-21:38:16 **** Incremental Build of configuration Default for project Iterative_Autonomous ****
-make all 
-make[1]: Nothing to be done for `all'.
-19:32:43 **** Build of configuration Default for project Simple_Teleop ****
+20:43:06 **** Incremental Build of configuration Default for project 24 Inch Simple Final ****
 make all 
 CC -I../include -I../src auto.c
 CC -I../include -I../src init.c
 CC -I../include -I../src opcontrol.c
-opcontrol.c: In function 'operatorControl':
-opcontrol.c:79:6: warning: unused variable 'liftMode' [-Wunused-variable]
+opcontrol.c: In function 'teleop':
+opcontrol.c:299:5: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat]
+opcontrol.c:299:5: warning: format '%f' expects argument of type 'double', but argument 3 has type 'int' [-Wformat]
+opcontrol.c:299:5: warning: format '%f' expects argument of type 'double', but argument 4 has type 'int' [-Wformat]
+opcontrol.c:229:6: warning: variable 'pickupSpeed' set but not used [-Wunused-but-set-variable]
 LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
    text	   data	    bss	    dec	    hex	filename
-  12248	      0	   3840	  16088	   3ed8	./bin/output.elf
+  17032	      0	   3840	  20872	   5188	./bin/output.elf
 arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-19:34:27 **** Incremental Build of configuration Default for project Simple_Teleop ****
+20:45:51 **** Incremental Build of configuration Default for project 24 Inch Simple Final ****
 make all 
 CC -I../include -I../src opcontrol.c
-opcontrol.c: In function 'operatorControl':
-opcontrol.c:79:6: warning: unused variable 'liftMode' [-Wunused-variable]
+opcontrol.c: In function 'teleop':
+opcontrol.c:313:5: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat]
+opcontrol.c:313:5: warning: format '%f' expects argument of type 'double', but argument 3 has type 'int' [-Wformat]
+opcontrol.c:313:5: warning: format '%f' expects argument of type 'double', but argument 4 has type 'int' [-Wformat]
 LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
    text	   data	    bss	    dec	    hex	filename
-  12248	      0	   3840	  16088	   3ed8	./bin/output.elf
+  17088	      0	   3840	  20928	   51c0	./bin/output.elf
 arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-19:34:45 **** Incremental Build of configuration Default for project Simple_Teleop ****
+20:47:14 **** Incremental Build of configuration Default for project 24 Inch Simple Final ****
+make all 
+CC -I../include -I../src auto.c
+CC -I../include -I../src init.c
+CC -I../include -I../src opcontrol.c
+opcontrol.c: In function 'teleop':
+opcontrol.c:313:5: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat]
+opcontrol.c:313:5: warning: format '%f' expects argument of type 'double', but argument 3 has type 'int' [-Wformat]
+opcontrol.c:313:5: warning: format '%f' expects argument of type 'double', but argument 4 has type 'int' [-Wformat]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  17088	      0	   3840	  20928	   51c0	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:47:27 **** Incremental Build of configuration Default for project 24 Inch Simple Final ****
 make all 
 make[1]: Nothing to be done for `all'.
-19:36:50 **** Incremental Build of configuration Default for project Simple_Teleop ****
+20:49:43 **** Incremental Build of configuration Default for project 24 Inch Simple Final ****
+make all 
+CC -I../include -I../src opcontrol.c
+opcontrol.c: In function 'teleop':
+opcontrol.c:313:5: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat]
+opcontrol.c:313:5: warning: format '%f' expects argument of type 'double', but argument 3 has type 'int' [-Wformat]
+opcontrol.c:313:5: warning: format '%f' expects argument of type 'double', but argument 4 has type 'int' [-Wformat]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  17088	      0	   3840	  20928	   51c0	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:49:56 **** Incremental Build of configuration Default for project 24 Inch Simple Final ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:53:25 **** Incremental Build of configuration Default for project 24 Inch Simple Final ****
+make all 
+CC -I../include -I../src opcontrol.c
+opcontrol.c: In function 'teleop':
+opcontrol.c:315:5: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat]
+opcontrol.c:315:5: warning: format '%f' expects argument of type 'double', but argument 3 has type 'int' [-Wformat]
+opcontrol.c:315:5: warning: format '%f' expects argument of type 'double', but argument 4 has type 'int' [-Wformat]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  17112	      0	   3840	  20952	   51d8	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:56:29 **** Incremental Build of configuration Default for project 24 Inch Simple Final ****
 make all 
 CC -I../include -I../src auto.c
 CC -I../include -I../src init.c
 CC -I../include -I../src opcontrol.c
-opcontrol.c: In function 'operatorControl':
-opcontrol.c:79:6: warning: unused variable 'liftMode' [-Wunused-variable]
+opcontrol.c: In function 'teleop':
+opcontrol.c:315:5: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat]
+opcontrol.c:315:5: warning: format '%f' expects argument of type 'double', but argument 3 has type 'int' [-Wformat]
+opcontrol.c:315:5: warning: format '%f' expects argument of type 'double', but argument 4 has type 'int' [-Wformat]
 LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
    text	   data	    bss	    dec	    hex	filename
-  12252	      0	   3840	  16092	   3edc	./bin/output.elf
+  17112	      0	   3840	  20952	   51d8	./bin/output.elf
 arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-19:38:19 **** Incremental Build of configuration Default for project Simple_Teleop ****
+20:57:01 **** Incremental Build of configuration Default for project 24 Inch Simple Final ****
 make all 
-CC -I../include -I../src auto.c
-CC -I../include -I../src init.c
 CC -I../include -I../src opcontrol.c
-opcontrol.c: In function 'operatorControl':
-opcontrol.c:79:6: warning: unused variable 'liftMode' [-Wunused-variable]
+opcontrol.c: In function 'teleop':
+opcontrol.c:315:5: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat]
+opcontrol.c:315:5: warning: format '%f' expects argument of type 'double', but argument 3 has type 'int' [-Wformat]
+opcontrol.c:315:5: warning: format '%f' expects argument of type 'double', but argument 4 has type 'int' [-Wformat]
 LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
    text	   data	    bss	    dec	    hex	filename
-  12252	      0	   3840	  16092	   3edc	./bin/output.elf
+  17112	      0	   3840	  20952	   51d8	./bin/output.elf
 arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+21:01:03 **** Incremental Build of configuration Default for project 24 Inch Simple ****
+make all 
+make[1]: Nothing to be done for `all'.
+21:01:14 **** Incremental Build of configuration Default for project 24 Inch Simple ****
+make all 
+make[1]: Nothing to be done for `all'.

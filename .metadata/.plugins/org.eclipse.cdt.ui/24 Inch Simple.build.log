@@ -1,0 +1,6 @@
+21:01:14 **** Incremental Build of configuration Default for project 24 Inch Simple ****
+make all 
+make[1]: Nothing to be done for `all'.
+
+21:01:15 Build Finished (took 827ms)
+

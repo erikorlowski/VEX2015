@@ -1,0 +1,6 @@
+NOTE: Left is master, right is slave
+
+Inputs:
+	desiredSpeed
+	leftPot
+	rightPot

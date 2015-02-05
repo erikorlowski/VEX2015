@@ -1,0 +1,14 @@
+First Stage Left:
+	Max:
+	Min:
+	Slow:
+	
+First Stage Right:
+	Max:
+	Min:
+	Slow:
+	
+Second Stage:
+	Max:
+	Min:
+	Slow:

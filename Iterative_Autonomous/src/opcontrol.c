@@ -270,7 +270,7 @@ void moveStraightForIME(drive myDrive, straightDrive *values)
 
 	//CASE 7
 	//If both wheels are within the deadband, stop them and finish the function
-	if(abs((*values).distance - (*values).leftMoved) < (*values).deadband && abs((*values).distance - (*values).rightMoved) < (*values).deadband)
+	if(absoluteValue((*values).distance - (*values).leftMoved) < (*values).deadband && absoluteValue((*values).distance - (*values).rightMoved) < (*values).deadband)
 	{
 		puts("7\n");
 		(*values).finished = 1;

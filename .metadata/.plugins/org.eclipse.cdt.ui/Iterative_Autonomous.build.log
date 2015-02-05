@@ -1,6 +1,11 @@
-21:38:16 **** Incremental Build of configuration Default for project Iterative_Autonomous ****
+19:39:03 **** Incremental Build of configuration Default for project Iterative_Autonomous ****
 make all 
-make[1]: Nothing to be done for `all'.
+CC -I../include -I../src opcontrol.c
+opcontrol.c: In function 'moveStraightForIME':
+opcontrol.c:273:2: error: implicit declaration of function 'absoluteValue' [-Werror=implicit-function-declaration]
+cc1.exe: some warnings being treated as errors
+make[1]: *** [../bin/opcontrol.o] Error 1
+make: *** [src] Error 2
 
-21:38:17 Build Finished (took 875ms)
+19:39:05 Build Finished (took 1s.552ms)
 
