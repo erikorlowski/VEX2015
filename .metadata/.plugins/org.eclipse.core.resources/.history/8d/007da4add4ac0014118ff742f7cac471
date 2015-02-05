@@ -579,10 +579,6 @@ void teleop()
 	int liftSP = 0;
 	double liftEncValue = 0;
 
-	const int CLAW_OPEN_SPEED = 127;
-	const int CLAW_CLOSE_SPEED = -127;
-	int clawSpeed = 0;
-
 	teleopInit();
 
 	while(1)
@@ -688,22 +684,6 @@ void teleop()
 		motorSet(LIFT_MOTOR_TOP, LIFT_MOTOR_TOP_INVERTED ? -liftSpeed : liftSpeed);
 
 		lastLiftMode = liftMode;
-
-		//CLAW
-		if(joystickGetDigital(1,5,JOY_DOWN))
-		{
-			clawSpeed = CLAW_CLOSE_SPEED;
-		}
-		else if(joystickGetDigital(1,6,JOY_DOWN))
-		{
-			clawSpeed = CLAW_OPEN_SPEED;
-		}
-		else
-		{
-			clawSpeed = 0;
-		}
-
-		motorSet(CLAW, clawSpeed);
 
 		delay(20);
 	}
