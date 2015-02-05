@@ -137,8 +137,11 @@ void holonomicDrive(int x, int y, int rotation)
 
 void liftFirstStage(int speed, int overrideSafeties, double leftPotValue, double rightPotValue)
 {
-	int leftSpeed = limit(leftSpeed, 127, -127);
-	int rightSpeed = limit(rightSpeed, 127, -127);
+	int leftSpeed = FIRST_STAGE_LIFT_LEFT_INVERTED ? -speed : speed;
+	int rightSpeed = FIRST_STAGE_LIFT_RIGHT_INVERTED ? -speed : speed;
+
+	leftSpeed = limit(leftSpeed, 127, -127);
+	rightSpeed = limit(rightSpeed, 127, -127);
 
 	if(!overrideSafeties)
 	{
@@ -146,26 +149,23 @@ void liftFirstStage(int speed, int overrideSafeties, double leftPotValue, double
 		rightSpeed = liftSafety(rightSpeed, rightPotValue);
 	}
 
-	leftSpeed = FIRST_STAGE_LIFT_LEFT_INVERTED ? -speed : speed;
-	rightSpeed = FIRST_STAGE_LIFT_RIGHT_INVERTED ? -speed : speed;
-
 	motorSet(FIRST_STAGE_LIFT_LEFT, leftSpeed);
 	motorSet(FIRST_STAGE_LIFT_RIGHT, rightSpeed);
 }
 
 void liftSecondStage(int speed, int overrideSafeties, double potValue)
 {
-	int leftSpeed = limit(leftSpeed, 127, -127);
-	int rightSpeed = limit(rightSpeed, 127, -127);
+	int leftSpeed = SECOND_STAGE_LIFT_LEFT_INVERTED ? -speed : speed;
+	int rightSpeed = SECOND_STAGE_LIFT_RIGHT_INVERTED ? -speed : speed;
+
+	leftSpeed = limit(leftSpeed, 127, -127);
+	rightSpeed = limit(rightSpeed, 127, -127);
 
 	if(!overrideSafeties)
 	{
 		leftSpeed = liftSafety(leftSpeed, potValue);
 		rightSpeed = liftSafety(rightSpeed, potValue);
 	}
-
-	leftSpeed = SECOND_STAGE_LIFT_LEFT_INVERTED ? -speed : speed;
-	rightSpeed = SECOND_STAGE_LIFT_RIGHT_INVERTED ? -speed : speed;
 
 	motorSet(SECOND_STAGE_LIFT_LEFT, leftSpeed);
 	motorSet(SECOND_STAGE_LIFT_RIGHT, rightSpeed);
