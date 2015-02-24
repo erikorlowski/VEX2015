@@ -46,24 +46,37 @@
 #define LIFT_MOTOR_BOT 4
 #define LIFT_MOTOR_MID 3
 #define LIFT_MOTOR_TOP 2
-#define LIFT_ENCODER_TOP 1
-#define LIFT_ENCODER_BOTTOM 2
-#define LIFT_LIMIT_SWITCH 3
+#define LIFT_ENCODER_TOP 11
+#define LIFT_ENCODER_BOTTOM 12
+#define LIFT_LIMIT_SWITCH 1
 #define LIFT_MOTOR_BOT_INVERTED 0
 #define LIFT_MOTOR_MID_INVERTED 0
 #define LIFT_MOTOR_TOP_INVERTED 0
 
 #define LEFT_MOTOR 1
 #define RIGHT_MOTOR 10
-#define LEFT_MOTOR_INVERTED 1
+#define LEFT_MOTOR_INVERTED 0
 #define RIGHT_MOTOR_INVERTED 0
-#define LEFT_IME_INVERTED 1
-#define RIGHT_IME_INVERTED 0
-#define LEFT_IME 1
-#define RIGHT_IME 0
+#define LEFT_IME_INVERTED 0
+#define RIGHT_IME_INVERTED 1
+#define LEFT_IME 0
+#define RIGHT_IME 1
+
+#define LOAD_HEIGHT 1600
+#define HEIGHT_1 500
+#define HEIGHT_2 2000
+#define HEIGHT_3 18
+#define HEIGHT_4 26
+#define HEIGHT_5 34
+#define HEIGHT_6 42
+#define HEIGHT_7 50
+
+#define CLAW 5
+
+#define ALLIANCE_SELECTION_SWITCH 2
 
 #include <API.h>
-
+Encoder liftEnc;
 // Allow usage of this file in C++ programs
 #ifdef __cplusplus
 extern "C" {

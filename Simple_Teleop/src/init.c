@@ -43,6 +43,8 @@
  * configure a UART port (usartOpen()) but cannot set up an LCD (lcdInit()).
  */
 void initializeIO() {
+	pinMode(LIFT_LIMIT_SWITCH, INPUT);
+	liftEnc = encoderInit(LIFT_ENCODER_TOP, LIFT_ENCODER_BOTTOM, 0);
 }
 
 /*
@@ -59,4 +61,6 @@ void initializeIO() {
  * can be implemented in this task if desired.
  */
 void initialize() {
+	int numInitialized = imeInitializeAll();
+	printf("%d IMEs initialized.\n", numInitialized);
 }

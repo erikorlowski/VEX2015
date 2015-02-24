@@ -528,8 +528,6 @@ void autonInit()
 	getAlliance();
 }
 
-
-
 void autonomous()
 {
 	int step = 1;
@@ -654,7 +652,7 @@ void teleop()
 			liftSP = HEIGHT_7;
 		}
 
-		if(absoluteValue(joystickGetDigial(LIFT_STICK,4) > 5))
+		if(absoluteValue(joystickGetAnalog(LIFT_STICK,4) > 5))
 		{
 			liftMode = LIFT_MODE_MANUAL;
 		}
@@ -672,7 +670,7 @@ void teleop()
 		}
 		else if(liftMode == LIFT_MODE_AUTO)
 		{
-			liftSpeed = pidController(telopLiftPid, liftSP, liftEncValue);
+			liftSpeed = pidController(&telopLiftPid, liftSP, liftEncValue);
 		}
 
 		if(!(joystickGetDigital(LIFT_STICK,6,JOY_UP) && joystickGetDigital(LIFT_STICK,6,JOY_DOWN)))

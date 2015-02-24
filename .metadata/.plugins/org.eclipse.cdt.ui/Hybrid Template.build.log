@@ -1,0 +1,11 @@
+17:18:15 **** Incremental Build of configuration Default for project Hybrid Template ****
+make all 
+make[1]: Nothing to be done for `all'.
+LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Step.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+./bin/auto.o:(.bss+0x0): multiple definition of `drive'
+./bin/DriveForTime.o:(.bss+0x0): first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [bin/output.elf] Error 1
+
+17:18:19 Build Finished (took 3s.551ms)
+

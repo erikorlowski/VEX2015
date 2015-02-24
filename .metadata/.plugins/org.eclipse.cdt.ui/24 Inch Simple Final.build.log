@@ -1,14 +1,16 @@
-20:57:01 **** Incremental Build of configuration Default for project 24 Inch Simple Final ****
+10:05:50 **** Incremental Build of configuration Default for project 24 Inch Simple Final ****
 make all 
+CC -I../include -I../src auto.c
+auto.c: In function 'autonomous':
+auto.c:234:6: warning: variable 'secondStagePotValue' set but not used [-Wunused-but-set-variable]
+auto.c:233:6: warning: variable 'firstStageRightPotValue' set but not used [-Wunused-but-set-variable]
+auto.c:232:6: warning: variable 'firstStageLeftPotValue' set but not used [-Wunused-but-set-variable]
 CC -I../include -I../src opcontrol.c
-opcontrol.c: In function 'teleop':
-opcontrol.c:315:5: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat]
-opcontrol.c:315:5: warning: format '%f' expects argument of type 'double', but argument 3 has type 'int' [-Wformat]
-opcontrol.c:315:5: warning: format '%f' expects argument of type 'double', but argument 4 has type 'int' [-Wformat]
+opcontrol.c:407:4: warning: "/*" within comment [-Wcomment]
 LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
    text	   data	    bss	    dec	    hex	filename
-  17112	      0	   3840	  20952	   51d8	./bin/output.elf
+  16184	      0	   3848	  20032	   4e40	./bin/output.elf
 arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
 
-20:57:03 Build Finished (took 2s.810ms)
+10:05:53 Build Finished (took 3s.395ms)
 

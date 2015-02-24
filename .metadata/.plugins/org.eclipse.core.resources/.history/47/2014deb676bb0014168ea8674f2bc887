@@ -1,0 +1,25 @@
+/*
+ * DriveForTime.c
+ *
+ *  Created on: Feb 21, 2015
+ *      Author: Erik
+ */
+
+#include "main.h"
+
+DriveForTime initDriveForTime(Drive drive, int leftSpeed, int rightSpeed, long int length)
+{
+	DriveForTime newStepInfo = {length, drive, leftSpeed, rightSpeed};
+	return newStepInfo;
+}
+
+void driveForTime(DriveForTime *stepInfo)
+{
+	tankDrive((*stepInfo).drive, (*stepInfo).leftSpeed, (*stepInfo).rightSpeed);
+
+	if(autonomousInfo.elapsedTime > (*stepInfo).length)
+	{
+		holonomicDrive((*stepInfo).drive, 0, 0, 0);
+		autonomousInfo.isFinished = 1;
+	}
+}

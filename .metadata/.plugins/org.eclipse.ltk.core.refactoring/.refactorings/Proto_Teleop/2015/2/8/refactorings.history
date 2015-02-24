@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Proto_Teleop/src/Test.cpp&apos; to &apos;Box.cpp&apos;" description="Rename resource &apos;Test.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Test.cpp" name="Box.cpp" stamp="1424468020196" updateReferences="true"/>
+</session>

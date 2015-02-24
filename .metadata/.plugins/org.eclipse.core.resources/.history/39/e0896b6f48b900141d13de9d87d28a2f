@@ -1,0 +1,31 @@
+/*
+ * Box.h
+ *
+ *  Created on: Feb 20, 2015
+ *      Author: Erik
+ */
+
+#ifndef BOX_H_
+#define BOX_H_
+
+class Box
+{
+	int height;
+	int width;
+	int length;
+
+public:
+	Box (int length, int width, int height)
+	{
+		this->length = length;
+		this->width = width;
+		this->height = height;
+	}
+
+	int getVolume()
+	{
+		return this->length * this->width * this->height;
+	}
+};
+
+#endif /* BOX_H_ */

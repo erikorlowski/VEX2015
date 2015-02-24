@@ -1,0 +1,10 @@
+15:41:28 **** Rebuild of configuration Default for project Testing With C++ ****
+Info: Internal Builder is used for build
+gcc -O2 -g -Wall -c -fmessage-length=0 -o "src\\auto.o" "..\\src\\auto.c" 
+..\src\auto.c:35:18: fatal error: main.h: No such file or directory
+ #include "main.h"
+                  ^
+compilation terminated.
+
+15:41:29 Build Finished (took 497ms)
+

@@ -1,6 +1,12 @@
-20:44:40 **** Incremental Build of configuration Default for project Proto_Teleop ****
+15:51:35 **** Incremental Build of configuration Default for project Proto_Teleop ****
 make all 
-make[1]: Nothing to be done for `all'.
+CC -I../include -I../src opcontrol.c
+opcontrol.c: In function 'operatorControl':
+opcontrol.c:78:8: warning: unused variable 'liftSpeed' [-Wunused-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  12252	      0	   3840	  16092	   3edc	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
 
-20:44:41 Build Finished (took 906ms)
+15:51:39 Build Finished (took 4s.315ms)
 

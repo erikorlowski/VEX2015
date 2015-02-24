@@ -1,0 +1,12 @@
+17:57:50 **** Build of configuration Default for project All C++ ****
+make all 
+CPC -I../include -I../src auto.cpp
+CPC -I../include -I../src init.cpp
+CPC -I../include -I../src opcontrol.cpp
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  14404	      0	   3840	  18244	   4744	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+
+17:57:53 Build Finished (took 3s.241ms)
+

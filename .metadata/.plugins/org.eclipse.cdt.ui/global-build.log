@@ -1,110 +1,16 @@
-20:37:57 **** Incremental Build of configuration Default for project 24 Inch Simple Final ****
+10:19:20 **** Incremental Build of configuration Default for project Procedural Command Test Base ****
 make all 
+CC -I../include -I../src Drive.c
+CC -I../include -I../src DriveForTime.c
+CC -I../include -I../src OI.c
+CC -I../include -I../src PantherMotor.c
+CC -I../include -I../src Utilities.c
 CC -I../include -I../src auto.c
+auto.c: In function 'autonomousInit':
+auto.c:59:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
 CC -I../include -I../src init.c
 CC -I../include -I../src opcontrol.c
-opcontrol.c: In function 'teleop':
-opcontrol.c:294:5: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat]
-opcontrol.c:294:5: warning: format '%f' expects argument of type 'double', but argument 3 has type 'int' [-Wformat]
-opcontrol.c:294:5: warning: format '%f' expects argument of type 'double', but argument 4 has type 'int' [-Wformat]
-opcontrol.c:224:6: warning: variable 'pickupSpeed' set but not used [-Wunused-but-set-variable]
-LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
    text	   data	    bss	    dec	    hex	filename
-  16696	      0	   3840	  20536	   5038	./bin/output.elf
+  12220	      4	   3908	  16132	   3f04	./bin/output.elf
 arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-20:43:06 **** Incremental Build of configuration Default for project 24 Inch Simple Final ****
-make all 
-CC -I../include -I../src auto.c
-CC -I../include -I../src init.c
-CC -I../include -I../src opcontrol.c
-opcontrol.c: In function 'teleop':
-opcontrol.c:299:5: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat]
-opcontrol.c:299:5: warning: format '%f' expects argument of type 'double', but argument 3 has type 'int' [-Wformat]
-opcontrol.c:299:5: warning: format '%f' expects argument of type 'double', but argument 4 has type 'int' [-Wformat]
-opcontrol.c:229:6: warning: variable 'pickupSpeed' set but not used [-Wunused-but-set-variable]
-LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  17032	      0	   3840	  20872	   5188	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-20:45:51 **** Incremental Build of configuration Default for project 24 Inch Simple Final ****
-make all 
-CC -I../include -I../src opcontrol.c
-opcontrol.c: In function 'teleop':
-opcontrol.c:313:5: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat]
-opcontrol.c:313:5: warning: format '%f' expects argument of type 'double', but argument 3 has type 'int' [-Wformat]
-opcontrol.c:313:5: warning: format '%f' expects argument of type 'double', but argument 4 has type 'int' [-Wformat]
-LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  17088	      0	   3840	  20928	   51c0	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-20:47:14 **** Incremental Build of configuration Default for project 24 Inch Simple Final ****
-make all 
-CC -I../include -I../src auto.c
-CC -I../include -I../src init.c
-CC -I../include -I../src opcontrol.c
-opcontrol.c: In function 'teleop':
-opcontrol.c:313:5: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat]
-opcontrol.c:313:5: warning: format '%f' expects argument of type 'double', but argument 3 has type 'int' [-Wformat]
-opcontrol.c:313:5: warning: format '%f' expects argument of type 'double', but argument 4 has type 'int' [-Wformat]
-LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  17088	      0	   3840	  20928	   51c0	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-20:47:27 **** Incremental Build of configuration Default for project 24 Inch Simple Final ****
-make all 
-make[1]: Nothing to be done for `all'.
-20:49:43 **** Incremental Build of configuration Default for project 24 Inch Simple Final ****
-make all 
-CC -I../include -I../src opcontrol.c
-opcontrol.c: In function 'teleop':
-opcontrol.c:313:5: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat]
-opcontrol.c:313:5: warning: format '%f' expects argument of type 'double', but argument 3 has type 'int' [-Wformat]
-opcontrol.c:313:5: warning: format '%f' expects argument of type 'double', but argument 4 has type 'int' [-Wformat]
-LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  17088	      0	   3840	  20928	   51c0	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-20:49:56 **** Incremental Build of configuration Default for project 24 Inch Simple Final ****
-make all 
-make[1]: Nothing to be done for `all'.
-20:53:25 **** Incremental Build of configuration Default for project 24 Inch Simple Final ****
-make all 
-CC -I../include -I../src opcontrol.c
-opcontrol.c: In function 'teleop':
-opcontrol.c:315:5: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat]
-opcontrol.c:315:5: warning: format '%f' expects argument of type 'double', but argument 3 has type 'int' [-Wformat]
-opcontrol.c:315:5: warning: format '%f' expects argument of type 'double', but argument 4 has type 'int' [-Wformat]
-LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  17112	      0	   3840	  20952	   51d8	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-20:56:29 **** Incremental Build of configuration Default for project 24 Inch Simple Final ****
-make all 
-CC -I../include -I../src auto.c
-CC -I../include -I../src init.c
-CC -I../include -I../src opcontrol.c
-opcontrol.c: In function 'teleop':
-opcontrol.c:315:5: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat]
-opcontrol.c:315:5: warning: format '%f' expects argument of type 'double', but argument 3 has type 'int' [-Wformat]
-opcontrol.c:315:5: warning: format '%f' expects argument of type 'double', but argument 4 has type 'int' [-Wformat]
-LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  17112	      0	   3840	  20952	   51d8	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-20:57:01 **** Incremental Build of configuration Default for project 24 Inch Simple Final ****
-make all 
-CC -I../include -I../src opcontrol.c
-opcontrol.c: In function 'teleop':
-opcontrol.c:315:5: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat]
-opcontrol.c:315:5: warning: format '%f' expects argument of type 'double', but argument 3 has type 'int' [-Wformat]
-opcontrol.c:315:5: warning: format '%f' expects argument of type 'double', but argument 4 has type 'int' [-Wformat]
-LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  17112	      0	   3840	  20952	   51d8	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-21:01:03 **** Incremental Build of configuration Default for project 24 Inch Simple ****
-make all 
-make[1]: Nothing to be done for `all'.
-21:01:14 **** Incremental Build of configuration Default for project 24 Inch Simple ****
-make all 
-make[1]: Nothing to be done for `all'.

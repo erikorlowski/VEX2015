@@ -1,0 +1,7 @@
+16:13:53 **** Clean-only build of configuration Default for project Test CPP ****
+make clean 
+rm -f ./bin/output.elf
+rm -rf ./bin
+
+16:13:55 Build Finished (took 1s.509ms)
+

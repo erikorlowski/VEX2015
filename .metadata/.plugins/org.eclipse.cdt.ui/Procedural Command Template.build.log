@@ -1,0 +1,16 @@
+12:10:51 **** Incremental Build of configuration Default for project Procedural Command Template ****
+make all 
+CC -I../include -I../src auto.c
+auto.c: In function 'autonomousInit':
+auto.c:57:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
+auto.c: In function 'autonomousPeriodic':
+auto.c:73:40: warning: 'stepStartTime' may be used uninitialized in this function [-Wmaybe-uninitialized]
+CC -I../include -I../src init.c
+CC -I../include -I../src opcontrol.c
+LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  12840	      4	   3940	  16784	   4190	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+
+12:10:55 Build Finished (took 4s.404ms)
+

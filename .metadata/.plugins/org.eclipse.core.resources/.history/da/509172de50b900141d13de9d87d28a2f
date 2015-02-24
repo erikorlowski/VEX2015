@@ -1,0 +1,14 @@
+/*
+ * Box.h
+ *
+ *  Created on: Feb 20, 2015
+ *      Author: Erik
+ */
+
+#ifndef BOX_H_
+#define BOX_H_
+
+
+typedef void * Box;
+
+#endif /* BOX_H_ */

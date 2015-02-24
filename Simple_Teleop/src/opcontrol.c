@@ -70,40 +70,61 @@ int limitNum(int num, int max, int min)
 
 void operatorControl()
 {
+	//autonomous();
 	puts("Operator Control");
 	int driveX;
 	int driveY;
 	int leftSpeed;
 	int rightSpeed;
 	int liftSpeed;
-	int liftMode;
+	int clawSpeed = 0;
+	const int CLAW_OPEN_SPEED = 100;
+	const int CLAW_CLOSE_SPEED = -100;
 
-
-	while (1)
+	while (isEnabled())
 	{
 		//DRIVE
-		driveX = joystickGetAnalog(1, 4);
-		driveY = joystickGetAnalog(1, 3);
+		leftSpeed = joystickGetAnalog(1, 3);
+		rightSpeed = joystickGetAnalog(1, 2);
 
-		leftSpeed = driveY + driveX;
 		leftSpeed = limitNum(leftSpeed, 127, -127);
 		leftSpeed = (LEFT_MOTOR_INVERTED == 1) ? (leftSpeed * -1) : leftSpeed;
 
 		motorSet(LEFT_MOTOR, leftSpeed);
 
-		rightSpeed = driveY - driveX;
 		rightSpeed = limitNum(rightSpeed, 127, -127);
 		rightSpeed = (RIGHT_MOTOR_INVERTED == 1) ? (rightSpeed * -1) : rightSpeed;
 
 		motorSet(RIGHT_MOTOR, rightSpeed);
 
 		//LIFT
-		liftSpeed = joystickGetAnalog(1, 2);
+		liftSpeed = joystickGetAnalog(2, 2);
 		liftSpeed = limitNum(liftSpeed, 127, -127);
+
+		if(!digitalRead(LIFT_LIMIT_SWITCH))
+		{
+			liftSpeed = limitNum(liftSpeed, 127,0);
+		}
 
 		motorSet(LIFT_MOTOR_BOT, LIFT_MOTOR_BOT_INVERTED ? -liftSpeed : liftSpeed);
 		motorSet(LIFT_MOTOR_MID, LIFT_MOTOR_MID_INVERTED ? -liftSpeed : liftSpeed);
 		motorSet(LIFT_MOTOR_TOP, LIFT_MOTOR_TOP_INVERTED ? -liftSpeed : liftSpeed);
+
+		//CLAW
+		if(joystickGetDigital(1,5,JOY_DOWN))
+		{
+			clawSpeed = CLAW_CLOSE_SPEED;
+		}
+		else if(joystickGetDigital(1,6,JOY_DOWN))
+		{
+			clawSpeed = CLAW_OPEN_SPEED;
+		}
+		else
+		{
+			clawSpeed = 0;
+		}
+
+		motorSet(CLAW, clawSpeed);
 
 		delay(20);
 	}

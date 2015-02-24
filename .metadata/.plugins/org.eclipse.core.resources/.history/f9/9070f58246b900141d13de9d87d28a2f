@@ -1,0 +1,20 @@
+/*
+ * Test.cpp
+ *
+ *  Created on: Feb 20, 2015
+ *      Author: Erik
+ */
+
+
+class Box
+{
+	int height;
+	int width;
+	int length;
+
+public:
+	Box (int length, int width, int height)
+	{
+
+	}
+};

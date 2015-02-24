@@ -186,9 +186,9 @@ void teleop()
 	int driveY;
 	int driveRotation;
 	int firstStageLiftSpeed;
-	const int FIRST_STAGE_SPEED = 80;
+	const int FIRST_STAGE_SPEED = 55;
 	int secondStageLiftSpeed;
-	const int SECOND_STAGE_SPEED = 80;
+	const int SECOND_STAGE_SPEED = 55;
 	int pickupSpeed;
 	const int PICKUP_RUN_SPEED = 127;
 	const int STRAFE_SPEED = 50;
