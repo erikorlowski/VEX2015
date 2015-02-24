@@ -55,12 +55,8 @@
 
 //UTILITIES
 int limit(int, int, int);
-int abs(int);
 
 //PANTHER MOTOR
-/**
- * Refence type for a motor and if it is inverted.
- */
 struct PantherMotor{
 	int port;
 	int inverted;
@@ -71,9 +67,6 @@ void setPantherMotor(PantherMotor, int);
 int getPantherMotor(PantherMotor);
 
 //DRIVE
-/**
- * Reference type for a two motor drive.
- */
 struct Drive{
 
 	PantherMotor leftMotor;
@@ -91,10 +84,6 @@ int OIGetDriveLeft();
 int OIGetDriveRight();
 
 //AUTO
-/**
- * Reference type for information about the progress of autonomous mode.
- * the only instance of this type that should be used is autonomousInfo.
- */
 struct AutonomousInfo{
 
 	int step;
@@ -104,14 +93,8 @@ struct AutonomousInfo{
 
 }typedef AutonomousInfo;
 
-/**
- * Struct containing information about the autonomous mode.
- */
 AutonomousInfo autonomousInfo;
 
-/**
- * Refence type for driving at a set speed based on time.
- */
 struct DriveForTime{
 
 	long int length;

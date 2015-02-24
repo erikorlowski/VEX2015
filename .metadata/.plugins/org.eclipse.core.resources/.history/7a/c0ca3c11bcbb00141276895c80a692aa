@@ -1,0 +1,19 @@
+/*
+ * Utilities.c
+ *
+ *  Created on: Feb 20, 2015
+ *      Author: Erik
+ */
+
+int limit(int num, int max, int min)
+{
+	if(num > max) return max;
+	else if(num < min) return min;
+	else return num;
+}
+
+int abs(int num)
+{
+	if(num < 0) return -num;
+	else return num;
+}

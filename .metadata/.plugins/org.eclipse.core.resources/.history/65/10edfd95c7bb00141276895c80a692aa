@@ -71,10 +71,8 @@ void operatorControl() {
 		teleopPeriodic();
 		delay(20);
 
-		printf("Online: %d\n", isOnline());
-
-		/*printf("Step: %d\n Last Step: %d\n Elapsed Time: %d\nIs Finished: %d\n",
+		printf("Step: %d\n Last Step: %d\n Elapsed Time: %d\nIs Finished: %d\n",
 				autonomousInfo.step, autonomousInfo.lastStep,
-				autonomousInfo.elapsedTime, autonomousInfo.isFinished);*/
+				autonomousInfo.elapsedTime, autonomousInfo.isFinished);
 	}
 }

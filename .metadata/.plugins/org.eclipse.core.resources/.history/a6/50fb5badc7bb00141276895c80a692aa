@@ -59,9 +59,6 @@ long int stepStartTime;
  */
 void autonomousInit()
 {
-	autonomousInfo.step = 1;
-	autonomousInfo.isFinished = 0;
-
 	mode0Step1 = initDriveForTime(drive, 127, 127, 2000);
 
 	stepStartTime = millis();

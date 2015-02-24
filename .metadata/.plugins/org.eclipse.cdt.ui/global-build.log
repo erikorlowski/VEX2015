@@ -14,3 +14,176 @@ LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Util
    text	   data	    bss	    dec	    hex	filename
   12220	      4	   3908	  16132	   3f04	./bin/output.elf
 arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:28:40 **** Incremental Build of configuration Default for project Procedural Command Test Base ****
+make all 
+CC -I../include -I../src Drive.c
+CC -I../include -I../src DriveForTime.c
+CC -I../include -I../src OI.c
+CC -I../include -I../src PantherMotor.c
+CC -I../include -I../src Utilities.c
+CC -I../include -I../src auto.c
+auto.c: In function 'autonomousInit':
+auto.c:62:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
+CC -I../include -I../src init.c
+CC -I../include -I../src opcontrol.c
+LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  12664	      4	   3908	  16576	   40c0	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:29:19 **** Incremental Build of configuration Default for project Procedural Command Test Base ****
+make all 
+CC -I../include -I../src init.c
+LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  12664	      4	   3908	  16576	   40c0	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:29:37 **** Incremental Build of configuration Default for project Procedural Command Test Base ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:30:59 **** Incremental Build of configuration Default for project Procedural Command Test Base ****
+make all 
+CC -I../include -I../src auto.c
+auto.c: In function 'autonomousInit':
+auto.c:62:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
+CC -I../include -I../src init.c
+CC -I../include -I../src opcontrol.c
+LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  12768	      4	   3908	  16680	   4128	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:33:22 **** Incremental Build of configuration Default for project Procedural Command Test Base ****
+make all 
+CC -I../include -I../src auto.c
+auto.c: In function 'autonomousInit':
+auto.c:62:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
+LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  15112	      4	   3908	  19024	   4a50	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:34:05 **** Incremental Build of configuration Default for project Procedural Command Test Base ****
+make all 
+CC -I../include -I../src auto.c
+auto.c: In function 'autonomousInit':
+auto.c:62:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
+LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  15112	      4	   3908	  19024	   4a50	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:34:36 **** Incremental Build of configuration Default for project Procedural Command Test Base ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:35:13 **** Incremental Build of configuration Default for project Procedural Command Test Base ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:35:33 **** Incremental Build of configuration Default for project Procedural Command Test Base ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:39:00 **** Incremental Build of configuration Default for project Procedural Command Test Base ****
+make all 
+CC -I../include -I../src auto.c
+auto.c: In function 'autonomousInit':
+auto.c:62:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
+LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  15128	      4	   3908	  19040	   4a60	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:39:22 **** Incremental Build of configuration Default for project Procedural Command Test Base ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:43:23 **** Incremental Build of configuration Default for project Procedural Command Test Base ****
+make all 
+CC -I../include -I../src auto.c
+CC -I../include -I../src init.c
+init.c: In function 'initialize':
+init.c:76:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
+LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  15128	      4	   3908	  19040	   4a60	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:44:38 **** Incremental Build of configuration Default for project Procedural Command Test Base ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'initialize':
+init.c:76:19: error: expected expression before '{' token
+make[1]: *** [../bin/init.o] Error 1
+make: *** [src] Error 2
+19:46:58 **** Incremental Build of configuration Default for project Procedural Command Test Base ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'initialize':
+init.c:76:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
+CC -I../include -I../src opcontrol.c
+LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  15128	      4	   3908	  19040	   4a60	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:49:35 **** Incremental Build of configuration Default for project Procedural Command Test Base ****
+make all 
+CC -I../include -I../src opcontrol.c
+LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  15212	      4	   3908	  19124	   4ab4	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:51:03 **** Incremental Build of configuration Default for project Procedural Command Test Base ****
+make all 
+CC -I../include -I../src opcontrol.c
+LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  15228	      4	   3908	  19140	   4ac4	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:51:43 **** Incremental Build of configuration Default for project Procedural Command Test Base ****
+make all 
+CC -I../include -I../src auto.c
+CC -I../include -I../src opcontrol.c
+LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  15220	      4	   3908	  19132	   4abc	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:52:43 **** Incremental Build of configuration Default for project Procedural Command Test Base ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  15228	      4	   3908	  19140	   4ac4	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:54:48 **** Incremental Build of configuration Default for project Procedural Command Test Base ****
+make all 
+CC -I../include -I../src opcontrol.c
+LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  15144	      4	   3908	  19056	   4a70	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:57:46 **** Incremental Build of configuration Default for project Procedural Command Test Base ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:58:12 **** Incremental Build of configuration Default for project Procedural Command Test Base ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:58:47 **** Incremental Build of configuration Default for project Procedural Command Test Base ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:59:40 **** Incremental Build of configuration Default for project Procedural Command Test Base ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:00:03 **** Incremental Build of configuration Default for project Procedural Command Test Base ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:01:32 **** Incremental Build of configuration Default for project Procedural Command Test Base ****
+make all 
+CC -I../include -I../src opcontrol.c
+LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  15172	      4	   3908	  19084	   4a8c	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:02:58 **** Incremental Build of configuration Default for project Procedural Command Test Base ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:03:09 **** Incremental Build of configuration Default for project Procedural Command Test Base ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:03:40 **** Incremental Build of configuration Default for project Procedural Command Test Base ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:03:58 **** Incremental Build of configuration Default for project Procedural Command Test Base ****
+make all 
+make[1]: Nothing to be done for `all'.
