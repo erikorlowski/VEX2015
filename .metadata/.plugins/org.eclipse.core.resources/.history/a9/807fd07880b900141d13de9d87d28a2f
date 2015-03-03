@@ -1,6 +1,0 @@
-struct Drive{
-
-	int frontLeft;
-	int
-
-}typedef Drive;

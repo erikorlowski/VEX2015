@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;Procedural Command Test Base/src/DriveForTime.c.c&apos;" deleteContents="false" description="Delete resource &apos;Procedural Command Test Base/src/DriveForTime.c.c&apos;" element1="/Procedural Command Test Base/src/DriveForTime.c.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1424745269546"/>
+</session>
