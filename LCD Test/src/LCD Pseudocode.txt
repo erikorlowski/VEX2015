@@ -1,0 +1,12 @@
+While not autonomous, not enabled, and in LCD mode:
+	
+	Step 1:
+		Display alliance (0: red, 1: blue)
+		If right button, change alliance
+		If center button, select the alliance
+		
+	Step 2:
+		Display mode (0: do nothing, 1: drive forward)
+		If right button, increment mode
+		If left button, decrement mode
+		If center button, select mode
