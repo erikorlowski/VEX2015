@@ -1,0 +1,11 @@
+20:33:12 **** Incremental Build of configuration Default for project Gyro Test ****
+make all 
+CC -I../include -I../src init.c
+CC -I../include -I../src opcontrol.c
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  14440	      0	   3944	  18384	   47d0	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+
+20:33:14 Build Finished (took 2s.522ms)
+

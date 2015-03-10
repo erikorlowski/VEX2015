@@ -1,3 +1,527 @@
-20:19:12 **** Build of configuration Default for project LCD Test ****
+19:11:52 **** Incremental Build of configuration Default for project Simple LCD ****
 make all 
-make: Nothing to be done for `all'.
+CC -I../include -I../src init.c
+init.c: In function 'initialize':
+init.c:77:16: warning: unused variable 'selectionText' [-Wunused-variable]
+init.c:73:7: warning: unused variable 'selection' [-Wunused-variable]
+init.c:66:6: warning: variable 'alliance' set but not used [-Wunused-but-set-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  12176	      0	   3840	  16016	   3e90	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:12:02 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:12:53 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'initialize':
+init.c:78:16: warning: unused variable 'selectionText' [-Wunused-variable]
+init.c:74:7: warning: unused variable 'selection' [-Wunused-variable]
+init.c:67:6: warning: variable 'alliance' set but not used [-Wunused-but-set-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  12212	      0	   3840	  16052	   3eb4	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:14:15 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'initialize':
+init.c:74:7: warning: unused variable 'selection' [-Wunused-variable]
+init.c:67:6: warning: variable 'alliance' set but not used [-Wunused-but-set-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  12212	      0	   3840	  16052	   3eb4	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:15:37 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'initialize':
+init.c:74:7: warning: unused variable 'selection' [-Wunused-variable]
+init.c:67:6: warning: variable 'alliance' set but not used [-Wunused-but-set-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  14556	      0	   3840	  18396	   47dc	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:16:44 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'initialize':
+init.c:74:7: warning: unused variable 'selection' [-Wunused-variable]
+init.c:67:6: warning: variable 'alliance' set but not used [-Wunused-but-set-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  14516	      0	   3840	  18356	   47b4	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:18:50 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'initialize':
+init.c:75:6: warning: unused variable 'selection' [-Wunused-variable]
+init.c:67:6: warning: variable 'alliance' set but not used [-Wunused-but-set-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  14564	      0	   3840	  18404	   47e4	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:19:45 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'initialize':
+init.c:77:6: warning: unused variable 'selection' [-Wunused-variable]
+init.c:69:6: warning: variable 'alliance' set but not used [-Wunused-but-set-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  14576	      0	   3840	  18416	   47f0	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:20:10 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'initialize':
+init.c:77:6: warning: unused variable 'selection' [-Wunused-variable]
+init.c:69:6: warning: variable 'alliance' set but not used [-Wunused-but-set-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  14544	      0	   3840	  18384	   47d0	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:22:27 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  11952	      0	   3840	  15792	   3db0	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:22:51 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:23:18 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'initialize':
+init.c:64:2: error: implicit declaration of function 'lcdShutDown' [-Werror=implicit-function-declaration]
+cc1.exe: some warnings being treated as errors
+make[1]: *** [../bin/init.o] Error 1
+make: *** [src] Error 2
+19:23:31 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  12024	      0	   3840	  15864	   3df8	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:23:49 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:24:23 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  14380	      0	   3840	  18220	   472c	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:24:59 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:25:10 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:25:39 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  14308	      0	   3840	  18148	   46e4	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:26:51 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  11892	      0	   3840	  15732	   3d74	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:27:17 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  11952	      0	   3840	  15792	   3db0	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:28:00 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  11952	      0	   3840	  15792	   3db0	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:28:40 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  11972	      0	   3840	  15812	   3dc4	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:29:27 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:31:17 **** Build of configuration Default for project Jared Test ****
+make all 
+CC -I../include -I../src auto.c
+CC -I../include -I../src init.c
+CC -I../include -I../src opcontrol.c
+opcontrol.c: In function 'operatorControl':
+opcontrol.c:58:3: error: implicit declaration of function 'joystickGetAnalof' [-Werror=implicit-function-declaration]
+cc1.exe: some warnings being treated as errors
+make[1]: *** [../bin/opcontrol.o] Error 1
+make: *** [src] Error 2
+19:31:33 **** Incremental Build of configuration Default for project Jared Test ****
+make all 
+CC -I../include -I../src opcontrol.c
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  12096	      0	   3840	  15936	   3e40	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:33:57 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'lcdModeSelect':
+init.c:50:15: warning: unused variable 'selectionText' [-Wunused-variable]
+init.c:46:6: warning: unused variable 'selection' [-Wunused-variable]
+init.c:39:6: warning: variable 'alliance' set but not used [-Wunused-but-set-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  12236	      0	   3840	  16076	   3ecc	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:34:11 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:35:01 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'lcdModeSelect':
+init.c:50:15: warning: unused variable 'selectionText' [-Wunused-variable]
+init.c:46:6: warning: unused variable 'selection' [-Wunused-variable]
+init.c:39:6: warning: variable 'alliance' set but not used [-Wunused-but-set-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  14576	      0	   3840	  18416	   47f0	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:35:54 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'lcdModeSelect':
+init.c:50:15: warning: unused variable 'selectionText' [-Wunused-variable]
+init.c:46:6: warning: unused variable 'selection' [-Wunused-variable]
+init.c:39:6: warning: variable 'alliance' set but not used [-Wunused-but-set-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  14540	      0	   3840	  18380	   47cc	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:36:30 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'lcdModeSelect':
+init.c:50:15: warning: unused variable 'selectionText' [-Wunused-variable]
+init.c:46:6: warning: unused variable 'selection' [-Wunused-variable]
+init.c:39:6: warning: variable 'alliance' set but not used [-Wunused-but-set-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  14576	      0	   3840	  18416	   47f0	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:38:37 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'lcdModeSelect':
+init.c:50:15: warning: unused variable 'selectionText' [-Wunused-variable]
+init.c:46:6: warning: unused variable 'selection' [-Wunused-variable]
+init.c:39:6: warning: variable 'alliance' set but not used [-Wunused-but-set-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  14596	      0	   3840	  18436	   4804	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:39:50 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'lcdModeSelect':
+init.c:51:15: warning: unused variable 'selectionText' [-Wunused-variable]
+init.c:46:6: warning: unused variable 'selection' [-Wunused-variable]
+init.c:39:6: warning: variable 'alliance' set but not used [-Wunused-but-set-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  14604	      0	   3840	  18444	   480c	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:42:22 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'lcdModeSelect':
+init.c:39:6: warning: variable 'alliance' set but not used [-Wunused-but-set-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  14628	      0	   3840	  18468	   4824	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:43:07 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'lcdModeSelect':
+init.c:39:6: warning: variable 'alliance' set but not used [-Wunused-but-set-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  14652	      0	   3840	  18492	   483c	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:43:34 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'lcdModeSelect':
+init.c:39:6: warning: variable 'alliance' set but not used [-Wunused-but-set-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  14660	      0	   3840	  18500	   4844	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:44:46 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'lcdModeSelect':
+init.c:39:6: warning: variable 'alliance' set but not used [-Wunused-but-set-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  14664	      0	   3840	  18504	   4848	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:45:59 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'lcdModeSelect':
+init.c:39:6: warning: variable 'alliance' set but not used [-Wunused-but-set-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  14704	      0	   3840	  18544	   4870	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:47:25 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'lcdModeSelect':
+init.c:39:6: warning: variable 'alliance' set but not used [-Wunused-but-set-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  14672	      0	   3840	  18512	   4850	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:50:23 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'lcdModeSelect':
+init.c:39:6: warning: variable 'alliance' set but not used [-Wunused-but-set-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  14792	      0	   3840	  18632	   48c8	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:51:33 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'lcdModeSelect':
+init.c:39:6: warning: variable 'alliance' set but not used [-Wunused-but-set-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  14784	      0	   3840	  18624	   48c0	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:53:10 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'lcdModeSelect':
+init.c:39:6: warning: variable 'alliance' set but not used [-Wunused-but-set-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  14720	      0	   3840	  18560	   4880	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:57:07 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'lcdModeSelect':
+init.c:39:6: warning: variable 'alliance' set but not used [-Wunused-but-set-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  12136	      0	   3840	  15976	   3e68	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:57:57 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:58:34 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'lcdModeSelect':
+init.c:39:6: warning: variable 'alliance' set but not used [-Wunused-but-set-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  14736	      0	   3840	  18576	   4890	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:59:39 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'lcdModeSelect':
+init.c:39:6: warning: variable 'alliance' set but not used [-Wunused-but-set-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  14752	      0	   3840	  18592	   48a0	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:01:16 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'lcdModeSelect':
+init.c:95:14: warning: 'alliance' may be used uninitialized in this function [-Wmaybe-uninitialized]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  14828	      0	   3840	  18668	   48ec	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:01:39 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:05:19 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'lcdModeSelect':
+init.c:99:3: warning: passing argument 3 of 'lcdSetText' makes pointer from integer without a cast [enabled by default]
+In file included from ../include/main.h:46:0,
+                 from init.c:35:
+../include/API.h:1164:6: note: expected 'const char *' but argument is of type 'int'
+init.c:50:15: warning: unused variable 'selectionText' [-Wunused-variable]
+init.c:39:6: warning: variable 'alliance' set but not used [-Wunused-but-set-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  14792	      0	   3840	  18632	   48c8	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:05:54 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'lcdModeSelect':
+init.c:99:4: warning: passing argument 3 of 'lcdSetText' makes pointer from integer without a cast [enabled by default]
+In file included from ../include/main.h:46:0,
+                 from init.c:35:
+../include/API.h:1164:6: note: expected 'const char *' but argument is of type 'int'
+init.c:50:15: warning: unused variable 'selectionText' [-Wunused-variable]
+init.c:39:6: warning: variable 'alliance' set but not used [-Wunused-but-set-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  14792	      0	   3840	  18632	   48c8	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:06:37 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'lcdModeSelect':
+init.c:39:6: warning: variable 'alliance' set but not used [-Wunused-but-set-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  14808	      0	   3840	  18648	   48d8	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:07:16 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'lcdModeSelect':
+init.c:39:6: warning: variable 'alliance' set but not used [-Wunused-but-set-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  14808	      0	   3840	  18648	   48d8	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:13:46 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'lcdModeSelect':
+init.c:65:6: warning: variable 'alliance' set but not used [-Wunused-but-set-variable]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  14960	      0	   3840	  18800	   4970	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:17:12 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'lcdModeSelect':
+init.c:146:12: warning: 'alliance' may be used uninitialized in this function [-Wmaybe-uninitialized]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  15172	      0	   3840	  19012	   4a44	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:17:36 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:20:23 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'lcdModeSelect':
+init.c:146:12: warning: 'alliance' may be used uninitialized in this function [-Wmaybe-uninitialized]
+CC -I../include -I../src opcontrol.c
+opcontrol.c: In function 'operatorControl':
+opcontrol.c:57:3: error: implicit declaration of function 'lcdSetPrint' [-Werror=implicit-function-declaration]
+cc1.exe: some warnings being treated as errors
+make[1]: *** [../bin/opcontrol.o] Error 1
+make: *** [src] Error 2
+20:20:41 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src opcontrol.c
+opcontrol.c: In function 'operatorControl':
+opcontrol.c:57:3: warning: format '%f' expects argument of type 'double', but argument 4 has type 'unsigned int' [-Wformat]
+opcontrol.c:58:3: warning: format '%f' expects argument of type 'double', but argument 4 has type 'unsigned int' [-Wformat]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  15300	      0	   3840	  19140	   4ac4	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:21:36 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'lcdModeSelect':
+init.c:146:12: warning: 'alliance' may be used uninitialized in this function [-Wmaybe-uninitialized]
+CC -I../include -I../src opcontrol.c
+opcontrol.c: In function 'operatorControl':
+opcontrol.c:57:3: warning: format '%f' expects argument of type 'double', but argument 4 has type 'unsigned int' [-Wformat]
+opcontrol.c:58:3: warning: format '%f' expects argument of type 'double', but argument 4 has type 'unsigned int' [-Wformat]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  15308	      0	   3840	  19148	   4acc	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:23:17 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'lcdModeSelect':
+init.c:151:4: error: implicit declaration of function 'lcdSetBackup' [-Werror=implicit-function-declaration]
+cc1.exe: some warnings being treated as errors
+make[1]: *** [../bin/init.o] Error 1
+make: *** [src] Error 2
+20:23:28 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'lcdModeSelect':
+init.c:146:12: warning: 'alliance' may be used uninitialized in this function [-Wmaybe-uninitialized]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  15316	      0	   3840	  19156	   4ad4	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:23:43 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:24:34 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'lcdModeSelect':
+init.c:146:12: warning: 'alliance' may be used uninitialized in this function [-Wmaybe-uninitialized]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  15208	      0	   3840	  19048	   4a68	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:32:37 **** Build of configuration Default for project Gyro Test ****
+make all 
+CC -I../include -I../src auto.c
+CC -I../include -I../src init.c
+CC -I../include -I../src opcontrol.c
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  13948	      0	   3848	  17796	   4584	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:32:57 **** Incremental Build of configuration Default for project Gyro Test ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'initialize':
+init.c:64:2: error: expected ';' before 'gyro'
+make[1]: *** [../bin/init.o] Error 1
+make: *** [src] Error 2
+20:33:12 **** Incremental Build of configuration Default for project Gyro Test ****
+make all 
+CC -I../include -I../src init.c
+CC -I../include -I../src opcontrol.c
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  14440	      0	   3944	  18384	   47d0	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin

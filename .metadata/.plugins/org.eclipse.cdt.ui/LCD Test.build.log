@@ -1,6 +1,6 @@
-20:19:12 **** Build of configuration Default for project LCD Test ****
+19:02:31 **** Build of configuration Default for project LCD Test ****
 make all 
 make: Nothing to be done for `all'.
 
-20:19:15 Build Finished (took 2s.887ms)
+19:02:34 Build Finished (took 2s.384ms)
 

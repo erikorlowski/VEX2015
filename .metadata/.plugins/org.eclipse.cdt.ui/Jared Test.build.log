@@ -1,0 +1,10 @@
+19:31:33 **** Incremental Build of configuration Default for project Jared Test ****
+make all 
+CC -I../include -I../src opcontrol.c
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  12096	      0	   3840	  15936	   3e40	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+
+19:31:35 Build Finished (took 1s.992ms)
+

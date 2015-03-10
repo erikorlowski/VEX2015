@@ -1,0 +1,12 @@
+20:24:34 **** Incremental Build of configuration Default for project Simple LCD ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'lcdModeSelect':
+init.c:146:12: warning: 'alliance' may be used uninitialized in this function [-Wmaybe-uninitialized]
+LN ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  15208	      0	   3840	  19048	   4a68	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+
+20:24:36 Build Finished (took 2s.166ms)
+
