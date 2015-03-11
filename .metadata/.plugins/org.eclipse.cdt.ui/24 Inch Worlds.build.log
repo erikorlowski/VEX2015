@@ -1,0 +1,10 @@
+18:32:46 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src opcontrol.c
+LN ./bin/Drive.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  16152	      4	   3948	  20104	   4e88	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+
+18:32:49 Build Finished (took 3s.65ms)
+

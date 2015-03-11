@@ -1,0 +1,17 @@
+Do Nothing
+
+Drive Forward small Distance
+
+Red One Low, Two Medium in a Line:
+	Strafe Right 12"
+	Move Pickup to score cube on low goal
+	Strafe Left 12"
+	Backup small distance
+	Turn 180 degrees
+	Drive to first cube
+	Move pickup to second cube position
+	Drive to second cube
+	Pickup second cube
+	Turn 90 degrees lefts
+	Drive to medium post and bring pickup to medium post height
+	Backdrive pickup to score

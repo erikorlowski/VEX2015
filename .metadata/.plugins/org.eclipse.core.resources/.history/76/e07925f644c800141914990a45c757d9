@@ -1,0 +1,24 @@
+/*
+ * Lift.h
+ *
+ *  Created on: Mar 11, 2015
+ *      Author: Erik
+ */
+
+#ifndef LIFT_H_
+#define LIFT_H_
+
+struct Pickup{
+
+	PantherMotor leftMotor;
+	PantherMotor rightMotor;
+
+}typedef Pickup;
+
+Pickup initPickup(PantherMotor leftMotor, PantherMotor rightMotor);
+
+void runPickup(int speed);
+
+Lift lift;
+
+#endif /* LIFT_H_ */
