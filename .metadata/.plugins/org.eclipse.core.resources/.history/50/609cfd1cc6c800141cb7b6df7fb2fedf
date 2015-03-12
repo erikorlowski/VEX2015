@@ -8,10 +8,6 @@
 #ifndef POT_H_
 #define POT_H_
 
-/**
- * The data structure for a potentiometer. This structure and its associated
- * functions will handle any mechanical inversions of the sensor.
- */
 struct Pot{
 
 	int channel;

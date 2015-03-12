@@ -30,41 +30,21 @@ int OIGetDriveRotation()
 	return joystickGetAnalog(1,1);
 }
 
-/**
- * Returns the output from the joystick of if the lift should be moving
- * up.
- *
- * Note: Assumes digital control of the lift.
- */
 int OIGetLiftUp()
 {
 	return joystickGetDigital(2, 7, JOY_UP);
 }
 
-/**
- * Returns the output from the joystick of if the lift should be moving
- * down.
- *
- * Note: Assumes digital control of the lift.
- */
 int OIGetLiftDown()
 {
 	return joystickGetDigital(2, 7, JOY_DOWN);
 }
 
-/**
- * Returns the output from the joystick of if the pickup should be running
- * inwards.
- */
 int OIGetPickupIn()
 {
 	return joystickGetDigital(1, 5, JOY_UP);
 }
 
-/**
- * Returns the output from the joystick of if the pickup should be running
- * outwards.
- */
 int OIGetPickupOut()
 {
 	return joystickGetDigital(1, 5, JOY_DOWN);

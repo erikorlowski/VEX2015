@@ -8,9 +8,6 @@
 #ifndef PICKUP_H_
 #define PICKUP_H_
 
-/**
- * The data structure for a Pickup. Currently includes two motors.
- */
 struct Pickup{
 
 	PantherMotor leftMotor;

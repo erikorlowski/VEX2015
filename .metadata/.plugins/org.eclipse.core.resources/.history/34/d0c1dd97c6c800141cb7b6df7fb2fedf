@@ -12,6 +12,14 @@ Drive initDrive(PantherMotor frontLeftMotor, PantherMotor frontRightMotor,
 	return newDrive;
 }
 
+
+/**
+ * frontLeft = y - x + rotation;
+	frontRight = y + x - rotation;
+	rearLeft = y + x + rotation;
+	rearRight = y - x - rotation;
+ */
+
 /**
  * Drives a holonomic drive robot at the specified direction, magnitude,
  * and rotation.

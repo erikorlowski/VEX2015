@@ -58,7 +58,7 @@ long int stepStartTime;
 void autonomousInit()
 {
 	autonomousInfo.step = 1;
-	autonomousInfo.isFinished = 1;//0; TODO change back to 0 when real auto code is added
+	autonomousInfo.isFinished = 1;//0; TODO change back to 0
 
 	stepStartTime = millis();
 }

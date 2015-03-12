@@ -53,6 +53,8 @@
 
 #include "Drive.h"
 
+#include "TestMotor.h"
+
 #include "Pot.h"
 
 #include "Lift.h"

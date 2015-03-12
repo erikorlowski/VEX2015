@@ -7,9 +7,6 @@
 
 #include "main.h"
 
-/**
- * Returns a new Lift object.
- */
 Lift initLift(PantherMotor leftMotor, PantherMotor rightMotor,
 		Pot leftPot, Pot rightPot)
 {
@@ -17,12 +14,6 @@ Lift initLift(PantherMotor leftMotor, PantherMotor rightMotor,
 	return newLift;
 }
 
-/**
- * Stops the lift at the bottom of its travel and slows it down as it
- * approaches the top of its travel.
- *
- * This function probably should not be used outside of Lift.c.
- */
 int liftSafety(int desiredSpeed, int potValue, int max)
 {
 	const int MIN_HEIGHT = 200;
@@ -52,9 +43,6 @@ int liftSafety(int desiredSpeed, int potValue, int max)
 	}
 }
 
-/**
- * Lifts at a specified speed including safeties.
- */
 void liftAtSpeed(Lift lift, int speed)
 {
 	//10000 to bypass max height safety

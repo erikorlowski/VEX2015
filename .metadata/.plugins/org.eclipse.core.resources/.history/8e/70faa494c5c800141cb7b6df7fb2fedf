@@ -7,18 +7,12 @@
 
 #include "main.h"
 
-/**
- * Returns an initialized Pickup object.
- */
 Pickup initPickup(PantherMotor leftMotor, PantherMotor rightMotor)
 {
 	Pickup newPickup = {leftMotor, rightMotor};
 	return newPickup;
 }
 
-/**
- * Runs the pickup at a specified speed.
- */
 void runPickup(Pickup pickup, int speed)
 {
 	int leftSpeed = limit(leftSpeed, 127, -127);

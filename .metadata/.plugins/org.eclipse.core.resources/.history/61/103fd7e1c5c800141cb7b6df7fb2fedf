@@ -8,10 +8,6 @@
 #ifndef LIFT_H_
 #define LIFT_H_
 
-/**
- * The data type for the Lift. Currently includes two motors and two
- * potentiometers.
- */
 struct Lift{
 
 	PantherMotor leftMotor;
