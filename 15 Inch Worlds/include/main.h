@@ -53,6 +53,10 @@
 
 #include "Drive.h"
 
+#include "Lift.h"
+
+#include "Pickup.h"
+
 #include "OI.h"
 
 #include "Auto.h"

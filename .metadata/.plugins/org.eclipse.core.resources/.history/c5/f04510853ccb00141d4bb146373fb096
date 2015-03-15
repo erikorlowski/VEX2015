@@ -1,0 +1,17 @@
+/*
+ * Pickup.h
+ *
+ *  Created on: Mar 15, 2015
+ *      Author: Erik
+ */
+
+#ifndef PICKUP_H_
+#define PICKUP_H_
+
+struct Pickup{
+
+	PantherMotor motor;
+
+}typedef Pickup;
+
+#endif /* PICKUP_H_ */

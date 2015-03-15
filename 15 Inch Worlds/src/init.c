@@ -59,21 +59,13 @@ void initializeIO() {
  * can be implemented in this task if desired.
  */
 
-/*
- * #define FRONT_LEFT_DRIVE 3
-#define FRONT_RIGHT_DRIVE 4
-#define REAR_LEFT_DRIVE 5
-#define REAR_RIGHT_DRIVE 6
-
-#define FRONT_LEFT_DRIVE_INVERTED 0
-#define FRONT_RIGHT_DRIVE_INVERTED 1
-#define REAR_LEFT_DRIVE_INVERTED 0
-#define REAR_RIGHT_DRIVE_INVERTED 1
- */
 void initialize()
 {
 	drive = initDrive(initPantherMotor(7,0), initPantherMotor(10,0),
 			initPantherMotor(1,1), initPantherMotor(6,1));
+	lift = initLift(initPantherMotor(4,0), initPantherMotor(3,0),
+			initPantherMotor(2,0), encoderInit(11,12, 0), 1);
+	pickup = initPickup(initPantherMotor(5,0));
 	AutonomousInfo autonomousInfo = {1, 0, 0, 0};
 	puts("Initialized");
 }

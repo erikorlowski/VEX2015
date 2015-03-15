@@ -11,5 +11,8 @@
 int OIGetDriveDirection();
 int OIGetDriveMagnitude();
 int OIGetDriveRotation();
+int OIGetLiftSpeed();
+int OIGetPickupOpen();
+int OIGetPickupClose();
 
 #endif /* OI_H_ */

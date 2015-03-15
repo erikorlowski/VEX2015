@@ -1,0 +1,6 @@
+14:21:46 **** Incremental Build of configuration Default for project Gyro Hold Heading ****
+make all 
+make[1]: Nothing to be done for `all'.
+
+14:21:47 Build Finished (took 944ms)
+

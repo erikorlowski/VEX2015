@@ -15,4 +15,6 @@
 #define DRIVE_FORWARD_2000 0
 #define MODE DRIVE_FORWARD_2000
 
+#define LOAD_HEIGHT 1600
+
 #endif /* PROPERTIES_H_ */

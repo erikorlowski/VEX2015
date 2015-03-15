@@ -60,6 +60,11 @@ void teleopPeriodic()
 {
 	holonomicDrive(drive, OIGetDriveDirection(), OIGetDriveMagnitude(),
 			OIGetDriveRotation());
+	liftAtSpeed(lift, OIGetLiftSpeed());
+
+	if(OIGetPickupOpen()) openPickup(pickup);
+	else if(OIGetPickupClose()) closePickup(pickup);
+	else stopPickup(pickup);
 }
 
 void operatorControl() {

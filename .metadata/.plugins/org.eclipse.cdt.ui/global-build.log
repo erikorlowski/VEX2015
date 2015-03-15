@@ -1,21 +1,95 @@
-09:43:50 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+14:03:03 **** Incremental Build of configuration Default for project Gyro Hold Heading ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'initialize':
+init.c:78:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
+CC -I../include -I../src opcontrol.c
+LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/OI.o ./bin/PantherMotor.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  17764	      8	   3992	  21764	   5504	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+14:03:10 **** Incremental Build of configuration Default for project Gyro Hold Heading ****
+make all 
+make[1]: Nothing to be done for `all'.
+14:03:31 **** Incremental Build of configuration Default for project Gyro Hold Heading ****
+make all 
+make[1]: Nothing to be done for `all'.
+14:05:34 **** Incremental Build of configuration Default for project Gyro Hold Heading ****
+make all 
+CC -I../include -I../src opcontrol.c
+LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/OI.o ./bin/PantherMotor.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  17764	      8	   3992	  21764	   5504	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+14:05:48 **** Incremental Build of configuration Default for project Gyro Hold Heading ****
+make all 
+make[1]: Nothing to be done for `all'.
+14:06:09 **** Incremental Build of configuration Default for project Gyro Hold Heading ****
+make all 
+make[1]: Nothing to be done for `all'.
+14:07:49 **** Incremental Build of configuration Default for project Gyro Hold Heading ****
+make all 
+make[1]: Nothing to be done for `all'.
+14:08:13 **** Incremental Build of configuration Default for project Gyro Hold Heading ****
+make all 
+make[1]: Nothing to be done for `all'.
+14:10:27 **** Incremental Build of configuration Default for project Gyro Hold Heading ****
+make all 
+CC -I../include -I../src opcontrol.c
+LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/OI.o ./bin/PantherMotor.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  17756	      8	   3992	  21756	   54fc	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+14:10:57 **** Incremental Build of configuration Default for project Gyro Hold Heading ****
+make all 
+make[1]: Nothing to be done for `all'.
+14:15:09 **** Incremental Build of configuration Default for project Gyro Hold Heading ****
 make all 
 CC -I../include -I../src Drive.c
-CC -I../include -I../src Lift.c
+LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/OI.o ./bin/PantherMotor.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  17756	      8	   3992	  21756	   54fc	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+14:15:48 **** Incremental Build of configuration Default for project Gyro Hold Heading ****
+make all 
+make[1]: Nothing to be done for `all'.
+14:18:23 **** Incremental Build of configuration Default for project Gyro Hold Heading ****
+make all 
+CC -I../include -I../src Drive.c
+Drive.c:46:6: error: conflicting types for 'updateGyroSetPoint'
+In file included from ../include/main.h:54:0,
+                 from Drive.c:1:
+../include/Drive.h:28:6: note: previous declaration of 'updateGyroSetPoint' was here
+make[1]: *** [../bin/Drive.o] Error 1
+make: *** [src] Error 2
+14:18:41 **** Incremental Build of configuration Default for project Gyro Hold Heading ****
+make all 
+CC -I../include -I../src Drive.c
+CC -I../include -I../src DriveForTime.c
+CC -I../include -I../src DriveTestMotor.c
 CC -I../include -I../src OI.c
 CC -I../include -I../src PantherMotor.c
-CC -I../include -I../src Pickup.c
-Pickup.c: In function 'runPickup':
-Pickup.c:24:6: warning: 'leftSpeed' is used uninitialized in this function [-Wuninitialized]
-Pickup.c:25:6: warning: 'rightSpeed' is used uninitialized in this function [-Wuninitialized]
-CC -I../include -I../src Pot.c
+CC -I../include -I../src TestMotor.c
 CC -I../include -I../src Utilities.c
 CC -I../include -I../src auto.c
 CC -I../include -I../src init.c
 init.c: In function 'initialize':
-init.c:73:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
+init.c:78:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
 CC -I../include -I../src opcontrol.c
-LN ./bin/Drive.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/OI.o ./bin/PantherMotor.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
    text	   data	    bss	    dec	    hex	filename
-  16152	      4	   3940	  20096	   4e80	./bin/output.elf
+  17748	      8	   3992	  21748	   54f4	./bin/output.elf
 arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+14:18:57 **** Incremental Build of configuration Default for project Gyro Hold Heading ****
+make all 
+make[1]: Nothing to be done for `all'.
+14:21:35 **** Incremental Build of configuration Default for project Gyro Hold Heading ****
+make all 
+CC -I../include -I../src opcontrol.c
+LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/OI.o ./bin/PantherMotor.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  17756	      8	   3992	  21756	   54fc	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+14:21:46 **** Incremental Build of configuration Default for project Gyro Hold Heading ****
+make all 
+make[1]: Nothing to be done for `all'.
