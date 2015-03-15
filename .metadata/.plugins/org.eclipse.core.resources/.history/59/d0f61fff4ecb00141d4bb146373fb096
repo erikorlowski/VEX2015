@@ -58,7 +58,7 @@ void teleopInit()
 
 const int LIFT_MODE_AUTO = 0;
 const int LIFT_MODE_MANUAL = 1;
-int liftMode = 1;
+int liftMode = LIFT_MODE_MANUAL;
 int heightToLift = LOAD_HEIGHT;
 
 void teleopPeriodic()

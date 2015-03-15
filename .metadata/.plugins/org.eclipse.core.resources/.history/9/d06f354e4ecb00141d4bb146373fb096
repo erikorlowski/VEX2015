@@ -12,7 +12,7 @@ int OIGetDriveDirection();
 int OIGetDriveMagnitude();
 int OIGetDriveRotation();
 int OIGetLiftSpeed();
-int OIGetLiftLoad();
+int OIGetLiftLoad()
 int OIGetPickupOpen();
 int OIGetPickupClose();
 

@@ -39,8 +39,7 @@ int OIGetLiftSpeed()
 }
 
 /**
- * Returns the output from the joystick of whether the lift should go to
- * the load height.
+ * Returns the output from the joystick for the speed of the lift.
  */
 int OIGetLiftLoad()
 {

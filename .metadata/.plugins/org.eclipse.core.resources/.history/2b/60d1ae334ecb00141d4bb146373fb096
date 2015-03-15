@@ -39,15 +39,6 @@ int OIGetLiftSpeed()
 }
 
 /**
- * Returns the output from the joystick of whether the lift should go to
- * the load height.
- */
-int OIGetLiftLoad()
-{
-	return joystickGetDigital(2,6,JOY_UP);
-}
-
-/**
  * Returns the output from the joystick for whether to open the claw.
  */
 int OIGetPickupOpen()

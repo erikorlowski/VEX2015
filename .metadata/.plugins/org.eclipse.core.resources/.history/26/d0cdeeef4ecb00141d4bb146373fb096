@@ -24,7 +24,6 @@ struct Lift{
 
 int liftSafety(Lift lift, int desiredSpeed);
 void liftAtSpeed(Lift lift, int speed);
-int liftToHeight(Lift lift, int heightSP, int deadBand);
 Lift initLift(PantherMotor topMotor, PantherMotor secondTopMotor,
 	PantherMotor middleMotor, PantherMotor secondBottomMotor,
 	PantherMotor bottomMotor, Encoder encoder, int limitSwitch);
