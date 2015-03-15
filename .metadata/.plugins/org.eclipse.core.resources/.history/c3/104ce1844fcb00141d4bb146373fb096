@@ -67,20 +67,3 @@ void liftAtSpeed(Lift lift, int speed)
 	setPantherMotor(lift.leftMotor, leftSpeed);
 	setPantherMotor(lift.rightMotor, rightSpeed);
 }
-
-/**
- * Returns the error (pv - sp). Enter 0 for default deadband of 25.
- */
-int liftToHeight(Lift lift, int heightSP, int deadBand)
-{
-	deadBand = (deadBand == 0) ? 25 : deadBand;
-
-	int heightPV = (getPot(lift.leftPot) + getPot(lift.rightPot))/2;
-	int error = heightPV - heightSP;
-
-	if(inDeadBand(error, 0, deadBand)) liftAtSpeed(lift, 0);
-	else if(error > 0) liftAtSpeed(lift, -100);
-	else liftAtSpeed(lift, 100);
-
-	return error;
-}

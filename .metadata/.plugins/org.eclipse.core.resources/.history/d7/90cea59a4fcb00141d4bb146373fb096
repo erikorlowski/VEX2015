@@ -25,7 +25,6 @@ Lift initLift(PantherMotor leftMotor, PantherMotor rightMotor,
 		Pot leftPot, Pot rightPot);
 
 void liftAtSpeed(Lift lift, int speed);
-int liftToHeight(Lift lift, int heightSP, int deadBand);
 
 Lift lift;
 

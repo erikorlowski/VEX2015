@@ -23,11 +23,3 @@ int abs(int num)
 	if(num < 0) return -num;
 	else return num;
 }
-
-/**
- * Returns if realNum is in a range of plus or minus deadBand of desiredNum.
- */
-int inDeadBand(int realNum, int desiredNum, int deadBand)
-{
-	return (abs(realNum - desiredNum) < deadBand);
-}

@@ -75,7 +75,7 @@ int liftToHeight(Lift lift, int heightSP, int deadBand)
 {
 	deadBand = (deadBand == 0) ? 25 : deadBand;
 
-	int heightPV = (getPot(lift.leftPot) + getPot(lift.rightPot))/2;
+	int heightPV = (encoderGet(lift.leftPot) + encoderGet(lift.rightPot))/2;
 	int error = heightPV - heightSP;
 
 	if(inDeadBand(error, 0, deadBand)) liftAtSpeed(lift, 0);

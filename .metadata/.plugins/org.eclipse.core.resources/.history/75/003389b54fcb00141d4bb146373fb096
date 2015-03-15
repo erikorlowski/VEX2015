@@ -10,6 +10,5 @@
 
 int limit(int, int, int);
 int abs(int);
-int inDeadBand(int realNum, int desiredNum, int deadBand);
 
 #endif /* UTILITIES_H_ */
