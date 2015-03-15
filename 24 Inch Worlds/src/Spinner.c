@@ -20,5 +20,5 @@ void spinnerUp(Spinner spinner)
 
 void spinnerDown(Spinner spinner)
 {
-	motorSet(spinner.servo, 127);
+	motorSet(spinner.servo, -127);
 }

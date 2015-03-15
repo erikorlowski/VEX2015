@@ -18,10 +18,10 @@ Drive initDrive(PantherMotor frontLeftMotor, PantherMotor frontRightMotor,
  */
 void holonomicDrive(Drive drive, int direction, int magnitude, int rotation)
 {
-	int frontLeft = -direction + magnitude + rotation;
-	int frontRight = direction + magnitude - rotation;
-	int rearLeft = direction + magnitude + rotation;
-	int rearRight = -direction + magnitude - rotation;
+	int frontLeft = direction + magnitude + rotation;
+	int frontRight = -direction + magnitude - rotation;
+	int rearLeft = -direction + magnitude + rotation;
+	int rearRight = direction + magnitude - rotation;
 
 	frontLeft = limit(frontLeft, 127, -127);
 	frontRight = limit(frontRight, 127, -127);

@@ -64,14 +64,12 @@ void initialize()
 	drive = initDrive(initPantherMotor(3,0), initPantherMotor(4,1),
 			initPantherMotor(5,0), initPantherMotor(6,1));
 
-	lift = initLift(initPantherMotor(8,0), initPantherMotor(7,1),
+	lift = initLift(initPantherMotor(8,1), initPantherMotor(7,0),
 			initPot(2,1), initPot(1,1));
 
-	//TODO get real values
-	pickup = initPickup(initPantherMotor(1,0), initPantherMotor(2,1));
+	pickup = initPickup(initPantherMotor(1,0), initPantherMotor(10,1));
 
-	//TODO get real values
-	spinner = initSpinner(5);
+	spinner = initSpinner(9);
 
 	AutonomousInfo autonomousInfo = {1, 0, 0, 0};
 	puts("Initialized");

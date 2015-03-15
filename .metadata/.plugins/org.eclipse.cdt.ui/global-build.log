@@ -1,21 +1,48 @@
-15:13:56 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+17:04:50 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
 make all 
 CC -I../include -I../src Lift.c
-CC -I../include -I../src OI.c
-CC -I../include -I../src PantherMotor.c
+LN ./bin/Drive.o ./bin/DriveToWayPoint.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  16368	      4	   3948	  20320	   4f60	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+17:12:53 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src Lift.c
+LN ./bin/Drive.o ./bin/DriveToWayPoint.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  16344	      4	   3948	  20296	   4f48	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+17:16:20 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src Lift.c
 CC -I../include -I../src Pickup.c
 Pickup.c: In function 'runPickup':
 Pickup.c:24:6: warning: 'leftSpeed' is used uninitialized in this function [-Wuninitialized]
 Pickup.c:25:6: warning: 'rightSpeed' is used uninitialized in this function [-Wuninitialized]
-CC -I../include -I../src Pot.c
-CC -I../include -I../src Spinner.c
-CC -I../include -I../src Utilities.c
-CC -I../include -I../src auto.c
-CC -I../include -I../src init.c
-init.c: In function 'initialize':
-init.c:76:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
-CC -I../include -I../src opcontrol.c
-LN ./bin/Drive.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+LN ./bin/Drive.o ./bin/DriveToWayPoint.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
    text	   data	    bss	    dec	    hex	filename
-  16256	      4	   3948	  20208	   4ef0	./bin/output.elf
+  16360	      4	   3948	  20312	   4f58	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+17:18:19 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src Lift.c
+LN ./bin/Drive.o ./bin/DriveToWayPoint.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  16360	      4	   3948	  20312	   4f58	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+17:29:53 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+17:30:06 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+17:31:30 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+17:32:49 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src Pickup.c
+LN ./bin/Drive.o ./bin/DriveToWayPoint.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  16360	      4	   3948	  20312	   4f58	./bin/output.elf
 arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin

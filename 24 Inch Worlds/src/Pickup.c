@@ -21,9 +21,9 @@ Pickup initPickup(PantherMotor leftMotor, PantherMotor rightMotor)
  */
 void runPickup(Pickup pickup, int speed)
 {
-	int leftSpeed = limit(leftSpeed, 127, -127);
-	int rightSpeed = limit(rightSpeed, 127, -127);
+	int leftSpeed = limit(speed, 127, -127);
+	int rightSpeed = limit(speed, 127, -127);
 
-	setPantherMotor(lift.leftMotor, leftSpeed);
-	setPantherMotor(lift.rightMotor, rightSpeed);
+	setPantherMotor(pickup.leftMotor, leftSpeed);
+	setPantherMotor(pickup.rightMotor, rightSpeed);
 }

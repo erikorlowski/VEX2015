@@ -25,7 +25,7 @@ Lift initLift(PantherMotor leftMotor, PantherMotor rightMotor,
  */
 int liftSafety(int desiredSpeed, int potValue, int max)
 {
-	const int MIN_HEIGHT = 200;
+	const int MIN_HEIGHT = 0;
 	const int SLOW_HEIGHT = 1000;
 
 	printf("Value: %d", potValue);
@@ -64,6 +64,9 @@ void liftAtSpeed(Lift lift, int speed)
 	leftSpeed = limit(leftSpeed, 127, -127);
 	rightSpeed = limit(rightSpeed, 127, -127);
 
+	printf("Left Speed: %d\n", leftSpeed);
+	printf("Right Speed: %d\n", rightSpeed);
+
 	setPantherMotor(lift.leftMotor, leftSpeed);
 	setPantherMotor(lift.rightMotor, rightSpeed);
 }
@@ -71,7 +74,7 @@ void liftAtSpeed(Lift lift, int speed)
 /**
  * Returns the error (pv - sp). Enter 0 for default deadband of 25.
  */
-int liftToHeight(Lift lift, int heightSP, int deadBand)
+/*int liftToHeight(Lift lift, int heightSP, int deadBand)
 {
 	deadBand = (deadBand == 0) ? 25 : deadBand;
 
@@ -83,4 +86,4 @@ int liftToHeight(Lift lift, int heightSP, int deadBand)
 	else liftAtSpeed(lift, 100);
 
 	return error;
-}
+}*/
