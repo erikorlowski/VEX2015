@@ -14,7 +14,7 @@ struct Lift{
 	PantherMotor secondTopMotor;
 	PantherMotor middleMotor;
 	PantherMotor secondBottomMotor;
-	PantherMotor bottomMotor;
+	PantherMotor bottonMotor;
 
 	Encoder encoder;
 
@@ -26,7 +26,7 @@ int liftSafety(Lift lift, int desiredSpeed);
 void liftAtSpeed(Lift lift, int speed);
 Lift initLift(PantherMotor topMotor, PantherMotor secondTopMotor,
 	PantherMotor middleMotor, PantherMotor secondBottomMotor,
-	PantherMotor bottomMotor, Encoder encoder, int limitSwitch);
+	PantherMotor bottomMotor, Encoder encoder, int limitSwitch)
 
 Lift lift;
 

@@ -1,7 +1,7 @@
-14:41:50 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+14:57:09 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
 make all 
-CC -I../include -I../src opcontrol.c
-LN ./bin/Drive.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+CC -I../include -I../src Lift.c
+LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
    text	   data	    bss	    dec	    hex	filename
-  16256	      4	   3948	  20208	   4ef0	./bin/output.elf
+  16488	      4	   3948	  20440	   4fd8	./bin/output.elf
 arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin

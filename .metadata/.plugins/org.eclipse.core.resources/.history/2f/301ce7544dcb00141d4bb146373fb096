@@ -14,7 +14,7 @@ struct Lift{
 	PantherMotor secondTopMotor;
 	PantherMotor middleMotor;
 	PantherMotor secondBottomMotor;
-	PantherMotor bottomMotor;
+	PantherMotor bottonMotor;
 
 	Encoder encoder;
 

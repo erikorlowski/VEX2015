@@ -7,13 +7,10 @@
 
 #include "main.h"
 
-Lift initLift(PantherMotor topMotor, PantherMotor secondTopMotor,
-		PantherMotor middleMotor, PantherMotor secondBottomMotor,
-		PantherMotor bottomMotor, Encoder encoder, int limitSwitch)
+Lift initLift(PantherMotor bottomMotor, PantherMotor middleMotor,
+		PantherMotor topMotor, Encoder encoder, int limitSwitch)
 {
-	Lift newLift = {topMotor, secondTopMotor,
-			middleMotor, secondBottomMotor, bottomMotor, encoder,
-			limitSwitch};
+	Lift newLift = {bottomMotor, middleMotor, topMotor, encoder, limitSwitch};
 	return newLift;
 }
 
@@ -29,9 +26,7 @@ void liftAtSpeed(Lift lift, int speed)
 	int speedToFeed = liftSafety(lift, speed);
 
 	setPantherMotor(lift.bottomMotor, speedToFeed);
-	setPantherMotor(lift.secondBottomMotor, speedToFeed);
 	setPantherMotor(lift.middleMotor, speedToFeed);
-	setPantherMotor(lift.secondTopMotor, speedToFeed);
 	setPantherMotor(lift.topMotor, speedToFeed);
 }
 

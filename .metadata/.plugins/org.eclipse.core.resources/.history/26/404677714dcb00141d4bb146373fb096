@@ -29,9 +29,7 @@ void liftAtSpeed(Lift lift, int speed)
 	int speedToFeed = liftSafety(lift, speed);
 
 	setPantherMotor(lift.bottomMotor, speedToFeed);
-	setPantherMotor(lift.secondBottomMotor, speedToFeed);
 	setPantherMotor(lift.middleMotor, speedToFeed);
-	setPantherMotor(lift.secondTopMotor, speedToFeed);
 	setPantherMotor(lift.topMotor, speedToFeed);
 }
 
