@@ -74,8 +74,3 @@ int OIGetSpinnerUp()
 {
 	return joystickGetDigital(2,5,JOY_UP);
 }
-
-int OIGetSpinnerDown()
-{
-	return joystickGetDigital(2,5,JOY_DOWN);
-}

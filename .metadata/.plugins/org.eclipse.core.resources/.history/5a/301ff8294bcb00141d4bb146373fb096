@@ -70,9 +70,6 @@ void initialize()
 	//TODO get real values
 	pickup = initPickup(initPantherMotor(1,0), initPantherMotor(2,1));
 
-	//TODO get real values
-	spinner = initSpinner(5);
-
 	AutonomousInfo autonomousInfo = {1, 0, 0, 0};
 	puts("Initialized");
 }

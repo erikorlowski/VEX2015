@@ -15,7 +15,5 @@ int OIGetLiftUp();
 int OIGetLiftDown();
 int OIGetPickupIn();
 int OIGetPickupOut();
-int OIGetSpinnerUp();
-int OIGetSpinnerDown();
 
 #endif /* OI_H_ */

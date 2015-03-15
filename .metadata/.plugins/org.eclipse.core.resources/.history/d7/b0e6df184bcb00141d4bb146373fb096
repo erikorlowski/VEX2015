@@ -68,9 +68,6 @@ void teleopPeriodic()
 	if(OIGetPickupIn()) runPickup(pickup, 127);
 	else if(OIGetPickupOut()) runPickup(pickup, -127);
 	else runPickup(pickup, 0);
-
-	if(OIGetSpinnerUp()) spinnerUp(spinner);
-	else if(OIGetSpinnerDown()) spinnerDown(spinner);
 }
 
 void operatorControl() {

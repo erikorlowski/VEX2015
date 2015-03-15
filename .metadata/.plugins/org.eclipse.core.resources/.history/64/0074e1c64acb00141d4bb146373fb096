@@ -1,0 +1,19 @@
+/*
+ * Spinner.h
+ *
+ *  Created on: Mar 15, 2015
+ *      Author: Erik
+ */
+
+#ifndef SPINNER_H_
+#define SPINNER_H_
+
+struct Spinner{
+
+	int servo;
+
+}typedef Spinner;
+
+Spinner spinner;
+
+#endif /* SPINNER_H_ */
