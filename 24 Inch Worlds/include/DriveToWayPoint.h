@@ -15,7 +15,13 @@ struct DriveToWayPoint{
 	double magnitude;
 	int rotation;
 	int maxSpeed;
+	double gyroStart;
 
 }typedef DriveToWayPoint;
+
+DriveToWayPoint initDriveToWayPoint(Drive drive, double direction,
+		double magnitude, int rotation, int maxSpeed);
+int getAxisCorrection(int error, int maxSpeed, int deadBand);
+void driveToWayPoint(DriveToWayPoint *stepInfo);
 
 #endif /* DRIVETOWAYPOINT_H_ */

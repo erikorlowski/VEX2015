@@ -13,23 +13,23 @@ Pickup initPickup(PantherMotor motor)
 	return newPickup;
 }
 
-void clawAtSpeed(Pickup pickup, int speed)
+void clawAtSpeed(int speed)
 {
 	setPantherMotor(pickup.motor, limit(speed, 127, -127));
 }
 
-void openPickup(Pickup pickup)
+void openPickup()
 {
-	clawAtSpeed(pickup, 100);
+	clawAtSpeed(127);
 }
 
-void closePickup(Pickup pickup)
+void closePickup()
 {
-	clawAtSpeed(pickup, -100);
+	clawAtSpeed(-100);
 }
 
-void stopPickup(Pickup pickup)
+void stopPickup()
 {
-	clawAtSpeed(pickup, 0);
+	clawAtSpeed(0);
 }
 

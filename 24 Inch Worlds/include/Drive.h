@@ -18,10 +18,19 @@ struct Drive{
 	PantherMotor rearLeftMotor;
 	PantherMotor rearRightMotor;
 
+	int frontLeftIME;
+	int frontRightIME;
+	int rearLeftIME;
+	int rearRightIME;
+
+	Gyro gyro;
+
 }typedef Drive;
 
 Drive initDrive(PantherMotor frontLeftMotor, PantherMotor frontRightMotor,
-		PantherMotor rearLeftMotor, PantherMotor rearRightMotor);
+		PantherMotor rearLeftMotor, PantherMotor rearRightMotor,
+		int frontLeftIME, int frontRightIME, int rearLeftIME,
+		int rearRightIME, Gyro gyro);
 void holonomicDrive(Drive, int, int, int);
 
 Drive drive;

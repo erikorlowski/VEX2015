@@ -1,6 +1,20 @@
-15:24:17 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
+14:18:48 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
 make all 
-make[1]: Nothing to be done for `all'.
+CC -I../include -I../src Drive.c
+CC -I../include -I../src Lift.c
+CC -I../include -I../src OI.c
+CC -I../include -I../src PantherMotor.c
+CC -I../include -I../src Pickup.c
+CC -I../include -I../src Utilities.c
+CC -I../include -I../src auto.c
+CC -I../include -I../src init.c
+init.c: In function 'initialize':
+init.c:70:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
+CC -I../include -I../src opcontrol.c
+LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  16612	     12	   3948	  20572	   505c	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
 
-15:24:18 Build Finished (took 1s.45ms)
+14:18:54 Build Finished (took 6s.0ms)
 

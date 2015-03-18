@@ -4,10 +4,13 @@
  * Initializes a new drive object composed of two PantherMotors.
  */
 Drive initDrive(PantherMotor frontLeftMotor, PantherMotor frontRightMotor,
-		PantherMotor rearLeftMotor, PantherMotor rearRightMotor)
+		PantherMotor rearLeftMotor, PantherMotor rearRightMotor,
+		int frontLeftIME, int frontRightIME, int rearLeftIME,
+		int rearRightIME, Gyro gyro)
 {
 	Drive newDrive = {frontLeftMotor, frontRightMotor, rearLeftMotor,
-		rearRightMotor};
+		rearRightMotor, frontLeftIME, frontRightIME, rearLeftIME,
+		rearRightIME, gyro};
 
 	return newDrive;
 }

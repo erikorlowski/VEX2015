@@ -61,8 +61,11 @@ void initializeIO() {
 
 void initialize()
 {
+	printf("%d IMEs initialized.\n", imeInitializeAll());
+
 	drive = initDrive(initPantherMotor(3,0), initPantherMotor(4,1),
-			initPantherMotor(5,0), initPantherMotor(6,1));
+			initPantherMotor(5,0), initPantherMotor(6,1), 0, 1, 2, 3,
+			gyroInit(1,0));
 
 	lift = initLift(initPantherMotor(8,1), initPantherMotor(7,0),
 			initPot(2,1), initPot(1,1));

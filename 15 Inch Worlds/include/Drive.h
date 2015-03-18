@@ -22,7 +22,7 @@ struct Drive{
 
 Drive initDrive(PantherMotor frontLeftMotor, PantherMotor frontRightMotor,
 		PantherMotor rearLeftMotor, PantherMotor rearRightMotor);
-void holonomicDrive(Drive, int, int, int);
+void holonomicDrive(int, int, int);
 
 Drive drive;
 

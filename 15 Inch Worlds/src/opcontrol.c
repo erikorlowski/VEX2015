@@ -63,8 +63,12 @@ int heightToLift = LOAD_HEIGHT;
 
 void teleopPeriodic()
 {
-	holonomicDrive(drive, OIGetDriveDirection(), OIGetDriveMagnitude(),
+	holonomicDrive(OIGetDriveDirection(), OIGetDriveMagnitude(),
 			OIGetDriveRotation());
+
+	watchLift();
+
+	printf("Encoder: %d\n", encoderGet(lift.encoder));
 
 	if(!inDeadBand(OIGetLiftSpeed(), 0, 10)) liftMode = LIFT_MODE_MANUAL;
 	else if(OIGetLiftLoad())
@@ -75,17 +79,16 @@ void teleopPeriodic()
 
 	if(liftMode == LIFT_MODE_MANUAL)
 	{
-		liftAtSpeed(lift, OIGetLiftSpeed());
+		liftAtSpeed(OIGetLiftSpeed());
 	}
 	else if(liftMode == LIFT_MODE_AUTO)
 	{
-		liftToHeight(lift, heightToLift, 0);
+		liftToHeight(heightToLift, 0);
 	}
 
 
 	if(OIGetPickupOpen()) openPickup(pickup);
 	else if(OIGetPickupClose()) closePickup(pickup);
-	else stopPickup(pickup);
 }
 
 void operatorControl() {

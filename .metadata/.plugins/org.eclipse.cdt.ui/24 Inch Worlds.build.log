@@ -1,10 +1,22 @@
-17:32:49 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+15:30:39 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
 make all 
+CC -I../include -I../src DriveToWayPoint.c
+CC -I../include -I../src Lift.c
+CC -I../include -I../src OI.c
+CC -I../include -I../src PantherMotor.c
 CC -I../include -I../src Pickup.c
+CC -I../include -I../src Pot.c
+CC -I../include -I../src Spinner.c
+CC -I../include -I../src Utilities.c
+CC -I../include -I../src auto.c
+CC -I../include -I../src init.c
+init.c: In function 'initialize':
+init.c:77:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
+CC -I../include -I../src opcontrol.c
 LN ./bin/Drive.o ./bin/DriveToWayPoint.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
    text	   data	    bss	    dec	    hex	filename
-  16360	      4	   3948	  20312	   4f58	./bin/output.elf
+  17664	      4	   4444	  22112	   5660	./bin/output.elf
 arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
 
-17:32:51 Build Finished (took 2s.750ms)
+15:30:46 Build Finished (took 7s.521ms)
 

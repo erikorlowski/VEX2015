@@ -15,11 +15,11 @@ Drive initDrive(PantherMotor frontLeftMotor, PantherMotor frontRightMotor,
 /**
  * Drives a two wheel drive robot at the left speed and right speed.
  */
-void holonomicDrive(Drive drive, int direction, int magnitude, int rotation)
+void holonomicDrive(int direction, int magnitude, int rotation)
 {
 	int frontLeft = direction + magnitude + rotation;
-	int frontRight = -direction + magnitude + rotation;
-	int rearLeft = -direction + magnitude - rotation;
+	int frontRight = -direction + magnitude - rotation;
+	int rearLeft = -direction + magnitude + rotation;
 	int rearRight = direction + magnitude - rotation;
 
 	frontLeft = limit(frontLeft, 127, -127);

@@ -61,12 +61,12 @@ void initializeIO() {
 
 void initialize()
 {
-	drive = initDrive(initPantherMotor(7,0), initPantherMotor(10,0),
-			initPantherMotor(1,1), initPantherMotor(6,1));
-	lift = initLift(initPantherMotor(5,0), initPantherMotor(6,0),
-			initPantherMotor(7,0),initPantherMotor(8,0),
-			initPantherMotor(9,0), encoderInit(11,12, 0), 1);
-	pickup = initPickup(initPantherMotor(10,0));
+	drive = initDrive(initPantherMotor(2,0), initPantherMotor(1,0),
+			initPantherMotor(4,0), initPantherMotor(3,1));
+	lift = initLift(initPantherMotor(8,0), initPantherMotor(5,1),
+			initPantherMotor(7,1),initPantherMotor(6,1),
+			initPantherMotor(10,0), encoderInit(2,3, 1), 1);
+	pickup = initPickup(initPantherMotor(9,0));
 	AutonomousInfo autonomousInfo = {1, 0, 0, 0};
 	puts("Initialized");
 }

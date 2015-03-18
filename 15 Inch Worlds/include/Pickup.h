@@ -14,10 +14,10 @@ struct Pickup{
 
 }typedef Pickup;
 
-void pickupAtSpeed(Pickup pickup, int speed);
-void openPickup(Pickup pickup);
-void closePickup(Pickup pickup);
-void stopPickup(Pickup pickup);
+void pickupAtSpeed(int speed);
+void openPickup();
+void closePickup();
+void stopPickup();
 
 Pickup initPickup(PantherMotor motor);
 
