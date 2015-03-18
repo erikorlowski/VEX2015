@@ -1,134 +1,40 @@
-12:20:58 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
+16:24:29 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
 make all 
-CC -I../include -I../src opcontrol.c
-LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  16520	     12	   3948	  20480	   5000	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-12:21:50 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
-make[1]: Nothing to be done for `all'.
-12:22:03 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
-make[1]: Nothing to be done for `all'.
-12:23:10 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
-make[1]: Nothing to be done for `all'.
-12:32:42 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
-CC -I../include -I../src init.c
-init.c: In function 'initialize':
-init.c:70:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
-LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  16520	     12	   3948	  20480	   5000	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-12:34:42 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
-CC -I../include -I../src init.c
-init.c: In function 'initialize':
-init.c:70:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
-LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  16520	     12	   3948	  20480	   5000	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-12:37:05 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
-CC -I../include -I../src init.c
-init.c: In function 'initialize':
-init.c:70:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
-LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  16520	     12	   3948	  20480	   5000	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-12:40:07 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
+CC -I../include -I../src AutoLiftToHeight.c
 CC -I../include -I../src Drive.c
-LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  16520	     12	   3948	  20480	   5000	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-12:41:15 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
-CC -I../include -I../src init.c
-init.c: In function 'initialize':
-init.c:70:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
-LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  16520	     12	   3948	  20480	   5000	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-12:41:43 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
-CC -I../include -I../src init.c
-init.c: In function 'initialize':
-init.c:70:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
-LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  16520	     12	   3948	  20480	   5000	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-12:42:46 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
-CC -I../include -I../src init.c
-init.c: In function 'initialize':
-init.c:70:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
-LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  16520	     12	   3948	  20480	   5000	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-12:45:13 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
-CC -I../include -I../src init.c
-init.c: In function 'initialize':
-init.c:70:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
-LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  16520	     12	   3948	  20480	   5000	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-12:48:03 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
+CC -I../include -I../src DriveToWayPoint.c
+CC -I../include -I../src IME.c
+CC -I../include -I../src Lift.c
+CC -I../include -I../src OI.c
+CC -I../include -I../src PantherMotor.c
 CC -I../include -I../src Pickup.c
-CC -I../include -I../src opcontrol.c
-LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  16504	     12	   3948	  20464	   4ff0	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-12:56:37 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
+CC -I../include -I../src Utilities.c
+CC -I../include -I../src auto.c
 CC -I../include -I../src init.c
 init.c: In function 'initialize':
-init.c:70:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
-LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  16504	     12	   3948	  20464	   4ff0	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-13:01:16 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
-CC -I../include -I../src init.c
-init.c: In function 'initialize':
-init.c:70:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
-LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  16504	     12	   3948	  20464	   4ff0	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-13:02:31 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
-CC -I../include -I../src Lift.c
-LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  16504	     12	   3948	  20464	   4ff0	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-13:40:15 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
-CC -I../include -I../src Lift.c
+init.c:74:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
 CC -I../include -I../src opcontrol.c
-opcontrol.c: In function 'teleopPeriodic':
-opcontrol.c:69:2: error: implicit declaration of function 'watchLift' [-Werror=implicit-function-declaration]
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  20924	     12	   4504	  25440	   6360	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+16:30:52 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+auto.c: In function 'autonomousInit':
+auto.c:70:2: error: implicit declaration of function 'initAutoLiftToHeight' [-Werror=implicit-function-declaration]
+auto.c:70:19: error: incompatible types when assigning to type 'AutoLiftToHeight' from type 'int'
+auto.c: In function 'autonomousPeriodic':
+auto.c:97:4: error: implicit declaration of function 'autoLiftToHeight' [-Werror=implicit-function-declaration]
 cc1.exe: some warnings being treated as errors
-make[1]: *** [../bin/opcontrol.o] Error 1
+make[1]: *** [../bin/auto.o] Error 1
 make: *** [src] Error 2
-13:40:44 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
+16:32:04 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
 make all 
+CC -I../include -I../src AutoLiftToHeight.c
 CC -I../include -I../src Drive.c
+CC -I../include -I../src DriveToWayPoint.c
+CC -I../include -I../src IME.c
 CC -I../include -I../src Lift.c
 CC -I../include -I../src OI.c
 CC -I../include -I../src PantherMotor.c
@@ -137,97 +43,29 @@ CC -I../include -I../src Utilities.c
 CC -I../include -I../src auto.c
 CC -I../include -I../src init.c
 init.c: In function 'initialize':
-init.c:70:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
+init.c:74:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
 CC -I../include -I../src opcontrol.c
-LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
    text	   data	    bss	    dec	    hex	filename
-  16612	     12	   3948	  20572	   505c	./bin/output.elf
+  21012	     12	   4512	  25536	   63c0	./bin/output.elf
 arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-13:41:42 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
-CC -I../include -I../src init.c
-init.c: In function 'initialize':
-init.c:70:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
-LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  16612	     12	   3948	  20572	   505c	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-13:42:24 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
+16:32:51 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
 make all 
 make[1]: Nothing to be done for `all'.
-13:42:41 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
+16:36:11 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
 make all 
-make[1]: Nothing to be done for `all'.
-13:42:57 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
-make[1]: Nothing to be done for `all'.
-13:44:04 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
-make[1]: Nothing to be done for `all'.
-13:44:27 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
-make[1]: Nothing to be done for `all'.
-13:44:46 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
-make[1]: Nothing to be done for `all'.
-13:45:19 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
-make[1]: Nothing to be done for `all'.
-13:46:09 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
-make[1]: Nothing to be done for `all'.
-13:46:46 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
-make[1]: Nothing to be done for `all'.
-13:52:18 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
-make[1]: Nothing to be done for `all'.
-13:56:29 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
-make[1]: Nothing to be done for `all'.
-14:05:14 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
-CC -I../include -I../src init.c
-init.c: In function 'initialize':
-init.c:70:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
-LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  16612	     12	   3948	  20572	   505c	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-14:05:51 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
-make[1]: Nothing to be done for `all'.
-14:15:02 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
-CC -I../include -I../src Drive.c
-CC -I../include -I../src Lift.c
-CC -I../include -I../src OI.c
-CC -I../include -I../src PantherMotor.c
-CC -I../include -I../src Pickup.c
-CC -I../include -I../src Utilities.c
 CC -I../include -I../src auto.c
-CC -I../include -I../src init.c
-init.c: In function 'initialize':
-init.c:70:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
-CC -I../include -I../src opcontrol.c
-LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
    text	   data	    bss	    dec	    hex	filename
-  16612	     12	   3948	  20572	   505c	./bin/output.elf
+  21028	     12	   4512	  25552	   63d0	./bin/output.elf
 arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-14:18:48 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
+16:41:03 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
 make all 
-CC -I../include -I../src Drive.c
-CC -I../include -I../src Lift.c
-CC -I../include -I../src OI.c
-CC -I../include -I../src PantherMotor.c
-CC -I../include -I../src Pickup.c
-CC -I../include -I../src Utilities.c
 CC -I../include -I../src auto.c
-CC -I../include -I../src init.c
-init.c: In function 'initialize':
-init.c:70:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
-CC -I../include -I../src opcontrol.c
-LN ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
    text	   data	    bss	    dec	    hex	filename
-  16612	     12	   3948	  20572	   505c	./bin/output.elf
+  21100	     12	   4552	  25664	   6440	./bin/output.elf
 arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+16:41:36 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.

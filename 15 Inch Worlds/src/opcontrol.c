@@ -93,7 +93,7 @@ void teleopPeriodic()
 
 void operatorControl() {
 
-	//if(!isOnline()) autonomous();
+	if(!isOnline()) autonomous();
 
 	teleopInit();
 

@@ -51,6 +51,9 @@
 int isAuto = 1;
 
 //DriveForTime mode0Step1_1;
+DriveToWayPoint driveForward48;
+AutoLiftToHeight liftToLoadHeight;
+DriveToWayPoint turn90;
 
 long int stepStartTime;
 
@@ -60,9 +63,13 @@ long int stepStartTime;
 void autonomousInit()
 {
 	autonomousInfo.step = 1;
+	autonomousInfo.lastStep = 0;
 	autonomousInfo.isFinished = 0;
 
 	//mode0Step1_1 = initDriveForTime(drive, 127, 127, 3000);
+	driveForward48 = initDriveToWayPoint(0,48,0,100);
+	liftToLoadHeight = initAutoLiftToHeight(LOAD_HEIGHT);
+	turn90 = initDriveToWayPoint(0,0,90,100);
 
 	stepStartTime = millis();
 }
@@ -72,12 +79,12 @@ void autonomousInit()
  */
 void autonomousPeriodic()
 {
+	watchLift();
+
 	if(autonomousInfo.step != autonomousInfo.lastStep)
 	{
 		stepStartTime = millis();
 	}
-
-	autonomousInfo.lastStep = autonomousInfo.step;
 
 	autonomousInfo.elapsedTime = millis() - stepStartTime;
 
@@ -89,9 +96,21 @@ void autonomousPeriodic()
 		switch(autonomousInfo.step)
 		{
 		case(1):
+			openPickup();
+			autonomousInfo.isFinished = 1;
+			break;
 
-			/*driveForTime(&mode0Step1_1);
-			autonomousInfo.isFinished = mode0Step1_1.isFinished;*/
+		case(2):
+
+			driveToWayPoint(&driveForward48);
+			autoLiftToHeight(&liftToLoadHeight);
+			autonomousInfo.isFinished = driveForward48.isFinished
+					&& liftToLoadHeight.isFinished;
+			break;
+
+		case(3):
+			driveToWayPoint(&turn90);
+			autonomousInfo.isFinished = turn90.isFinished;
 			break;
 
 		default:
@@ -102,6 +121,8 @@ void autonomousPeriodic()
 		break;
 
 	}
+
+	autonomousInfo.lastStep = autonomousInfo.step;
 
 	if(autonomousInfo.isFinished)
 	{

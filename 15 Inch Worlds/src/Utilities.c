@@ -5,6 +5,8 @@
  *      Author: Erik
  */
 
+#include "main.h"
+
 /**
  * Returns a number limited between the min and max.
  */
@@ -30,4 +32,9 @@ int abs(int num)
 int inDeadBand(int realNum, int desiredNum, int deadBand)
 {
 	return (abs(realNum - desiredNum) < deadBand);
+}
+
+int holonomicInchesToIME(double inches, double wheelDiameter)
+{
+	return (int) (inches / ((PI * wheelDiameter * SIN_45) / /*627.2*/392.0));
 }

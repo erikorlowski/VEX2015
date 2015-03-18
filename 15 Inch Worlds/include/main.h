@@ -57,6 +57,12 @@
 
 #include "Pickup.h"
 
+#include "DriveToWayPoint.h"
+
+#include "AutoLiftToHeight.h"
+
+#include "IME.h"
+
 #include "OI.h"
 
 #include "Auto.h"

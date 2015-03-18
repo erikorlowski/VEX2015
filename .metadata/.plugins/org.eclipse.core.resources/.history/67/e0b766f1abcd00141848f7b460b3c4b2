@@ -1,0 +1,73 @@
+/*
+ * DriveToWayPoint.c
+ *
+ *  Created on: Mar 15, 2015
+ *      Author: Erik
+ */
+
+#include "main.h"
+
+DriveToWayPoint initDriveToWayPoint(double direction,
+		double magnitude, int rotation, int maxSpeed)
+{
+	DriveToWayPoint newDriveToWayPoint = {direction, magnitude,
+			rotation, maxSpeed, 0.0, 0};
+	return newDriveToWayPoint;
+}
+
+int getAxisCorrection(int error, int maxSpeed, int deadBand)
+{
+	if(inDeadBand(error, 0, deadBand)) return 0;
+	else if(error > 0) return -maxSpeed;
+	else return maxSpeed;
+}
+
+void driveToWayPoint(DriveToWayPoint *stepInfo)
+{
+	if(autonomousInfo.lastStep != autonomousInfo.step)
+	{
+		imeReset(drive.frontLeftIME);
+		imeReset(drive.frontRightIME);
+		imeReset(drive.rearLeftIME);
+		imeReset(drive.rearRightIME);
+
+		(*stepInfo).gyroStart = gyroGet(drive.gyro);
+	}
+
+	int directionRevs = holonomicInchesToIME((*stepInfo).direction, 3.25);
+	int magnitudeRevs = holonomicInchesToIME((*stepInfo).magnitude, 3.25);
+
+	printf("Direction Revs: %d\n", directionRevs);
+
+	int frontLeftDistance;
+	int frontRightDistance;
+	int rearLeftDistance;
+	int rearRightDistance;
+
+	imeGet(drive.frontLeftIME, &frontLeftDistance);
+	imeGet(drive.frontRightIME, &frontRightDistance);
+	imeGet(drive.rearLeftIME, &rearLeftDistance);
+	imeGet(drive.rearRightIME, &rearRightDistance);
+
+	int directionPV = (frontLeftDistance -frontRightDistance -
+			rearLeftDistance +rearRightDistance)/4;
+	int magnitudePV = (frontLeftDistance + frontRightDistance +
+			rearLeftDistance + rearRightDistance)/4;
+
+	int directionError = directionPV - directionRevs;
+	int magnitudeError = magnitudePV - magnitudeRevs;
+	int rotationError = (int) (gyroGet(drive.gyro) -
+			(*stepInfo).gyroStart - (*stepInfo).rotation);
+
+	printf("Magnitude Error: %d\nDirection Error: %d\nRotation Error: %d\n",
+			magnitudeError, directionError, rotationError);
+
+	holonomicDrive(
+			getAxisCorrection(directionError, (*stepInfo).maxSpeed, 10),
+			getAxisCorrection(magnitudeError, (*stepInfo).maxSpeed, 10),
+			getAxisCorrection(rotationError, (*stepInfo).maxSpeed, 4));
+
+	(*stepInfo).isFinished = inDeadBand(directionError, 0, 10)
+			&& inDeadBand(magnitudeError, 0, 10)
+			&& inDeadBand(rotationError, 0, 4);
+}
