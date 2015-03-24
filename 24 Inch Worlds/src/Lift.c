@@ -74,16 +74,19 @@ void liftAtSpeed(Lift lift, int speed)
 /**
  * Returns the error (pv - sp). Enter 0 for default deadband of 25.
  */
-/*int liftToHeight(Lift lift, int heightSP, int deadBand)
+int liftToHeight(Lift lift, int heightSP, int deadBand)
 {
+	const double kP = -.500;
+
 	deadBand = (deadBand == 0) ? 25 : deadBand;
 
 	int heightPV = (getPot(lift.leftPot) + getPot(lift.rightPot))/2;
 	int error = heightPV - heightSP;
 
+	int proportionalContribution = (int) (kP * error);
+
 	if(inDeadBand(error, 0, deadBand)) liftAtSpeed(lift, 0);
-	else if(error > 0) liftAtSpeed(lift, -100);
-	else liftAtSpeed(lift, 100);
+	else if(error > 0) liftAtSpeed(lift, proportionalContribution);
 
 	return error;
-}*/
+}

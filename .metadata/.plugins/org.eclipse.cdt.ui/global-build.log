@@ -1,71 +1,47 @@
-16:24:29 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
+14:37:12 **** Build of configuration Default for project Memory Leak Elimination ****
 make all 
-CC -I../include -I../src AutoLiftToHeight.c
-CC -I../include -I../src Drive.c
 CC -I../include -I../src DriveToWayPoint.c
-CC -I../include -I../src IME.c
 CC -I../include -I../src Lift.c
-CC -I../include -I../src OI.c
-CC -I../include -I../src PantherMotor.c
-CC -I../include -I../src Pickup.c
-CC -I../include -I../src Utilities.c
-CC -I../include -I../src auto.c
-CC -I../include -I../src init.c
-init.c: In function 'initialize':
-init.c:74:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
-CC -I../include -I../src opcontrol.c
 LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
    text	   data	    bss	    dec	    hex	filename
-  20924	     12	   4504	  25440	   6360	./bin/output.elf
+  20852	     12	   4552	  25416	   6348	./bin/output.elf
 arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-16:30:52 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
-CC -I../include -I../src auto.c
-auto.c: In function 'autonomousInit':
-auto.c:70:2: error: implicit declaration of function 'initAutoLiftToHeight' [-Werror=implicit-function-declaration]
-auto.c:70:19: error: incompatible types when assigning to type 'AutoLiftToHeight' from type 'int'
-auto.c: In function 'autonomousPeriodic':
-auto.c:97:4: error: implicit declaration of function 'autoLiftToHeight' [-Werror=implicit-function-declaration]
-cc1.exe: some warnings being treated as errors
-make[1]: *** [../bin/auto.o] Error 1
-make: *** [src] Error 2
-16:32:04 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
-CC -I../include -I../src AutoLiftToHeight.c
-CC -I../include -I../src Drive.c
-CC -I../include -I../src DriveToWayPoint.c
-CC -I../include -I../src IME.c
-CC -I../include -I../src Lift.c
-CC -I../include -I../src OI.c
-CC -I../include -I../src PantherMotor.c
-CC -I../include -I../src Pickup.c
-CC -I../include -I../src Utilities.c
-CC -I../include -I../src auto.c
-CC -I../include -I../src init.c
-init.c: In function 'initialize':
-init.c:74:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
-CC -I../include -I../src opcontrol.c
-LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  21012	     12	   4512	  25536	   63c0	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-16:32:51 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
+20:11:42 **** Incremental Build of configuration Default for project Memory Leak Elimination ****
 make all 
 make[1]: Nothing to be done for `all'.
-16:36:11 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
+20:14:24 **** Incremental Build of configuration Default for project Memory Leak Elimination ****
 make all 
-CC -I../include -I../src auto.c
+make[1]: Nothing to be done for `all'.
+20:15:37 **** Incremental Build of configuration Default for project Memory Leak Elimination ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:16:08 **** Incremental Build of configuration Default for project Memory Leak Elimination ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:16:23 **** Incremental Build of configuration Default for project Memory Leak Elimination ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:17:17 **** Incremental Build of configuration Default for project Memory Leak Elimination ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:18:49 **** Incremental Build of configuration Default for project Memory Leak Elimination ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'initialize':
+init.c:75:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
 LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
    text	   data	    bss	    dec	    hex	filename
-  21028	     12	   4512	  25552	   63d0	./bin/output.elf
+  20868	     12	   4552	  25432	   6358	./bin/output.elf
 arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-16:41:03 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
+20:20:26 **** Incremental Build of configuration Default for project Memory Leak Elimination ****
 make all 
-CC -I../include -I../src auto.c
-LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  21100	     12	   4552	  25664	   6440	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-16:41:36 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
+make[1]: Nothing to be done for `all'.
+20:50:13 **** Build of configuration Default for project 15 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:50:31 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:50:45 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
 make all 
 make[1]: Nothing to be done for `all'.

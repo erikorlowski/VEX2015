@@ -79,3 +79,18 @@ int OIGetSpinnerDown()
 {
 	return joystickGetDigital(2,5,JOY_DOWN);
 }
+
+int OIGetLiftToLowPost()
+{
+	return joystickGetDigital(2,8,JOY_DOWN);
+}
+
+int OIGetLiftToMediumPost()
+{
+	return joystickGetDigital(2,8,JOY_RIGHT);
+}
+
+int OIGetLiftToHighPost()
+{
+	return joystickGetDigital(2,8,JOY_UP);
+}

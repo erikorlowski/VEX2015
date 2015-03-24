@@ -1,0 +1,6 @@
+20:20:26 **** Incremental Build of configuration Default for project Memory Leak Elimination ****
+make all 
+make[1]: Nothing to be done for `all'.
+
+20:20:27 Build Finished (took 1s.31ms)
+

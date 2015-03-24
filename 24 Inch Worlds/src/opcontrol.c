@@ -56,14 +56,41 @@ void teleopInit()
 	puts("Teleop");
 }
 
+const int LIFT_MODE_MANUAL = 0;
+const int LIFT_MODE_AUTO = 1;
+
+int liftMode = LIFT_MODE_MANUAL;
+int liftHeightSP = 0;
+
 void teleopPeriodic()
 {
 	holonomicDrive(drive, OIGetDriveDirection(), OIGetDriveMagnitude(),
 		OIGetDriveRotation());
 
-	if(OIGetLiftUp()) liftAtSpeed(lift, 80);
-	else if(OIGetLiftDown()) liftAtSpeed(lift, -80);
-	else liftAtSpeed(lift, 0);
+	if(OIGetLiftUp() || OIGetLiftDown()) liftMode = LIFT_MODE_MANUAL;
+	else if(OIGetLiftToLowPost())
+	{
+		liftMode = LIFT_MODE_AUTO;
+		liftHeightSP = LOW_POST_HEIGHT;
+	}
+	else if(OIGetLiftToMediumPost())
+	{
+		liftMode = LIFT_MODE_AUTO;
+		liftHeightSP = MEDIUM_POST_HEIGHT;
+	}
+	else if(OIGetLiftToHighPost())
+	{
+		liftMode = LIFT_MODE_AUTO;
+		liftHeightSP = HIGH_POST_HEIGHT;
+	}
+
+	if(liftMode == LIFT_MODE_AUTO) liftToHeight(lift, liftHeightSP, 0);
+	else if(liftMode == LIFT_MODE_MANUAL)
+	{
+		if(OIGetLiftUp()) liftAtSpeed(lift, 80);
+		else if(OIGetLiftDown()) liftAtSpeed(lift, -80);
+		else liftAtSpeed(lift, 0);
+	}
 
 	if(OIGetPickupIn()) runPickup(pickup, 127);
 	else if(OIGetPickupOut()) runPickup(pickup, -127);
