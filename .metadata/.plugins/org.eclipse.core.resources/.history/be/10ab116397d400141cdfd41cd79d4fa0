@@ -30,16 +30,6 @@ int OIGetDriveRotation()
 	return joystickGetAnalog(1,1);
 }
 
-int OIDisableDriveGyro()
-{
-	return joystickGetDigital(1, 5, JOY_UP);
-}
-
-int OIEnableDriveGyro()
-{
-	return joystickGetDigital(1, 6, JOY_UP);
-}
-
 /**
  * Returns the output from the joystick of if the lift should be moving
  * up.

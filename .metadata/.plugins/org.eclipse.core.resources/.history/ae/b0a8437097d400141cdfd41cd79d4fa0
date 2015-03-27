@@ -11,8 +11,6 @@
 int OIGetDriveDirection();
 int OIGetDriveMagnitude();
 int OIGetDriveRotation();
-int OIDisableDriveGyro();
-int OIEnableDriveGyro();
 int OIGetLiftUp();
 int OIGetLiftDown();
 int OIGetPickupIn();

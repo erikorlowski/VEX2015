@@ -63,5 +63,5 @@ void driveToWayPoint(DriveToWayPoint *stepInfo)
 	holonomicDrive((*stepInfo).drive,
 			getAxisCorrection(directionError, (*stepInfo).maxSpeed, 10),
 			getAxisCorrection(magnitudeError, (*stepInfo).maxSpeed, 10),
-			getAxisCorrection(rotationError, (*stepInfo).maxSpeed, 4));
+			getAxisCorrection(rotationError, (*stepInfo).maxSpeed, 4), 0);
 }

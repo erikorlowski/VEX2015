@@ -62,31 +62,10 @@ const int LIFT_MODE_AUTO = 1;
 int liftMode = 0;
 int liftHeightSP = 0;
 
-int lastIsTurning = 1;
-int useDriveGyro = 1;
-
 void teleopPeriodic()
 {
-	if(OIDisableDriveGyro()) useDriveGyro = 0;
-	if(OIEnableDriveGyro())
-	{
-		updateGyroSetPoint(&drive);
-		useDriveGyro = 1;
-	}
-
-	int turning = !inDeadBand(OIGetDriveRotation(), 0, 10);
-
-	if(turning || !useDriveGyro) holonomicDrive(drive, OIGetDriveDirection(),
-		OIGetDriveMagnitude(), OIGetDriveRotation, 0);
-	else if(lastIsTurning)
-	{
-		updateGyroSetPoint(&drive);
-		holonomicDrive(drive, OIGetDriveDirection(), OIGetDriveMagnitude(), 0, 1);
-	}
-	else holonomicDrive(drive, OIGetDriveDirection(), OIGetDriveMagnitude(),
-		0, 1);
-
-	lastIsTurning = turning;
+	holonomicDrive(drive, OIGetDriveDirection(), OIGetDriveMagnitude(),
+		OIGetDriveRotation(), 0);
 
 	if(OIGetLiftUp() || OIGetLiftDown()) liftMode = LIFT_MODE_MANUAL;
 	else if(OIGetLiftToLowPost())

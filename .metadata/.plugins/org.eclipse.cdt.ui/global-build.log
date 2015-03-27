@@ -1,47 +1,12 @@
-14:37:12 **** Build of configuration Default for project Memory Leak Elimination ****
+10:40:34 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
 make all 
-CC -I../include -I../src DriveToWayPoint.c
-CC -I../include -I../src Lift.c
-LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+CC -I../include -I../src opcontrol.c
+opcontrol.c: In function 'teleopPeriodic':
+opcontrol.c:80:3: warning: passing argument 4 of 'holonomicDrive' makes integer from pointer without a cast [enabled by default]
+In file included from ../include/main.h:54:0,
+                 from opcontrol.c:35:
+../include/Drive.h:35:6: note: expected 'int' but argument is of type 'int (*)()'
+LN ./bin/Drive.o ./bin/DriveToWayPoint.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
    text	   data	    bss	    dec	    hex	filename
-  20852	     12	   4552	  25416	   6348	./bin/output.elf
+  20288	     12	   4452	  24752	   60b0	./bin/output.elf
 arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-20:11:42 **** Incremental Build of configuration Default for project Memory Leak Elimination ****
-make all 
-make[1]: Nothing to be done for `all'.
-20:14:24 **** Incremental Build of configuration Default for project Memory Leak Elimination ****
-make all 
-make[1]: Nothing to be done for `all'.
-20:15:37 **** Incremental Build of configuration Default for project Memory Leak Elimination ****
-make all 
-make[1]: Nothing to be done for `all'.
-20:16:08 **** Incremental Build of configuration Default for project Memory Leak Elimination ****
-make all 
-make[1]: Nothing to be done for `all'.
-20:16:23 **** Incremental Build of configuration Default for project Memory Leak Elimination ****
-make all 
-make[1]: Nothing to be done for `all'.
-20:17:17 **** Incremental Build of configuration Default for project Memory Leak Elimination ****
-make all 
-make[1]: Nothing to be done for `all'.
-20:18:49 **** Incremental Build of configuration Default for project Memory Leak Elimination ****
-make all 
-CC -I../include -I../src init.c
-init.c: In function 'initialize':
-init.c:75:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
-LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  20868	     12	   4552	  25432	   6358	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
-20:20:26 **** Incremental Build of configuration Default for project Memory Leak Elimination ****
-make all 
-make[1]: Nothing to be done for `all'.
-20:50:13 **** Build of configuration Default for project 15 Inch Worlds ****
-make all 
-make[1]: Nothing to be done for `all'.
-20:50:31 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
-make[1]: Nothing to be done for `all'.
-20:50:45 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
-make all 
-make[1]: Nothing to be done for `all'.

@@ -42,7 +42,7 @@ void holonomicDrive(Drive drive, int direction, int magnitude, int rotation,
 	else
 	{
 		holonomicDrive(drive, direction, magnitude, getGyroCorrection(drive),
-			0);
+				0);
 	}
 
 }

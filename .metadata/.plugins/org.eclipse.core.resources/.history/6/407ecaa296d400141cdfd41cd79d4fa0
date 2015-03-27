@@ -39,11 +39,7 @@ void holonomicDrive(Drive drive, int direction, int magnitude, int rotation,
 		setPantherMotor(drive.rearLeftMotor, rearLeft);
 		setPantherMotor(drive.rearRightMotor, rearRight);
 	}
-	else
-	{
-		holonomicDrive(drive, direction, magnitude, getGyroCorrection(drive),
-			0);
-	}
+
 
 }
 

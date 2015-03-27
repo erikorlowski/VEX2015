@@ -32,7 +32,7 @@ Drive initDrive(PantherMotor frontLeftMotor, PantherMotor frontRightMotor,
 		PantherMotor rearLeftMotor, PantherMotor rearRightMotor,
 		int frontLeftIME, int frontRightIME, int rearLeftIME,
 		int rearRightIME, Gyro gyro);
-void holonomicDrive(Drive, int, int, int, int);
+void holonomicDrive(Drive, int, int, int);
 int getGyroCorrection(Drive drive);
 int getAngle(Drive drive);
 void updateGyroSetPoint(Drive *drive);
