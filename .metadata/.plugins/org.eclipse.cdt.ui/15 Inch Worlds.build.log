@@ -1,6 +1,10 @@
-20:50:45 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
+14:23:48 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
 make all 
-make[1]: Nothing to be done for `all'.
+CC -I../include -I../src opcontrol.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  18492	     12	   4552	  23056	   5a10	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
 
-20:50:45 Build Finished (took 312ms)
+14:23:52 Build Finished (took 4s.87ms)
 

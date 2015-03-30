@@ -15,7 +15,7 @@ AutoLiftToHeight initAutoLiftToHeight(int height)
 
 void autoLiftToHeight(AutoLiftToHeight *stepInfo)
 {
-	int error = liftToHeight((*stepInfo).desiredHeight, 0);
+	int error = liftToHeight(lift, (*stepInfo).desiredHeight, 0);
 
 	(*stepInfo).isFinished = (abs(error) < 25);
 }

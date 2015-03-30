@@ -24,6 +24,8 @@ void holonomicDrive(Drive drive, int direction, int magnitude, int rotation,
 {
 	if(!useGyro)
 	{
+		puts("No Gyro");
+
 		int frontLeft = direction + magnitude + rotation;
 		int frontRight = -direction + magnitude - rotation;
 		int rearLeft = -direction + magnitude + rotation;
@@ -41,6 +43,7 @@ void holonomicDrive(Drive drive, int direction, int magnitude, int rotation,
 	}
 	else
 	{
+		puts("Using Gyro");
 		holonomicDrive(drive, direction, magnitude, getGyroCorrection(drive),
 			0);
 	}
@@ -49,7 +52,7 @@ void holonomicDrive(Drive drive, int direction, int magnitude, int rotation,
 
 int getGyroCorrection(Drive drive)
 {
-	double kP = 3.81;
+	double kP = -3.81;
 
 	int error = getAngle(drive) - drive.headingSetPoint;
 

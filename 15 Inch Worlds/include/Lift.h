@@ -22,10 +22,10 @@ struct Lift{
 
 }typedef Lift;
 
-int liftSafety(int desiredSpeed);
-void liftAtSpeed(int speed);
-int liftToHeight(int heightSP, int deadBand);
-void watchLift();
+int liftSafety(Lift, int desiredSpeed);
+void liftAtSpeed(Lift, int speed);
+int liftToHeight(Lift, int heightSP, int deadBand);
+void watchLift(Lift);
 Lift initLift(PantherMotor topMotor, PantherMotor secondTopMotor,
 	PantherMotor middleMotor, PantherMotor secondBottomMotor,
 	PantherMotor bottomMotor, Encoder encoder, int limitSwitch);

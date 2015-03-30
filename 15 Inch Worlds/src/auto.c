@@ -64,7 +64,7 @@ void autonomousInit()
 {
 	autonomousInfo.step = 1;
 	autonomousInfo.lastStep = 0;
-	autonomousInfo.isFinished = 0;
+	autonomousInfo.isFinished = 1;//FIXME
 
 	//mode0Step1_1 = initDriveForTime(drive, 127, 127, 3000);
 	driveForward48 = initDriveToWayPoint(0,48,0,100);
@@ -79,7 +79,7 @@ void autonomousInit()
  */
 void autonomousPeriodic()
 {
-	watchLift();
+	watchLift(lift);
 
 	if(autonomousInfo.step != autonomousInfo.lastStep)
 	{
@@ -96,21 +96,24 @@ void autonomousPeriodic()
 		switch(autonomousInfo.step)
 		{
 		case(1):
-			openPickup();
+			//openPickup();
 			autonomousInfo.isFinished = 1;
 			break;
 
 		case(2):
-
-			driveToWayPoint(&driveForward48);
-			autoLiftToHeight(&liftToLoadHeight);
-			autonomousInfo.isFinished = driveForward48.isFinished
-					&& liftToLoadHeight.isFinished;
+			//FIXME
+			//driveToWayPoint(&driveForward48);
+			//autoLiftToHeight(&liftToLoadHeight);
+			//autonomousInfo.isFinished = driveForward48.isFinished
+			//		&& liftToLoadHeight.isFinished;
+			autonomousInfo.isFinished = 1;
 			break;
 
 		case(3):
-			driveToWayPoint(&turn90);
-			autonomousInfo.isFinished = turn90.isFinished;
+			//FIXME
+			//driveToWayPoint(&turn90);
+			//autonomousInfo.isFinished = turn90.isFinished;
+			autonomousInfo.isFinished = 1;
 			break;
 
 		default:

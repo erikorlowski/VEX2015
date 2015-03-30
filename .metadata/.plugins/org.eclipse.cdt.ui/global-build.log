@@ -1,12 +1,7 @@
-10:40:34 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+14:23:48 **** Incremental Build of configuration Default for project 15 Inch Worlds ****
 make all 
 CC -I../include -I../src opcontrol.c
-opcontrol.c: In function 'teleopPeriodic':
-opcontrol.c:80:3: warning: passing argument 4 of 'holonomicDrive' makes integer from pointer without a cast [enabled by default]
-In file included from ../include/main.h:54:0,
-                 from opcontrol.c:35:
-../include/Drive.h:35:6: note: expected 'int' but argument is of type 'int (*)()'
-LN ./bin/Drive.o ./bin/DriveToWayPoint.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMotor.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/TestMotor.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
    text	   data	    bss	    dec	    hex	filename
-  20288	     12	   4452	  24752	   60b0	./bin/output.elf
+  18492	     12	   4552	  23056	   5a10	./bin/output.elf
 arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin

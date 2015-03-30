@@ -77,7 +77,7 @@ void teleopPeriodic()
 	int turning = !inDeadBand(OIGetDriveRotation(), 0, 10);
 
 	if(turning || !useDriveGyro) holonomicDrive(drive, OIGetDriveDirection(),
-		OIGetDriveMagnitude(), OIGetDriveRotation, 0);
+		OIGetDriveMagnitude(), OIGetDriveRotation(), 0);
 	else if(lastIsTurning)
 	{
 		updateGyroSetPoint(&drive);
@@ -104,6 +104,8 @@ void teleopPeriodic()
 		liftMode = LIFT_MODE_AUTO;
 		liftHeightSP = HIGH_POST_HEIGHT;
 	}
+
+	printf("Lift Mode: %d", liftMode);
 
 	if(liftMode == LIFT_MODE_AUTO) liftToHeight(lift, liftHeightSP, 0);
 	else if(liftMode == LIFT_MODE_MANUAL)

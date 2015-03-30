@@ -32,7 +32,7 @@ int OIGetDriveRotation()
 
 int OIDisableDriveGyro()
 {
-	return joystickGetDigital(1, 5, JOY_UP);
+	return joystickGetDigital(1, 6, JOY_DOWN);
 }
 
 int OIEnableDriveGyro()

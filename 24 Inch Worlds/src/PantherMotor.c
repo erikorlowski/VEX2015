@@ -21,7 +21,7 @@ PantherMotor initPantherMotor(int port, int inverted)
  */
 void setPantherMotor(PantherMotor motor, int speed)
 {
-	printf("Motor: %d to %d\n", motor.port, speed);
+	//printf("Motor: %d to %d\n", motor.port, speed);
 	motorSet(motor.port, (motor.inverted) ? -speed : speed);
 }
 

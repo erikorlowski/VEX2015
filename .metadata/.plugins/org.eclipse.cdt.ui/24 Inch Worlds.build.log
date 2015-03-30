@@ -1,15 +1,6 @@
-10:40:34 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+16:11:18 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
 make all 
-CC -I../include -I../src opcontrol.c
-opcontrol.c: In function 'teleopPeriodic':
-opcontrol.c:80:3: warning: passing argument 4 of 'holonomicDrive' makes integer from pointer without a cast [enabled by default]
-In file included from ../include/main.h:54:0,
-                 from opcontrol.c:35:
-../include/Drive.h:35:6: note: expected 'int' but argument is of type 'int (*)()'
-LN ./bin/Drive.o ./bin/DriveToWayPoint.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
-   text	   data	    bss	    dec	    hex	filename
-  20288	     12	   4452	  24752	   60b0	./bin/output.elf
-arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+make[1]: Nothing to be done for `all'.
 
-10:40:38 Build Finished (took 3s.67ms)
+16:11:19 Build Finished (took 1s.383ms)
 

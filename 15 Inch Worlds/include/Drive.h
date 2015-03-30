@@ -33,7 +33,7 @@ Drive initDrive(PantherMotor frontLeftMotor, PantherMotor frontRightMotor,
 		PantherMotor rearLeftMotor, PantherMotor rearRightMotor,
 		IME frontLeftIME, IME frontRightIME, IME rearLeftIME,
 		IME rearRightIME, Gyro gyro);
-void holonomicDrive(int, int, int);
+void holonomicDrive(Drive, int, int, int);
 
 Drive drive;
 
