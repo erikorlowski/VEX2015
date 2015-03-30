@@ -7,9 +7,6 @@
 
 #include "main.h"
 
-//TODO put DriveToWayPoint into main header file
-#include "DriveToWayPoint.h"
-
 DriveToWayPoint initDriveToWayPoint(Drive drive, double direction,
 		double magnitude, int rotation, int maxSpeed)
 {

@@ -115,9 +115,9 @@ void teleopPeriodic()
 		else liftAtSpeed(lift, 0);
 	}
 
-	if(OIGetPickupIn()) runPickup(pickup, 127);
-	else if(OIGetPickupOut()) runPickup(pickup, -127);
-	else runPickup(pickup, 0);
+	if(OIGetPickupIn()) pickupIn(pickup);
+	else if(OIGetPickupOut()) pickupOut(pickup);
+	else pickupStop(pickup);
 
 	if(OIGetSpinnerUp()) spinnerUp(spinner);
 	else if(OIGetSpinnerDown()) spinnerDown(spinner);

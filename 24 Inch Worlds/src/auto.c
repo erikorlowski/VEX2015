@@ -79,9 +79,9 @@ void autonomousPeriodic()
 
 	printf("Step: %d", autonomousInfo.step);
 
-	switch(MODE)
+	switch(autonomousSelection)
 	{
-	case(DRIVE_FORWARD_2000):
+	case(MODE_1):
 		switch(autonomousInfo.step)
 		{
 		case(1):

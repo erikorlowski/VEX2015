@@ -27,3 +27,18 @@ void runPickup(Pickup pickup, int speed)
 	setPantherMotor(pickup.leftMotor, leftSpeed);
 	setPantherMotor(pickup.rightMotor, rightSpeed);
 }
+
+void pickupIn(Pickup pickup)
+{
+	runPickup(pickup, 127);
+}
+
+void pickupOut(Pickup pickup)
+{
+	runPickup(pickup, -127);
+}
+
+void pickupStop(Pickup pickup)
+{
+	runPickup(pickup, 0);
+}

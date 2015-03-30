@@ -21,6 +21,9 @@ struct Pickup{
 Pickup initPickup(PantherMotor leftMotor, PantherMotor rightMotor);
 
 void runPickup(Pickup pickup, int speed);
+void pickupIn(Pickup pickup);
+void pickupOut(Pickup pickup);
+void pickupStop(Pickup pickup);
 
 Pickup pickup;
 
