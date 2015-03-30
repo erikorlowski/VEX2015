@@ -61,8 +61,6 @@
 
 #include "AutoLiftToHeight.h"
 
-#include "DriveForTime.h"
-
 #include "IME.h"
 
 #include "OI.h"
