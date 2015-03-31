@@ -16,6 +16,7 @@ struct DriveToWayPoint{
 	int rotation;
 	int maxSpeed;
 	double gyroStart;
+	int isFinished;
 
 }typedef DriveToWayPoint;
 

@@ -7,15 +7,15 @@
 
 #include "main.h"
 
-AutoLiftToHeight initAutoLiftToHeight(int height)
+AutoLiftToHeight initAutoLiftToHeight(Lift lift, int height)
 {
-	AutoLiftToHeight newStep = {height, 0};
+	AutoLiftToHeight newStep = {height, 0, lift};
 	return newStep;
 }
 
 void autoLiftToHeight(AutoLiftToHeight *stepInfo)
 {
-	int error = liftToHeight(lift, (*stepInfo).desiredHeight, 0);
+	int error = liftToHeight((*stepInfo).lift, (*stepInfo).desiredHeight, 0);
 
-	(*stepInfo).isFinished = (abs(error) < 25);
+	(*stepInfo).isFinished = (abs(error) < 50);
 }

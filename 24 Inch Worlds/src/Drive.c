@@ -5,8 +5,8 @@
  */
 Drive initDrive(PantherMotor frontLeftMotor, PantherMotor frontRightMotor,
 		PantherMotor rearLeftMotor, PantherMotor rearRightMotor,
-		int frontLeftIME, int frontRightIME, int rearLeftIME,
-		int rearRightIME, Gyro gyro)
+		IME frontLeftIME, IME frontRightIME, IME rearLeftIME,
+		IME rearRightIME, Gyro gyro)
 {
 	Drive newDrive = {frontLeftMotor, frontRightMotor, rearLeftMotor,
 		rearRightMotor, frontLeftIME, frontRightIME, rearLeftIME,

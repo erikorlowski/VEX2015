@@ -105,6 +105,8 @@ void teleopPeriodic()
 		liftHeightSP = HIGH_POST_HEIGHT;
 	}
 
+	printf("SP: %d", liftHeightSP);
+
 	printf("Lift Mode: %d", liftMode);
 
 	if(liftMode == LIFT_MODE_AUTO) liftToHeight(lift, liftHeightSP, 0);

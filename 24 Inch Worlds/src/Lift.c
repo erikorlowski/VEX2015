@@ -86,7 +86,7 @@ int liftToHeight(Lift lift, int heightSP, int deadBand)
 	int proportionalContribution = (int) (kP * error);
 
 	if(inDeadBand(error, 0, deadBand)) liftAtSpeed(lift, 0);
-	else if(error > 0) liftAtSpeed(lift, proportionalContribution);
+	else liftAtSpeed(lift, proportionalContribution);
 
 	return error;
 }

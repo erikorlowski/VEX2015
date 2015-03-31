@@ -25,11 +25,11 @@ DriveForTime initDriveForTime(Drive drive, int direction, int magnitude,
 void driveForTime(DriveForTime *stepInfo)
 {
 	holonomicDrive((*stepInfo).drive, (*stepInfo).direction,
-			(*stepInfo).magnitude, (*stepInfo).rotation);
+			(*stepInfo).magnitude, (*stepInfo).rotation, 0);
 
 	if(autonomousInfo.elapsedTime > (*stepInfo).length)
 	{
-		holonomicDrive((*stepInfo).drive, 0, 0, 0);
+		holonomicDrive((*stepInfo).drive, 0, 0, 0, 0);
 		(*stepInfo).isFinished = 1;
 	}
 }

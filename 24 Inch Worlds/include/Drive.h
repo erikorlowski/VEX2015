@@ -8,6 +8,8 @@
 #ifndef DRIVE_H_
 #define DRIVE_H_
 
+#include "main.h"
+
 /**
  * Reference type for a two motor drive.
  */
@@ -18,10 +20,10 @@ struct Drive{
 	PantherMotor rearLeftMotor;
 	PantherMotor rearRightMotor;
 
-	int frontLeftIME;
-	int frontRightIME;
-	int rearLeftIME;
-	int rearRightIME;
+	IME frontLeftIME;
+	IME frontRightIME;
+	IME rearLeftIME;
+	IME rearRightIME;
 
 	Gyro gyro;
 	int headingSetPoint;
@@ -30,8 +32,8 @@ struct Drive{
 
 Drive initDrive(PantherMotor frontLeftMotor, PantherMotor frontRightMotor,
 		PantherMotor rearLeftMotor, PantherMotor rearRightMotor,
-		int frontLeftIME, int frontRightIME, int rearLeftIME,
-		int rearRightIME, Gyro gyro);
+		IME frontLeftIME, IME frontRightIME, IME rearLeftIME,
+		IME rearRightIME, Gyro gyro);
 void holonomicDrive(Drive, int, int, int, int);
 int getGyroCorrection(Drive drive);
 int getAngle(Drive drive);

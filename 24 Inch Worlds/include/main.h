@@ -51,6 +51,8 @@
 
 #include "PantherMotor.h"
 
+#include "IME.h"
+
 #include "Drive.h"
 
 #include "Pot.h"

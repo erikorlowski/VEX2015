@@ -17,3 +17,679 @@ LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveTestMo
    text	   data	    bss	    dec	    hex	filename
   18492	     12	   4552	  23056	   5a10	./bin/output.elf
 arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:06:20 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src AutoLiftToHeight.c
+CC -I../include -I../src Drive.c
+CC -I../include -I../src DriveForTime.c
+DriveForTime.c: In function 'driveForTime':
+DriveForTime.c:28:4: error: too few arguments to function 'holonomicDrive'
+In file included from ../include/main.h:54:0,
+                 from DriveForTime.c:8:
+../include/Drive.h:35:6: note: declared here
+DriveForTime.c:32:3: error: too few arguments to function 'holonomicDrive'
+In file included from ../include/main.h:54:0,
+                 from DriveForTime.c:8:
+../include/Drive.h:35:6: note: declared here
+make[1]: *** [../bin/DriveForTime.o] Error 1
+make: *** [src] Error 2
+19:08:35 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src DriveForTime.c
+DriveForTime.c: In function 'driveForTime':
+DriveForTime.c:32:3: error: too few arguments to function 'holonomicDrive'
+In file included from ../include/main.h:54:0,
+                 from DriveForTime.c:8:
+../include/Drive.h:35:6: note: declared here
+make[1]: *** [../bin/DriveForTime.o] Error 1
+make: *** [src] Error 2
+19:08:50 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src DriveForTime.c
+CC -I../include -I../src DriveToWayPoint.c
+CC -I../include -I../src Lift.c
+CC -I../include -I../src OI.c
+CC -I../include -I../src PantherMotor.c
+CC -I../include -I../src Pickup.c
+CC -I../include -I../src Pot.c
+CC -I../include -I../src Spinner.c
+CC -I../include -I../src Utilities.c
+CC -I../include -I../src auto.c
+CC -I../include -I../src init.c
+init.c: In function 'initialize':
+init.c:200:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
+CC -I../include -I../src opcontrol.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  21500	     12	   4460	  25972	   6574	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:09:11 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:09:36 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:16:41 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src AutoLiftToHeight.c
+CC -I../include -I../src Drive.c
+CC -I../include -I../src DriveForTime.c
+CC -I../include -I../src DriveToWayPoint.c
+CC -I../include -I../src Lift.c
+CC -I../include -I../src OI.c
+CC -I../include -I../src PantherMotor.c
+CC -I../include -I../src Pickup.c
+CC -I../include -I../src Pot.c
+CC -I../include -I../src Spinner.c
+CC -I../include -I../src Utilities.c
+CC -I../include -I../src auto.c
+CC -I../include -I../src init.c
+init.c: In function 'initialize':
+init.c:200:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
+CC -I../include -I../src opcontrol.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22220	     12	   4560	  26792	   68a8	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:17:23 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22220	     12	   4560	  26792	   68a8	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:17:33 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:17:48 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:18:15 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:18:38 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:22:28 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:23:09 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:23:22 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:27:28 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src DriveToWayPoint.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22220	     12	   4560	  26792	   68a8	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:28:10 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:28:34 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:31:47 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:35:52 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+auto.c: In function 'autonomousPeriodic':
+auto.c:98:5: error: too few arguments to function 'holonomicDrive'
+In file included from ../include/main.h:54:0,
+                 from auto.c:35:
+../include/Drive.h:35:6: note: declared here
+make[1]: *** [../bin/auto.o] Error 1
+make: *** [src] Error 2
+19:36:09 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22276	     12	   4560	  26848	   68e0	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:44:57 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src AutoLiftToHeight.c
+In file included from ../include/main.h:54:0,
+                 from AutoLiftToHeight.c:8:
+../include/Drive.h:21:2: error: unknown type name 'IME'
+../include/Drive.h:22:2: error: unknown type name 'IME'
+../include/Drive.h:23:2: error: unknown type name 'IME'
+../include/Drive.h:24:2: error: unknown type name 'IME'
+../include/Drive.h:33:3: error: unknown type name 'IME'
+../include/Drive.h:33:21: error: unknown type name 'IME'
+../include/Drive.h:33:40: error: unknown type name 'IME'
+../include/Drive.h:34:3: error: unknown type name 'IME'
+make[1]: *** [../bin/AutoLiftToHeight.o] Error 1
+make: *** [src] Error 2
+19:45:28 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src AutoLiftToHeight.c
+In file included from ../include/main.h:54:0,
+                 from AutoLiftToHeight.c:8:
+../include/Drive.h:21:2: error: unknown type name 'IME'
+../include/Drive.h:22:2: error: unknown type name 'IME'
+../include/Drive.h:23:2: error: unknown type name 'IME'
+../include/Drive.h:24:2: error: unknown type name 'IME'
+../include/Drive.h:33:3: error: unknown type name 'IME'
+../include/Drive.h:33:21: error: unknown type name 'IME'
+../include/Drive.h:33:40: error: unknown type name 'IME'
+../include/Drive.h:34:3: error: unknown type name 'IME'
+make[1]: *** [../bin/AutoLiftToHeight.o] Error 1
+make: *** [src] Error 2
+19:46:21 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src AutoLiftToHeight.c
+In file included from ../include/main.h:54:0,
+                 from AutoLiftToHeight.c:8:
+../include/Drive.h:23:2: error: unknown type name 'IME'
+../include/Drive.h:24:2: error: unknown type name 'IME'
+../include/Drive.h:25:2: error: unknown type name 'IME'
+../include/Drive.h:26:2: error: unknown type name 'IME'
+../include/Drive.h:35:3: error: unknown type name 'IME'
+../include/Drive.h:35:21: error: unknown type name 'IME'
+../include/Drive.h:35:40: error: unknown type name 'IME'
+../include/Drive.h:36:3: error: unknown type name 'IME'
+make[1]: *** [../bin/AutoLiftToHeight.o] Error 1
+make: *** [src] Error 2
+19:47:07 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src AutoLiftToHeight.c
+CC -I../include -I../src Drive.c
+CC -I../include -I../src DriveForTime.c
+CC -I../include -I../src DriveToWayPoint.c
+DriveToWayPoint.c:10:17: error: conflicting types for 'initDriveToWayPoint'
+In file included from ../include/main.h:70:0,
+                 from DriveToWayPoint.c:8:
+../include/DriveToWayPoint.h:23:17: note: previous declaration of 'initDriveToWayPoint' was here
+DriveToWayPoint.c: In function 'initDriveToWayPoint':
+DriveToWayPoint.c:13:2: warning: missing braces around initializer [-Wmissing-braces]
+DriveToWayPoint.c:13:2: warning: (near initialization for 'newDriveToWayPoint.drive') [-Wmissing-braces]
+DriveToWayPoint.c: In function 'driveToWayPoint':
+DriveToWayPoint.c:68:4: error: too few arguments to function 'holonomicDrive'
+In file included from ../include/main.h:56:0,
+                 from DriveToWayPoint.c:8:
+../include/Drive.h:37:6: note: declared here
+make[1]: *** [../bin/DriveToWayPoint.o] Error 1
+make: *** [src] Error 2
+19:47:32 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src DriveToWayPoint.c
+DriveToWayPoint.c:10:17: error: conflicting types for 'initDriveToWayPoint'
+In file included from ../include/main.h:70:0,
+                 from DriveToWayPoint.c:8:
+../include/DriveToWayPoint.h:23:17: note: previous declaration of 'initDriveToWayPoint' was here
+DriveToWayPoint.c: In function 'initDriveToWayPoint':
+DriveToWayPoint.c:13:2: warning: missing braces around initializer [-Wmissing-braces]
+DriveToWayPoint.c:13:2: warning: (near initialization for 'newDriveToWayPoint.drive') [-Wmissing-braces]
+make[1]: *** [../bin/DriveToWayPoint.o] Error 1
+make: *** [src] Error 2
+19:48:26 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src DriveToWayPoint.c
+DriveToWayPoint.c:10:44: error: expected ')' before 'double'
+make[1]: *** [../bin/DriveToWayPoint.o] Error 1
+make: *** [src] Error 2
+19:48:45 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src DriveToWayPoint.c
+CC -I../include -I../src IME.c
+CC -I../include -I../src Lift.c
+CC -I../include -I../src OI.c
+CC -I../include -I../src PantherMotor.c
+CC -I../include -I../src Pickup.c
+CC -I../include -I../src Pot.c
+CC -I../include -I../src Spinner.c
+CC -I../include -I../src Utilities.c
+CC -I../include -I../src auto.c
+CC -I../include -I../src init.c
+init.c: In function 'initialize':
+init.c:201:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
+CC -I../include -I../src opcontrol.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22636	     12	   4592	  27240	   6a68	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:49:52 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:50:08 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:50:32 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:50:50 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:51:41 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:51:51 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:55:28 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:55:59 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src DriveToWayPoint.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22636	     12	   4592	  27240	   6a68	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:56:19 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:56:36 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:56:54 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:57:07 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:01:12 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src DriveToWayPoint.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22636	     12	   4592	  27240	   6a68	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:03:17 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src init.c
+init.c: In function 'initialize':
+init.c:201:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22636	     12	   4592	  27240	   6a68	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:04:57 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src DriveToWayPoint.c
+CC -I../include -I../src init.c
+init.c: In function 'initialize':
+init.c:201:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22636	     12	   4592	  27240	   6a68	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:05:26 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:05:42 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:05:57 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:06:19 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:06:29 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:08:32 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:08:48 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:09:07 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:09:18 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:09:36 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:10:40 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src DriveToWayPoint.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22636	     12	   4592	  27240	   6a68	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:11:30 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:11:58 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:16:00 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src DriveToWayPoint.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22636	     12	   4592	  27240	   6a68	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:20:21 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22636	     12	   4592	  27240	   6a68	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:22:27 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:24:31 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src DriveToWayPoint.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22636	     12	   4592	  27240	   6a68	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:24:50 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:25:05 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:25:19 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:32:36 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src Lift.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22636	     12	   4592	  27240	   6a68	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:34:26 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22644	     12	   4592	  27248	   6a70	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:34:56 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:36:03 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src opcontrol.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22660	     12	   4592	  27264	   6a80	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:39:09 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src Lift.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22652	     12	   4592	  27256	   6a78	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:40:47 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src Lift.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22652	     12	   4592	  27256	   6a78	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:41:25 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:43:34 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src AutoLiftToHeight.c
+CC -I../include -I../src Drive.c
+CC -I../include -I../src DriveForTime.c
+CC -I../include -I../src DriveToWayPoint.c
+CC -I../include -I../src IME.c
+CC -I../include -I../src Lift.c
+CC -I../include -I../src OI.c
+CC -I../include -I../src PantherMotor.c
+CC -I../include -I../src Pickup.c
+CC -I../include -I../src Pot.c
+CC -I../include -I../src Spinner.c
+CC -I../include -I../src Utilities.c
+CC -I../include -I../src auto.c
+CC -I../include -I../src init.c
+init.c: In function 'initialize':
+init.c:201:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
+CC -I../include -I../src opcontrol.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22644	     12	   4592	  27248	   6a70	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:47:02 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src AutoLiftToHeight.c
+CC -I../include -I../src Drive.c
+CC -I../include -I../src DriveForTime.c
+CC -I../include -I../src DriveToWayPoint.c
+CC -I../include -I../src IME.c
+CC -I../include -I../src Lift.c
+CC -I../include -I../src OI.c
+CC -I../include -I../src PantherMotor.c
+CC -I../include -I../src Pickup.c
+CC -I../include -I../src Pot.c
+CC -I../include -I../src Spinner.c
+CC -I../include -I../src Utilities.c
+CC -I../include -I../src auto.c
+CC -I../include -I../src init.c
+init.c: In function 'initialize':
+init.c:201:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
+CC -I../include -I../src opcontrol.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22652	     12	   4592	  27256	   6a78	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:48:49 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src AutoLiftToHeight.c
+CC -I../include -I../src Drive.c
+CC -I../include -I../src DriveForTime.c
+CC -I../include -I../src DriveToWayPoint.c
+CC -I../include -I../src IME.c
+CC -I../include -I../src Lift.c
+CC -I../include -I../src OI.c
+CC -I../include -I../src PantherMotor.c
+CC -I../include -I../src Pickup.c
+CC -I../include -I../src Pot.c
+CC -I../include -I../src Spinner.c
+CC -I../include -I../src Utilities.c
+CC -I../include -I../src auto.c
+CC -I../include -I../src init.c
+init.c: In function 'initialize':
+init.c:201:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
+CC -I../include -I../src opcontrol.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22652	     12	   4592	  27256	   6a78	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:54:30 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:56:43 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:57:57 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src AutoLiftToHeight.c
+CC -I../include -I../src Drive.c
+CC -I../include -I../src DriveForTime.c
+CC -I../include -I../src DriveToWayPoint.c
+CC -I../include -I../src IME.c
+CC -I../include -I../src Lift.c
+CC -I../include -I../src OI.c
+CC -I../include -I../src PantherMotor.c
+CC -I../include -I../src Pickup.c
+CC -I../include -I../src Pot.c
+CC -I../include -I../src Spinner.c
+CC -I../include -I../src Utilities.c
+CC -I../include -I../src auto.c
+CC -I../include -I../src init.c
+init.c: In function 'initialize':
+init.c:201:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
+CC -I../include -I../src opcontrol.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22652	     12	   4592	  27256	   6a78	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:59:41 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src AutoLiftToHeight.c
+CC -I../include -I../src Drive.c
+CC -I../include -I../src DriveForTime.c
+CC -I../include -I../src DriveToWayPoint.c
+CC -I../include -I../src IME.c
+CC -I../include -I../src Lift.c
+CC -I../include -I../src OI.c
+CC -I../include -I../src PantherMotor.c
+CC -I../include -I../src Pickup.c
+CC -I../include -I../src Pot.c
+CC -I../include -I../src Spinner.c
+CC -I../include -I../src Utilities.c
+CC -I../include -I../src auto.c
+CC -I../include -I../src init.c
+init.c: In function 'initialize':
+init.c:201:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
+CC -I../include -I../src opcontrol.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22652	     12	   4592	  27256	   6a78	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+21:02:02 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src AutoLiftToHeight.c
+CC -I../include -I../src Drive.c
+CC -I../include -I../src DriveForTime.c
+CC -I../include -I../src DriveToWayPoint.c
+CC -I../include -I../src IME.c
+CC -I../include -I../src Lift.c
+CC -I../include -I../src OI.c
+CC -I../include -I../src PantherMotor.c
+CC -I../include -I../src Pickup.c
+CC -I../include -I../src Pot.c
+CC -I../include -I../src Spinner.c
+CC -I../include -I../src Utilities.c
+CC -I../include -I../src auto.c
+CC -I../include -I../src init.c
+init.c: In function 'initialize':
+init.c:201:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
+CC -I../include -I../src opcontrol.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22652	     12	   4592	  27256	   6a78	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+21:03:31 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src AutoLiftToHeight.c
+CC -I../include -I../src Drive.c
+CC -I../include -I../src DriveForTime.c
+CC -I../include -I../src DriveToWayPoint.c
+CC -I../include -I../src IME.c
+CC -I../include -I../src Lift.c
+CC -I../include -I../src OI.c
+CC -I../include -I../src PantherMotor.c
+CC -I../include -I../src Pickup.c
+CC -I../include -I../src Pot.c
+CC -I../include -I../src Spinner.c
+CC -I../include -I../src Utilities.c
+CC -I../include -I../src auto.c
+CC -I../include -I../src init.c
+init.c: In function 'initialize':
+init.c:201:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
+CC -I../include -I../src opcontrol.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22652	     12	   4592	  27256	   6a78	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+21:05:34 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src AutoLiftToHeight.c
+CC -I../include -I../src Drive.c
+CC -I../include -I../src DriveForTime.c
+CC -I../include -I../src DriveToWayPoint.c
+CC -I../include -I../src IME.c
+CC -I../include -I../src Lift.c
+CC -I../include -I../src OI.c
+CC -I../include -I../src PantherMotor.c
+CC -I../include -I../src Pickup.c
+CC -I../include -I../src Pot.c
+CC -I../include -I../src Spinner.c
+CC -I../include -I../src Utilities.c
+CC -I../include -I../src auto.c
+CC -I../include -I../src init.c
+init.c: In function 'initialize':
+init.c:201:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
+CC -I../include -I../src opcontrol.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22652	     12	   4592	  27256	   6a78	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+21:11:49 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src AutoLiftToHeight.c
+CC -I../include -I../src Drive.c
+CC -I../include -I../src DriveForTime.c
+CC -I../include -I../src DriveToWayPoint.c
+CC -I../include -I../src IME.c
+CC -I../include -I../src Lift.c
+CC -I../include -I../src OI.c
+CC -I../include -I../src PantherMotor.c
+CC -I../include -I../src Pickup.c
+CC -I../include -I../src Pot.c
+CC -I../include -I../src Spinner.c
+CC -I../include -I../src Utilities.c
+CC -I../include -I../src auto.c
+CC -I../include -I../src init.c
+init.c: In function 'initialize':
+init.c:201:17: warning: unused variable 'autonomousInfo' [-Wunused-variable]
+CC -I../include -I../src opcontrol.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22756	     12	   4632	  27400	   6b08	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+21:12:10 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+21:12:35 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+21:13:15 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+21:14:03 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+21:14:20 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+21:16:53 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22828	     12	   4632	  27472	   6b50	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+21:17:15 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+21:21:05 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22836	     12	   4632	  27480	   6b58	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+21:21:36 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+21:23:08 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src AutoLiftToHeight.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22836	     12	   4632	  27480	   6b58	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin

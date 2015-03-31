@@ -48,6 +48,9 @@
  * The autonomous task may exit, unlike operatorControl() which should never exit. If it does
  * so, the robot will await a switch to another mode or disable/enable cycle.
  */
+DriveToWayPoint driveForward;
+AutoLiftToHeight liftToMediumPost;
+
 int isAuto = 1;
 
 long int stepStartTime;
@@ -57,6 +60,9 @@ long int stepStartTime;
  */
 void autonomousInit()
 {
+	driveForward = initDriveToWayPoint(drive, 0, 36, 0, 100);
+	liftToMediumPost = initAutoLiftToHeight(lift, MEDIUM_POST_HEIGHT);
+
 	autonomousInfo.step = 1;
 	autonomousInfo.isFinished = 1;//0; TODO change back to 0 when real auto code is added
 
@@ -73,8 +79,6 @@ void autonomousPeriodic()
 		stepStartTime = millis();
 	}
 
-	autonomousInfo.lastStep = autonomousInfo.step;
-
 	autonomousInfo.elapsedTime = millis() - stepStartTime;
 
 	printf("Step: %d", autonomousInfo.step);
@@ -85,12 +89,21 @@ void autonomousPeriodic()
 		switch(autonomousInfo.step)
 		{
 		case(1):
+			autoLiftToHeight(&liftToMediumPost);
 
-			/*driveForTime(&mode0Step1_1);
-			driveTestMotor(&mode0Step1_2);
-			autonomousInfo.isFinished = mode0Step1_1.isFinished &&
-					mode0Step1_2.isFinished;*/
-			autonomousInfo.isFinished = 1;
+			autonomousInfo.isFinished = liftToMediumPost.isFinished;
+		break;
+
+		case(2):
+			driveToWayPoint(&driveForward);
+
+			autonomousInfo.isFinished = driveForward.isFinished;
+
+			if(autonomousInfo.isFinished)
+			{
+				holonomicDrive(drive, 0, 0 ,0, 0);
+			}
+
 			break;
 
 		default:
@@ -100,7 +113,13 @@ void autonomousPeriodic()
 		}
 		break;
 
+		case(DO_NOTHING):
+			isAuto = 0;
+			break;
+
 	}
+
+	autonomousInfo.lastStep = autonomousInfo.step;
 
 	if(autonomousInfo.isFinished)
 	{
