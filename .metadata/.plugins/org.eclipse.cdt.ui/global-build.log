@@ -693,3 +693,427 @@ LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayP
    text	   data	    bss	    dec	    hex	filename
   22836	     12	   4632	  27480	   6b58	./bin/output.elf
 arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+18:16:37 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22876	     12	   4632	  27520	   6b80	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+18:17:13 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+18:18:44 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+18:19:15 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+18:19:27 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+18:24:25 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  23084	     12	   4784	  27880	   6ce8	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+18:25:38 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+18:26:53 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  23020	     12	   4784	  27816	   6ca8	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+18:27:28 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+18:27:47 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+18:28:19 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:40:46 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src Lift.c
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  23012	     12	   4784	  27808	   6ca0	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:41:10 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:42:43 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src Lift.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  23020	     12	   4784	  27816	   6ca8	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:45:36 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src Lift.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  23020	     12	   4784	  27816	   6ca8	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+19:45:53 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:46:04 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:47:58 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+19:50:46 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22124	     12	   4784	  26920	   6928	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:04:05 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+auto.c: In function 'autonomousPeriodic':
+auto.c:190:1: error: expected declaration or statement at end of input
+make[1]: *** [../bin/auto.o] Error 1
+make: *** [src] Error 2
+20:06:24 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22812	     12	   4632	  27456	   6b40	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:07:49 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22820	     12	   4632	  27464	   6b48	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:12:31 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22812	     12	   4632	  27456	   6b40	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:14:33 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+auto.c: In function 'autonomousPeriodic':
+auto.c:158:6: error: too few arguments to function 'liftToHeight'
+In file included from ../include/main.h:60:0,
+                 from auto.c:35:
+../include/Lift.h:28:5: note: declared here
+make[1]: *** [../bin/auto.o] Error 1
+make: *** [src] Error 2
+20:15:04 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22852	     12	   4632	  27496	   6b68	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:17:01 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  22876	     12	   4632	  27520	   6b80	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:21:07 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  23020	     12	   4744	  27776	   6c80	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:25:57 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  23068	     12	   4744	  27824	   6cb0	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:28:06 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  23068	     12	   4744	  27824	   6cb0	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:29:47 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  23028	     12	   4744	  27784	   6c88	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:33:26 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  23028	     12	   4744	  27784	   6c88	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:34:49 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  23028	     12	   4744	  27784	   6c88	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:35:53 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  23028	     12	   4744	  27784	   6c88	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:37:21 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  23028	     12	   4744	  27784	   6c88	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:47:57 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+auto.c: In function 'autonomousPeriodic':
+auto.c:181:6: error: too few arguments to function 'liftToHeight'
+In file included from ../include/main.h:60:0,
+                 from auto.c:35:
+../include/Lift.h:28:5: note: declared here
+make[1]: *** [../bin/auto.o] Error 1
+make: *** [src] Error 2
+20:48:13 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  23100	     12	   4856	  27968	   6d40	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:49:58 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  23100	     12	   4856	  27968	   6d40	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:55:48 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  23316	     12	   5008	  28336	   6eb0	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:56:03 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  23324	     12	   5008	  28344	   6eb8	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:56:32 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+20:59:34 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  23508	     12	   4984	  28504	   6f58	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+20:59:46 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+21:03:30 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  23620	     12	   5096	  28728	   7038	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+21:06:32 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  23620	     12	   5096	  28728	   7038	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+21:09:13 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  23604	     12	   5096	  28712	   7028	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+21:11:49 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  23620	     12	   5096	  28728	   7038	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+21:15:25 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  23756	     12	   5216	  28984	   7138	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+21:19:16 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+auto.c: In function 'autonomousInit':
+auto.c:100:2: error: too few arguments to function 'initDriveToWayPoint'
+In file included from ../include/main.h:70:0,
+                 from auto.c:35:
+../include/DriveToWayPoint.h:23:17: note: declared here
+make[1]: *** [../bin/auto.o] Error 1
+make: *** [src] Error 2
+21:19:39 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+auto.c: In function 'autonomousInit':
+auto.c:100:23: error: incompatible types when assigning to type 'DriveForTime' from type 'DriveToWayPoint'
+make[1]: *** [../bin/auto.o] Error 1
+make: *** [src] Error 2
+21:20:03 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  23852	     12	   5304	  29168	   71f0	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+21:24:42 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  23956	     12	   5416	  29384	   72c8	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+21:28:35 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  23956	     12	   5416	  29384	   72c8	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+21:30:17 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  24028	     12	   5528	  29568	   7380	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+21:39:04 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  24196	     12	   5752	  29960	   7508	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+21:43:28 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  24212	     12	   5752	  29976	   7518	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+21:43:59 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+21:45:41 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  24212	     12	   5752	  29976	   7518	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+21:46:01 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+21:48:07 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  24212	     12	   5752	  29976	   7518	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+21:55:25 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+auto.c: In function 'autonomousInit':
+auto.c:111:2: error: too many arguments to function 'initAutoLiftToHeight'
+In file included from ../include/main.h:68:0,
+                 from auto.c:35:
+../include/AutoLiftToHeight.h:19:18: note: declared here
+make[1]: *** [../bin/auto.o] Error 1
+make: *** [src] Error 2
+21:55:54 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  24340	     12	   5904	  30256	   7630	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+21:56:35 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+21:57:50 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+make[1]: Nothing to be done for `all'.
+22:01:03 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+auto.c: In function 'autonomousInit':
+auto.c:112:2: error: incompatible type for argument 1 of 'initDriveToWayPoint'
+In file included from ../include/main.h:70:0,
+                 from auto.c:35:
+../include/DriveToWayPoint.h:23:17: note: expected 'Drive' but argument is of type 'int'
+auto.c:112:2: error: too few arguments to function 'initDriveToWayPoint'
+In file included from ../include/main.h:70:0,
+                 from auto.c:35:
+../include/DriveToWayPoint.h:23:17: note: declared here
+make[1]: *** [../bin/auto.o] Error 1
+make: *** [src] Error 2
+22:01:24 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  24444	     12	   5904	  30360	   7698	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+22:06:52 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  24476	     12	   5904	  30392	   76b8	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+22:08:48 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  24476	     12	   5904	  30392	   76b8	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
+22:13:40 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+make all 
+CC -I../include -I../src auto.c
+LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
+   text	   data	    bss	    dec	    hex	filename
+  24476	     12	   5904	  30392	   76b8	./bin/output.elf
+arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin

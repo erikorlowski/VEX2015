@@ -48,8 +48,38 @@
  * The autonomous task may exit, unlike operatorControl() which should never exit. If it does
  * so, the robot will await a switch to another mode or disable/enable cycle.
  */
-DriveToWayPoint driveForward;
-AutoLiftToHeight liftToMediumPost;
+
+/**
+ * This is where you declare all of the actions the robot will take.
+ * The options are DriveForTime which is useful for driving into something
+ * but shouldn't be used elsewhere, DriveToWayPoint, which will handle
+ * driving forward and back, strafing, and turning (turning must be in
+ * its own step) and AutoLiftToHeight which will bring the lift to a
+ * specified height (Note: Once the step where this function is used has
+ * completed, the lift will move down due to gravity. To avoid this,
+ * create a new AutoLiftToHeight function to keep the lift at the desired
+ * height. Also, the lift to height code isn't perfectly tuned yet,
+ * if the autonomous stalls with the autoLiftToHeight function, help the
+ * lift up.)
+ *
+ * Running the pickup or spinner does not require an object to be declared
+ * or instantiated, an example is shown below.
+ */
+DriveToWayPoint mode1Turn45;
+AutoLiftToHeight mode1LiftToFirstGoal;
+DriveToWayPoint mode1BackToFirstScore;
+DriveToWayPoint mode1TurnToSecondCube;
+DriveForTime mode1DriveBackToGetRoom;
+AutoLiftToHeight mode1FirstLiftDown;
+DriveToWayPoint mode1StrafeToLineUpToSecondCube;
+DriveToWayPoint mode1DriveToSecondCube;
+DriveForTime mode1DriveBackToWall;
+DriveToWayPoint mode1TurnToThirdCube;
+DriveToWayPoint mode1DriveToThirdCube;
+DriveToWayPoint mode1StrafeOutForSecondPost;
+DriveToWayPoint mode1TurnToSecondPost;
+AutoLiftToHeight mode1LiftToSecondPost;
+DriveToWayPoint mode1DriveForwardToSecondPost;
 
 int isAuto = 1;
 
@@ -60,8 +90,26 @@ long int stepStartTime;
  */
 void autonomousInit()
 {
-	driveForward = initDriveToWayPoint(drive, 0, 36, 0, 100);
-	liftToMediumPost = initAutoLiftToHeight(lift, MEDIUM_POST_HEIGHT);
+	/**
+	 * Here, the different steps are instantiated and details are
+	 * given about them. By hovering over the function name, you can see a
+	 * list of the arguments to pass in.
+	 */
+	mode1Turn45 = initDriveToWayPoint(drive, 0, 0, -50, 50);
+	mode1LiftToFirstGoal = initAutoLiftToHeight(lift, LOW_POST_HEIGHT);
+	mode1BackToFirstScore = initDriveToWayPoint(drive, 0, -2.5, 0, 50);
+	mode1TurnToSecondCube = initDriveToWayPoint(drive, 0, 0, 130, 50);
+	mode1DriveBackToGetRoom = initDriveForTime(drive, 0, -50, 0, 1500);
+	mode1FirstLiftDown = initAutoLiftToHeight(lift, 0);
+	mode1StrafeToLineUpToSecondCube = initDriveToWayPoint(drive, -4, 0, 0, 50);
+	mode1DriveToSecondCube = initDriveToWayPoint(drive, 0, 18, 0, 50);
+	mode1DriveBackToWall = initDriveForTime(drive, 0, -50, 0, 3000);
+	mode1TurnToThirdCube = initDriveToWayPoint(drive, 0, 0, 90, 50);
+	mode1DriveToThirdCube = initDriveToWayPoint(drive, 0, 14, 0, 40);
+	mode1StrafeOutForSecondPost = initDriveToWayPoint(drive, -6, 0, 0, 50);
+	mode1TurnToSecondPost = initDriveToWayPoint(drive, 0, 0, 40, 50);
+	mode1LiftToSecondPost = initAutoLiftToHeight(lift, MEDIUM_POST_HEIGHT);
+	mode1DriveForwardToSecondPost = initDriveToWayPoint(drive, 0,3,0,50);
 
 	autonomousInfo.step = 1;
 	autonomousInfo.isFinished = 1;//0; TODO change back to 0 when real auto code is added
@@ -86,38 +134,184 @@ void autonomousPeriodic()
 	switch(autonomousSelection)
 	{
 	case(MODE_1):
-		switch(autonomousInfo.step)
-		{
-		case(1):
-			autoLiftToHeight(&liftToMediumPost);
+				switch(autonomousInfo.step)
+				{
+				case(1):
+													/**
+													 * Each step to be done in sequence is put in a case. At
+													 * the end of the case, the autonomousInfo.isFinished variable
+													 * must be updated. Usually, this can be done by setting it
+													 * equal to the .isFinished variable of the step that is being
+													 * excectuted.
+													 *
+													 * Pickup functions available are pickupIn(pickup),
+													 * pickupOut(pickup), and pickupStop(pickup).
+													 *
+													 * Spinner functions available are spinnerUp(spinner) and
+													 * spinnerDown(spinner).
+													 *
+													 * It's important to put break at the end of every case, if
+													 * this is not done, the autonomous will exit when that step
+													 * is entered.
+													 *
+													 * Finally, notice the & in front of the step name with
+													 * driveForTime, driveToWayPoint and autoLiftToHeight. This
+													 * affects how the compiler accesses the variable, if this is
+													 * forgotten, the compiler may not catch it and the program
+													 * could be accessing memory that it should not be.
+													 *
+													 * Note: To end a step based on time, use
+													 * autonomousInfo.elapsedTime to access the amount of time
+													 * the program has been in the step. This will be in
+													 * milliseconds.
+													 */
+				pickupStop(pickup);
 
-			autonomousInfo.isFinished = liftToMediumPost.isFinished;
-		break;
+				spinnerDown(spinner);
 
-		case(2):
-			driveToWayPoint(&driveForward);
+				autoLiftToHeight(&mode1LiftToFirstGoal);
 
-			autonomousInfo.isFinished = driveForward.isFinished;
+				autonomousInfo.isFinished = mode1LiftToFirstGoal.isFinished;
 
-			if(autonomousInfo.isFinished)
-			{
-				holonomicDrive(drive, 0, 0 ,0, 0);
-			}
+				break;
 
-			break;
+				case(2):
+													driveToWayPoint(&mode1Turn45);
+				liftToHeight(lift, LOW_POST_HEIGHT, 0);
 
-		default:
-			isAuto = 0;
-			break;
+				autonomousInfo.isFinished = mode1Turn45.isFinished;
+				break;
 
-		}
-		break;
+				case(3):
+													driveToWayPoint(&mode1BackToFirstScore);
+				liftToHeight(lift, LOW_POST_HEIGHT, 0);
 
-		case(DO_NOTHING):
-			isAuto = 0;
-			break;
+				autonomousInfo.isFinished =
+						mode1BackToFirstScore.isFinished;
+
+				break;
+
+				case(4):
+													holonomicDrive(drive, 0, 0, 0, 0);
+				liftToHeight(lift, LOW_POST_HEIGHT, 0);
+				pickupOut(pickup);
+
+				autonomousInfo.isFinished = autonomousInfo.elapsedTime > 2000;
+
+				break;
+
+				case(5):
+													driveToWayPoint(&mode1TurnToSecondCube);
+				liftToHeight(lift, LOW_POST_HEIGHT, 0);
+
+				autonomousInfo.isFinished =
+						mode1TurnToSecondCube.isFinished;
+
+				break;
+
+				case(6):
+													driveForTime(&mode1DriveBackToGetRoom);
+				autoLiftToHeight(&mode1FirstLiftDown);
+
+				autonomousInfo.isFinished =
+						mode1DriveBackToGetRoom.isFinished
+						&& mode1FirstLiftDown.isFinished;
+
+				break;
+
+				case(7):
+
+													driveToWayPoint(&mode1StrafeToLineUpToSecondCube);
+				pickupIn(pickup);
+
+				autonomousInfo.isFinished =
+						mode1StrafeToLineUpToSecondCube.isFinished;
+
+				break;
+
+				case(8):
+
+												driveToWayPoint(&mode1DriveToSecondCube);
+				pickupIn(pickup);
+
+				autonomousInfo.isFinished =
+						mode1DriveToSecondCube.isFinished;
+
+				break;
+
+				case(9):
+					driveForTime(&mode1DriveBackToWall);
+
+					autonomousInfo.isFinished =
+							mode1DriveBackToWall.isFinished;
+
+					break;
+
+				case(10):
+					driveToWayPoint(&mode1TurnToThirdCube);
+
+					autonomousInfo.isFinished =
+							mode1TurnToThirdCube.isFinished;
+
+					break;
+
+				case(11):
+					driveToWayPoint(&mode1DriveToThirdCube);
+
+					autonomousInfo.isFinished =
+							mode1DriveToThirdCube.isFinished;
+					break;
+
+				case(12):
+					driveToWayPoint(&mode1StrafeOutForSecondPost);
+
+					autonomousInfo.isFinished =
+							mode1StrafeOutForSecondPost.isFinished;
+					break;
+
+				case(13):
+					driveToWayPoint(&mode1TurnToSecondPost);
+
+					autonomousInfo.isFinished =
+							mode1TurnToSecondPost.isFinished;
+					break;
+
+				case(14):
+					autoLiftToHeight(&mode1LiftToSecondPost);
+
+					autonomousInfo.isFinished =
+							mode1LiftToSecondPost.isFinished;
+					break;
+
+				case(15):
+					driveToWayPoint(&mode1DriveForwardToSecondPost);
+					liftToHeight(lift, MEDIUM_POST_HEIGHT, 0);
+
+					autonomousInfo.isFinished =
+							mode1DriveForwardToSecondPost.isFinished;
+					break;
+
+				case(16):
+					pickupOut(pickup);
+					liftToHeight(lift, MEDIUM_POST_HEIGHT, 0);
+
+					autonomousInfo.isFinished =
+						autonomousInfo.elapsedTime > 2000;
+					break;
+
+				default:
+					isAuto = 0;
+					break;
+
+				}
+	break;
+
+				case(DO_NOTHING):
+													isAuto = 0;
+				break;
 
 	}
+
 
 	autonomousInfo.lastStep = autonomousInfo.step;
 
@@ -126,6 +320,7 @@ void autonomousPeriodic()
 		autonomousInfo.step ++;
 		autonomousInfo.isFinished = 0;
 	}
+
 }
 
 void autonomous()

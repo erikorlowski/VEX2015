@@ -76,7 +76,7 @@ void liftAtSpeed(Lift lift, int speed)
  */
 int liftToHeight(Lift lift, int heightSP, int deadBand)
 {
-	const double kP = -.500;
+	const double kP = -0.50;
 
 	deadBand = (deadBand == 0) ? 25 : deadBand;
 
@@ -87,6 +87,8 @@ int liftToHeight(Lift lift, int heightSP, int deadBand)
 
 	if(inDeadBand(error, 0, deadBand)) liftAtSpeed(lift, 0);
 	else liftAtSpeed(lift, proportionalContribution);
+
+	printf("Error: %d", error);
 
 	return error;
 }

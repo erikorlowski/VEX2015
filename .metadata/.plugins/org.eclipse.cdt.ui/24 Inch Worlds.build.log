@@ -1,10 +1,10 @@
-21:23:08 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
+22:13:40 **** Incremental Build of configuration Default for project 24 Inch Worlds ****
 make all 
-CC -I../include -I../src AutoLiftToHeight.c
+CC -I../include -I../src auto.c
 LN ./bin/AutoLiftToHeight.o ./bin/Drive.o ./bin/DriveForTime.o ./bin/DriveToWayPoint.o ./bin/IME.o ./bin/Lift.o ./bin/OI.o ./bin/PantherMotor.o ./bin/Pickup.o ./bin/Pot.o ./bin/Spinner.o ./bin/Utilities.o ./bin/auto.o ./bin/init.o ./bin/opcontrol.o ./firmware/libccos.a -lgcc -lm to bin/output.elf
    text	   data	    bss	    dec	    hex	filename
-  22836	     12	   4632	  27480	   6b58	./bin/output.elf
+  24476	     12	   5904	  30392	   76b8	./bin/output.elf
 arm-none-eabi-objcopy ./bin/output.elf -O binary ./bin/output.bin
 
-21:23:11 Build Finished (took 2s.453ms)
+22:13:43 Build Finished (took 2s.889ms)
 
