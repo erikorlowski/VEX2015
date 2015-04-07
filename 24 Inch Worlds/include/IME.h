@@ -17,5 +17,6 @@ struct IME{
 
 IME initIME(int port, int inverted);
 int getIME(IME ime);
+int getIMEVelocity(IME ime);
 
 #endif /* IME_H_ */

@@ -22,3 +22,12 @@ int getIME(IME ime)
 
 	return (ime.inverted) ? -value : value;
 }
+
+int getIMEVelocity(IME ime)
+{
+	int value;
+
+	imeGetVelocity(ime.port, &value);
+
+	return (ime.inverted) ? -value : value;
+}

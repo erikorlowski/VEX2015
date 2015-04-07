@@ -114,7 +114,7 @@ void teleopPeriodic()
 	{
 		if(OIGetLiftUp()) liftAtSpeed(lift, 80);
 		else if(OIGetLiftDown()) liftAtSpeed(lift, -80);
-		else liftAtSpeed(lift, 0);
+		else liftAtSpeed(lift, ((getLiftHeight(lift) > 100) ? 10 : 0));
 	}
 
 	if(OIGetPickupIn()) pickupIn(pickup);
@@ -134,6 +134,9 @@ void operatorControl() {
 	while (1) {
 		teleopPeriodic();
 		delay(20);
+
+		lcdPrint(uart1, 1, "Main: %d", powerLevelMain());
+		lcdPrint(uart1, 2, "Backup: %d", powerLevelBackup());
 
 		printf("Online: %d\n", isOnline());
 

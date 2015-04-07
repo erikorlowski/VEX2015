@@ -26,6 +26,7 @@ Lift initLift(PantherMotor leftMotor, PantherMotor rightMotor,
 
 void liftAtSpeed(Lift lift, int speed);
 int liftToHeight(Lift lift, int heightSP, int deadBand);
+int getLiftHeight(Lift lift);
 
 Lift lift;
 
