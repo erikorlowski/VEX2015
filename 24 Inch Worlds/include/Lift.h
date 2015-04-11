@@ -18,11 +18,12 @@ struct Lift{
 	PantherMotor rightMotor;
 	Pot leftPot;
 	Pot rightPot;
+	int limitSwitch;
 
 }typedef Lift;
 
 Lift initLift(PantherMotor leftMotor, PantherMotor rightMotor,
-		Pot leftPot, Pot rightPot);
+		Pot leftPot, Pot rightPot, int limitSwitch);
 
 void liftAtSpeed(Lift lift, int speed);
 int liftToHeight(Lift lift, int heightSP, int deadBand);

@@ -123,6 +123,8 @@ void teleopPeriodic()
 
 	if(OIGetSpinnerUp()) spinnerUp(spinner);
 	else if(OIGetSpinnerDown()) spinnerDown(spinner);
+
+	printf("Lift Height: %d\n", getLiftHeight(lift));
 }
 
 void operatorControl() {
@@ -135,8 +137,8 @@ void operatorControl() {
 		teleopPeriodic();
 		delay(20);
 
-		lcdPrint(uart1, 1, "Main: %d", powerLevelMain());
-		lcdPrint(uart1, 2, "Backup: %d", powerLevelBackup());
+		lcdPrint(uart1, 1, "Main: %.2f", powerLevelMain()/1000);
+		lcdPrint(uart1, 2, "Backup: %.2f", powerLevelBackup()/1000);
 
 		printf("Online: %d\n", isOnline());
 

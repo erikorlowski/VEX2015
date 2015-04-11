@@ -1,0 +1,18 @@
+/*
+ * AutoLiftToLimitSwitch.h
+ *
+ *  Created on: Apr 9, 2015
+ *      Author: Erik
+ */
+
+#ifndef AUTOLIFTTOLIMITSWITCH_H_
+#define AUTOLIFTTOLIMITSWITCH_H_
+
+struct AutoLiftToLimitSwitch{
+
+	Lift lift;
+	int isFinished;
+
+}typedef AutoLiftToLimitSwitch;
+
+#endif /* AUTOLIFTTOLIMITSWITCH_H_ */

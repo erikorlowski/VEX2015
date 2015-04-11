@@ -1,0 +1,15 @@
+/*
+ * Properties.h
+ *
+ *  Created on: Feb 25, 2015
+ *      Author: Erik
+ */
+
+#ifndef PROPERTIES_H_
+#define PROPERTIES_H_
+
+#define LOAD_HEIGHT 530
+
+int[] skyRiseHeights = {335};
+
+#endif /* PROPERTIES_H_ */

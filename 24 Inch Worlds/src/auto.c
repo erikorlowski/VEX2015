@@ -70,7 +70,7 @@ AutoLiftToHeight mode1LiftToFirstGoal;
 DriveToWayPoint mode1BackToFirstScore;
 DriveToWayPoint mode1TurnToSecondCube;
 DriveForTime mode1DriveBackToGetRoom;
-AutoLiftToHeight mode1FirstLiftDown;
+AutoLiftToLimitSwitch mode1FirstLiftDown;
 DriveToWayPoint mode1StrafeToLineUpToSecondCube;
 DriveToWayPoint mode1DriveToSecondCube;
 DriveForTime mode1DriveBackToWall;
@@ -96,11 +96,11 @@ void autonomousInit()
 	 * list of the arguments to pass in.
 	 */
 	mode1Turn45 = initDriveToWayPoint(drive, 0, 0, -50, 50);
-	mode1LiftToFirstGoal = initAutoLiftToHeight(lift, LOW_POST_HEIGHT);
+	mode1LiftToFirstGoal = initAutoLiftToHeight(lift, LOW_POST_HEIGHT, 0);
 	mode1BackToFirstScore = initDriveToWayPoint(drive, 0, -2.5, 0, 50);
 	mode1TurnToSecondCube = initDriveToWayPoint(drive, 0, 0, 130, 50);
 	mode1DriveBackToGetRoom = initDriveForTime(drive, 0, -50, 0, 1500);
-	mode1FirstLiftDown = initAutoLiftToHeight(lift, 0);
+	mode1FirstLiftDown = initAutoLiftToLimitSwitch(lift);
 	mode1StrafeToLineUpToSecondCube = initDriveToWayPoint(drive, -4, 0, 0, 50);
 	mode1DriveToSecondCube = initDriveToWayPoint(drive, 0, 18, 0, 50);
 	mode1DriveBackToWall = initDriveForTime(drive, 0, -50, 0, 3000);
@@ -108,7 +108,7 @@ void autonomousInit()
 	mode1DriveToThirdCube = initDriveToWayPoint(drive, 0, 14, 0, 40);
 	mode1StrafeOutForSecondPost = initDriveToWayPoint(drive, -6, 0, 0, 50);
 	mode1TurnToSecondPost = initDriveToWayPoint(drive, 0, 0, 40, 50);
-	mode1LiftToSecondPost = initAutoLiftToHeight(lift, MEDIUM_POST_HEIGHT);
+	mode1LiftToSecondPost = initAutoLiftToHeight(lift, MEDIUM_POST_HEIGHT, 0);
 	mode1DriveForwardToSecondPost = initDriveToWayPoint(drive, 0,3,0,50);
 
 	autonomousInfo.step = 1;
@@ -210,8 +210,8 @@ void autonomousPeriodic()
 				break;
 
 				case(6):
-													driveForTime(&mode1DriveBackToGetRoom);
-				autoLiftToHeight(&mode1FirstLiftDown);
+				driveForTime(&mode1DriveBackToGetRoom);
+				autoLiftToLimitSwitch(&mode1FirstLiftDown);
 
 				autonomousInfo.isFinished =
 						mode1DriveBackToGetRoom.isFinished
@@ -221,7 +221,7 @@ void autonomousPeriodic()
 
 				case(7):
 
-													driveToWayPoint(&mode1StrafeToLineUpToSecondCube);
+				driveToWayPoint(&mode1StrafeToLineUpToSecondCube);
 				pickupIn(pickup);
 
 				autonomousInfo.isFinished =
@@ -231,7 +231,7 @@ void autonomousPeriodic()
 
 				case(8):
 
-												driveToWayPoint(&mode1DriveToSecondCube);
+				driveToWayPoint(&mode1DriveToSecondCube);
 				pickupIn(pickup);
 
 				autonomousInfo.isFinished =

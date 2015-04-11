@@ -1,0 +1,311 @@
+/** @file auto.c
+ * @brief File for autonomous code
+ *
+ * This file should contain the user autonomous() function and any functions related to it.
+ *
+ * Copyright (c) 2011-2014, Purdue University ACM SIG BOTS.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *     * Redistributions of source code must retain the above copyright
+ *       notice, this list of conditions and the following disclaimer.
+ *     * Redistributions in binary form must reproduce the above copyright
+ *       notice, this list of conditions and the following disclaimer in the
+ *       documentation and/or other materials provided with the distribution.
+ *     * Neither the name of Purdue University ACM SIG BOTS nor the
+ *       names of its contributors may be used to endorse or promote products
+ *       derived from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL PURDUE UNIVERSITY ACM SIG BOTS BE LIABLE FOR ANY
+ * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+ * Purdue Robotics OS contains FreeRTOS (http://www.freertos.org) whose source code may be
+ * obtained from http://sourceforge.net/projects/freertos/files/ or on request.
+ */
+
+#include "main.h"
+
+/*
+ * Runs the user autonomous code. This function will be started in its own task with the default
+ * priority and stack size whenever the robot is enabled via the Field Management System or the
+ * VEX Competition Switch in the autonomous mode. If the robot is disabled or communications is
+ * lost, the autonomous task will be stopped by the kernel. Re-enabling the robot will restart
+ * the task, not re-start it from where it left off.
+ *
+ * Code running in the autonomous task cannot access information from the VEX Joystick. However,
+ * the autonomous function can be invoked from another task if a VEX Competition Switch is not
+ * available, and it can access joystick information if called in this way.
+ *
+ * The autonomous task may exit, unlike operatorControl() which should never exit. If it does
+ * so, the robot will await a switch to another mode or disable/enable cycle.
+ */
+int isAuto = 1;
+
+int skyRiseHeights[] = {400, 600};
+
+AutoLiftToLimitSwitch mode1InitLift;
+AutoLiftToHeight mode1LiftToLoadHeight;
+DriveToWayPoint mode1StrafeForCube;
+DriveToWayPoint mode1StrafeFromCube;
+DriveForTime mode1DriveToAutoLoader;
+AutoLiftToHeight mode1LiftOutOfAutoLoader;
+DriveToWayPoint mode1DriveBackFromAutoLoader;
+DriveToWayPoint mode1TurnToSkyRiseBase;
+DriveToWayPoint mode1DriveToSkyRiseBase;
+AutoLiftToHeight mode1LiftToPlaceSkyRise;
+AutoLiftToHeight mode1LiftBackToLoad;
+DriveToWayPoint mode1DriveBackToAutoLoader;
+DriveToWayPoint mode1TurnBackToAutoLoader;
+DriveToWayPoint mode1DriveBackToGetSpace;
+
+long int stepStartTime;
+
+/**
+ * Runs at the start of autonomous. Steps should be initialized here.
+ */
+void autonomousInit()
+{
+	if(autonomousInfo.skyRise == 1)
+	{
+		autonomousInfo.step = 1;
+		autonomousInfo.lastStep = 0;
+	}
+	else
+	{
+		autonomousInfo.step = 5;
+		autonomousInfo.lastStep = 4;
+	}
+
+	autonomousInfo.isFinished = 0;//FIXME
+
+	mode1InitLift = initAutoLiftToLimitSwitch(lift);
+	mode1LiftToLoadHeight = initAutoLiftToHeight(lift, LOAD_HEIGHT);
+	mode1StrafeForCube = initDriveToWayPoint(drive, -4, 0, 0, 50);
+	mode1StrafeFromCube = initDriveToWayPoint(drive, 4, 0, 0, 50);
+	mode1DriveToAutoLoader = initDriveForTime(drive, 0, 50, 0, 2500);
+	mode1LiftOutOfAutoLoader = initAutoLiftToHeight(lift, LOAD_HEIGHT + 500);
+	mode1DriveBackFromAutoLoader = initDriveToWayPoint(drive, 0, -2.5, 0, 50);
+	mode1TurnToSkyRiseBase = initDriveToWayPoint(drive, 0, 0, -85, 30);
+	mode1DriveToSkyRiseBase = initDriveToWayPoint(drive, 0, 2, 0, 50);
+	mode1LiftToPlaceSkyRise = initAutoLiftToHeight(lift, 0);
+	mode1LiftBackToLoad = initAutoLiftToHeight(lift, LOAD_HEIGHT);
+	mode1DriveBackToAutoLoader = initDriveToWayPoint(drive, 0, -2, 0, 50);
+	mode1TurnBackToAutoLoader = initDriveToWayPoint(drive, 0, 0, 90, 30);
+	mode1DriveBackToGetSpace = initDriveToWayPoint(drive, 0, -4, 0, 50);
+
+
+	mode1LiftToPlaceSkyRise.desiredHeight = skyRiseHeights[autonomousInfo.skyRise - 1];
+
+	stepStartTime = millis();
+}
+
+/**
+ * Runs continuously during autonomous, should exit relatively promptly.
+ */
+void autonomousPeriodic()
+{
+	watchLift(lift);
+
+	if(autonomousInfo.step != autonomousInfo.lastStep)
+	{
+		stepStartTime = millis();
+	}
+
+	autonomousInfo.elapsedTime = millis() - stepStartTime;
+
+	printf("Step: %d", autonomousInfo.step);
+
+	switch(autonomousSelection)
+	{
+	case(MODE_1):
+		switch(autonomousInfo.step)
+		{
+		case(1):
+			puts("Starting Mode 1");
+			printf("SkyRise: %d\n", autonomousInfo.skyRise);
+			if(autonomousInfo.skyRise == 1)
+			{
+				puts("Resetting Lift");
+				openPickup(pickup);
+				autoLiftToLimitSwitch(&mode1InitLift);
+
+				autonomousInfo.isFinished = mode1InitLift.isFinished;
+			}
+			else
+			{
+				autonomousInfo.isFinished = 1;
+			}
+
+			break;
+
+		case(2):
+			if(autonomousInfo.skyRise == 1)
+			{
+				autoLiftToHeight(&mode1LiftToLoadHeight);
+
+				autonomousInfo.isFinished = mode1LiftToLoadHeight.isFinished;
+			}
+			else
+			{
+				autonomousInfo.isFinished = 1;
+			}
+
+			break;
+
+		case(3):
+			if(autonomousInfo.skyRise == 1)
+			{
+				driveToWayPoint(&mode1StrafeForCube);
+
+				autonomousInfo.isFinished = mode1StrafeForCube.isFinished;
+			}
+			else
+			{
+				autonomousInfo.isFinished = 1;
+			}
+
+			break;
+
+		case(4):
+			if(autonomousInfo.skyRise == 1)
+			{
+				driveToWayPoint(&mode1StrafeFromCube);
+
+				autonomousInfo.isFinished = mode1StrafeFromCube.isFinished;
+			}
+			else
+			{
+				autonomousInfo.isFinished = 1;
+			}
+
+			break;
+
+		case(5):
+			driveForTime(&mode1DriveToAutoLoader);
+
+			autonomousInfo.isFinished = mode1DriveToAutoLoader.isFinished;
+
+			break;
+
+		case(6):
+			autoLiftToHeight(&mode1LiftOutOfAutoLoader);
+			closePickup(pickup);
+
+			autonomousInfo.isFinished = mode1LiftOutOfAutoLoader.isFinished;
+
+			break;
+
+		case(7):
+			driveToWayPoint(&mode1DriveBackFromAutoLoader);
+
+			autonomousInfo.isFinished = mode1DriveBackFromAutoLoader.isFinished;
+
+			break;
+
+		case(8):
+			driveToWayPoint(&mode1TurnToSkyRiseBase);
+
+			autonomousInfo.isFinished = mode1TurnToSkyRiseBase.isFinished;
+
+			break;
+
+		case(9):
+			driveToWayPoint(&mode1DriveToSkyRiseBase);
+
+			autonomousInfo.isFinished = mode1DriveToSkyRiseBase.isFinished;
+
+			break;
+
+		case(10):
+			autoLiftToHeight(&mode1LiftToPlaceSkyRise);
+
+			autonomousInfo.isFinished = mode1LiftToPlaceSkyRise.isFinished;
+
+			break;
+
+		case(11):
+			driveToWayPoint(&mode1DriveBackToAutoLoader);
+			openPickup(pickup);
+			autonomousInfo.isFinished = mode1DriveBackToAutoLoader.isFinished;
+
+			break;
+
+		case(12):
+			autoLiftToHeight(&mode1LiftBackToLoad);
+
+			autonomousInfo.isFinished = mode1LiftBackToLoad.isFinished;
+
+			break;
+
+		case(13):
+			driveToWayPoint(&mode1TurnBackToAutoLoader);
+
+			autonomousInfo.isFinished = mode1TurnBackToAutoLoader.isFinished;
+
+			break;
+
+		case(14):
+			driveToWayPoint(&mode1DriveBackToGetSpace);
+
+			autonomousInfo.isFinished = mode1DriveBackToGetSpace.isFinished;
+
+			break;
+
+		default:
+			autonomousInfo.skyRise++;
+
+			if(autonomousInfo.skyRise > 2) isAuto = 0; //FIXME
+			else
+			{
+				autonomousInit();
+			}
+
+			break;
+
+		}
+		break;
+
+		case(DO_NOTHING):
+		default:
+			isAuto = 0;
+			break;
+
+	}
+
+	autonomousInfo.lastStep = autonomousInfo.step;
+
+	if(autonomousInfo.isFinished)
+	{
+		autonomousInfo.step++;
+	}
+}
+
+void autonomous()
+{
+	autonomousInfo.skyRise = 1;
+
+	autonomousInit();
+
+	while(isAuto)
+	{
+		autonomousPeriodic();
+
+		if(isOnline())
+		{
+			if(!isAutonomous() || !isEnabled()) isAuto = 0;
+		}
+
+		delay(20);
+
+		puts("Autonomous");
+	}
+}

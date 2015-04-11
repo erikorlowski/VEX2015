@@ -13,10 +13,11 @@ struct AutoLiftToHeight{
 	int desiredHeight;
 	int isFinished;
 	Lift lift;
+	int deadBand;
 
 }typedef AutoLiftToHeight;
 
-AutoLiftToHeight initAutoLiftToHeight(Lift lift, int height);
+AutoLiftToHeight initAutoLiftToHeight(Lift lift, int height, int deadBand);
 void autoLiftToHeight(AutoLiftToHeight *stepInfo);
 
 #endif /* AUTOLIFTTOHEIGHT_H_ */

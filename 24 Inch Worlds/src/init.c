@@ -165,6 +165,7 @@ void lcdModeSelect()
  */
 void initializeIO()
 {
+	pinMode(12, INPUT);
 	lcdInit(uart1);
 }
 
@@ -192,7 +193,7 @@ void initialize()
 			gyroInit(3,0));
 
 	lift = initLift(initPantherMotor(8,1), initPantherMotor(7,0),
-			initPot(2,1), initPot(1,1));
+			initPot(2,1), initPot(1,1), 12);
 
 	pickup = initPickup(initPantherMotor(1,0), initPantherMotor(10,1));
 

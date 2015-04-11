@@ -101,6 +101,9 @@ void operatorControl() {
 		teleopPeriodic();
 		delay(20);
 
+		//lcdPrint(uart1, 1, "Main: %.2f", powerLevelMain()/1000);
+		//lcdPrint(uart1, 2, "Backup: %.2f", powerLevelBackup()/1000);
+
 		printf("Online: %d\n", isOnline());
 
 		/*printf("Step: %d\n Last Step: %d\n Elapsed Time: %d\nIs Finished: %d\n",

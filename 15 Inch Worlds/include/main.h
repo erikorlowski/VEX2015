@@ -63,6 +63,8 @@
 
 #include "DriveForTime.h"
 
+#include "AutoLiftToLimitSwitch.h"
+
 #include "IME.h"
 
 #include "OI.h"

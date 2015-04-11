@@ -1,0 +1,81 @@
+/*
+ * DriveToWayPoint.c
+ *
+ *  Created on: Mar 15, 2015
+ *      Author: Erik
+ */
+
+#include "main.h"
+
+DriveToWayPoint initDriveToWayPoint(Drive drive, double direction,
+		double magnitude, int rotation, int maxSpeed)
+{
+	DriveToWayPoint newDriveToWayPoint = {direction, magnitude,
+			rotation, maxSpeed, 0.0, 0, drive};
+	return newDriveToWayPoint;
+}
+
+int getAxisCorrection(int error, int maxSpeed, int deadBand)
+{
+	if(inDeadBand(error, 0, deadBand)) return 0;
+	else if(error > 0) return -maxSpeed;
+	else return maxSpeed;
+}
+
+void driveToWayPoint(DriveToWayPoint *stepInfo)
+{
+	if(autonomousInfo.lastStep != autonomousInfo.step)
+	{
+		int failures = 0;
+
+		puts("Drive To WayPoint Reset");
+
+		failures += imeReset(drive.frontLeftIME.port);
+		failures += imeReset(drive.frontRightIME.port);
+		failures += imeReset(drive.rearLeftIME.port);
+		failures += imeReset(drive.rearRightIME.port);
+
+		if(failures < 0)
+		{
+			lcdPrint(uart1, 1, "%d Fail", failures);
+			lcdSetBacklight(uart1, true);
+		}
+
+		(*stepInfo).gyroStart = gyroGet(drive.gyro);
+	}
+
+	int directionRevs = holonomicInchesToIME((*stepInfo).direction, 3.25);
+	int magnitudeRevs = holonomicInchesToIME((*stepInfo).magnitude, 3.25);
+
+	printf("Magnitude Revs: %d\n", magnitudeRevs);
+
+	int frontLeftDistance = getIME(drive.frontLeftIME);
+	int frontRightDistance = getIME(drive.frontRightIME);
+	int rearLeftDistance = getIME(drive.rearLeftIME);
+	int rearRightDistance = getIME(drive.rearRightIME);
+
+	printf("Front Left Distance: %d\n", frontLeftDistance);
+
+	int directionPV = (frontLeftDistance -frontRightDistance -
+			rearLeftDistance +rearRightDistance)/4;
+	int magnitudePV = (frontLeftDistance + frontRightDistance +
+			rearLeftDistance + rearRightDistance)/4;
+
+	int directionError = directionPV - directionRevs;
+	int magnitudeError = magnitudePV - magnitudeRevs;
+	int rotationError = (int) (gyroGet(drive.gyro) -
+			(*stepInfo).gyroStart - (*stepInfo).rotation);
+
+	printf("Magnitude Error: %d\nDirection Error: %d\nRotation Error: %d\n",
+			magnitudeError, directionError, rotationError);
+
+	holonomicDrive(
+			(*stepInfo).drive,
+			getAxisCorrection(directionError, (*stepInfo).maxSpeed, 10),
+			getAxisCorrection(magnitudeError, (*stepInfo).maxSpeed, 10),
+			getAxisCorrection(rotationError, (*stepInfo).maxSpeed, 2));
+
+	(*stepInfo).isFinished = inDeadBand(directionError, 0, 10)
+			&& inDeadBand(magnitudeError, 0, 10)
+			&& inDeadBand(rotationError, 0, 2);
+}

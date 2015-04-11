@@ -7,11 +7,11 @@
 
 #include "main.h"
 
-DriveToWayPoint initDriveToWayPoint(double direction,
+DriveToWayPoint initDriveToWayPoint(Drive drive, double direction,
 		double magnitude, int rotation, int maxSpeed)
 {
 	DriveToWayPoint newDriveToWayPoint = {direction, magnitude,
-			rotation, maxSpeed, 0.0, 0};
+			rotation, maxSpeed, 0.0, 0, drive};
 	return newDriveToWayPoint;
 }
 
@@ -26,12 +26,20 @@ void driveToWayPoint(DriveToWayPoint *stepInfo)
 {
 	if(autonomousInfo.lastStep != autonomousInfo.step)
 	{
+		int failures = 0;
+
 		puts("Drive To WayPoint Reset");
 
-		imeReset(drive.frontLeftIME.port);
-		imeReset(drive.frontRightIME.port);
-		imeReset(drive.rearLeftIME.port);
-		imeReset(drive.rearRightIME.port);
+		failures += !imeReset(drive.frontLeftIME.port);
+		failures += !imeReset(drive.frontRightIME.port);
+		failures += !imeReset(drive.rearLeftIME.port);
+		failures += !imeReset(drive.rearRightIME.port);
+
+		if(failures > 0)
+		{
+			lcdPrint(uart1, 1, "%d Fail", failures);
+			lcdSetBacklight(uart1, true);
+		}
 
 		(*stepInfo).gyroStart = gyroGet(drive.gyro);
 	}
@@ -62,7 +70,7 @@ void driveToWayPoint(DriveToWayPoint *stepInfo)
 			magnitudeError, directionError, rotationError);
 
 	holonomicDrive(
-			drive,
+			(*stepInfo).drive,
 			getAxisCorrection(directionError, (*stepInfo).maxSpeed, 10),
 			getAxisCorrection(magnitudeError, (*stepInfo).maxSpeed, 10),
 			getAxisCorrection(rotationError, (*stepInfo).maxSpeed, 4));

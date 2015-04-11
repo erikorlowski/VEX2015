@@ -1,0 +1,21 @@
+/*
+ * AutoLiftToLimitSwitch.c
+ *
+ *  Created on: Apr 9, 2015
+ *      Author: Erik
+ */
+
+#include "main.h"
+
+AutoLiftToLimitSwitch initAutoLiftToLimitSwitch(Lift lift)
+{
+	AutoLiftToLimitSwitch newStep = {lift};
+
+	return newStep;
+}
+
+void autoLiftToLimitSwitch(AutoLiftToLimitSwitch *stepInfo)
+{
+	if(digitalRead((*stepInfo).lift.limitSwitch) == HIGH)
+		liftAtSpeed((*stepInfo).lift, -80);
+}

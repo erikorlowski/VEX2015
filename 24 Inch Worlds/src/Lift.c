@@ -11,9 +11,9 @@
  * Returns a new Lift object.
  */
 Lift initLift(PantherMotor leftMotor, PantherMotor rightMotor,
-		Pot leftPot, Pot rightPot)
+		Pot leftPot, Pot rightPot, int limitSwitch)
 {
-	Lift newLift = {leftMotor, rightMotor, leftPot, rightPot};
+	Lift newLift = {leftMotor, rightMotor, leftPot, rightPot, limitSwitch};
 	return newLift;
 }
 
@@ -76,10 +76,10 @@ void liftAtSpeed(Lift lift, int speed)
  */
 int liftToHeight(Lift lift, int heightSP, int deadBand)
 {
-	const double kP = -0.60;
-	const int integralOffset = 20;
+	const double kP = -0.50;//.6
+	const int integralOffset = 0;//20
 
-	deadBand = (deadBand == 0) ? 10 : deadBand;
+	deadBand = (deadBand == 0) ? 25 : deadBand;
 
 	int heightPV = (getPot(lift.leftPot) + getPot(lift.rightPot))/2;
 	int error = heightPV - heightSP;

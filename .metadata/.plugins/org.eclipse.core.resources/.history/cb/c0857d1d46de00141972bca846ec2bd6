@@ -1,0 +1,23 @@
+/*
+ * AutoLiftToHeight.c
+ *
+ *  Created on: Mar 18, 2015
+ *      Author: Erik
+ */
+
+#include "main.h"
+
+AutoLiftToHeight initAutoLiftToHeight(Lift lift, int height)
+{
+	AutoLiftToHeight newStep = {height, 0, lift};
+	return newStep;
+}
+
+void autoLiftToHeight(AutoLiftToHeight *stepInfo)
+{
+	int error = liftToHeight((*stepInfo).lift, (*stepInfo).desiredHeight, 0);
+
+	printf("Auto Error: %d\nFinished: %d\n", error, (abs(error) < 50));
+
+	(*stepInfo).isFinished = (abs(error) < 50);
+}

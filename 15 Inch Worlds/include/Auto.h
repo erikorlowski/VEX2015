@@ -18,6 +18,7 @@ struct AutonomousInfo{
 	int lastStep;
 	int elapsedTime;
 	int isFinished;
+	int skyRise;
 
 }typedef AutonomousInfo;
 
@@ -26,32 +27,14 @@ struct AutonomousInfo{
  */
 AutonomousInfo autonomousInfo;
 
-/**
- * Refence type for driving at a set speed based on time.
- */
-/*struct DriveForTime{
+int alliance;
 
-	long int length;
-	Drive drive;
-	int leftSpeed;
-	int rightSpeed;
-	int isFinished;
+#define RED 0
+#define BLUE 1
 
-}typedef DriveForTime;*/
+#define DO_NOTHING 0
+#define MODE_1 1
 
-/*DriveForTime initDriveForTime(Drive, int, int, long int);
-void driveForTime(DriveForTime *stepInfo);*/
-
-/*struct DriveTestMotor{
-
-	long int length;
-	TestMotor motor;
-	int speed;
-	int isFinished;
-
-}typedef DriveTestMotor;*/
-
-/*DriveTestMotor initDriveTestMotor(TestMotor, int, long int);
-void driveTestMotor(DriveTestMotor*);*/
+int autonomousSelection;
 
 #endif /* AUTO_H_ */
